@@ -3,41 +3,408 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Shop Wigs at Zel's Hair Collection.">
+  <meta name="description" content="Shop wigs from Zel's Hair Collection.">
   <title>Wigs | Zel's Hair Collection</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    :root{--ink:#211d1c;--muted:#77716e;--ivory:#f8f5f1;--pink:#b77d86;--line:#e9e4df;--serif:"Playfair Display",Georgia,serif;--sans:"DM Sans",Arial,sans-serif}
-    *{box-sizing:border-box}body{margin:0;color:var(--ink);font:14px/1.65 var(--sans)}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.announcement{text-align:center;background:var(--ink);color:white;padding:8px;font-size:9px;letter-spacing:.18em}.header{height:76px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font:500 21px var(--serif);letter-spacing:.09em}.brand small{display:block;text-align:center;font:8px var(--sans);letter-spacing:.25em}.nav{display:flex;gap:24px;font-size:11px}.nav a:hover,.back:hover{color:var(--pink)}.intro{background:var(--ivory);text-align:center;padding:65px 20px}.eyebrow{font-size:9px;letter-spacing:.22em;color:var(--pink);font-weight:700}.intro h1{font:500 clamp(36px,5vw,52px)/1.15 var(--serif);margin:12px 0}.intro p{color:var(--muted);max-width:520px;margin:0 auto}.content{padding:55px 7% 85px}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:28px;color:var(--muted);font-size:11px}.toolbar input{width:min(260px,55%);border:1px solid var(--line);padding:11px 13px;font:inherit}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px 20px}.card img{width:100%;height:340px;object-fit:cover;background:var(--ivory)}.card h2{font:500 21px var(--serif);margin:12px 0 0}.card p{font-size:10px;color:var(--muted);margin:2px 0}.price{font-size:11px;color:var(--ink)}.note{margin-top:45px;padding:22px;background:var(--ivory);font-size:11px;color:var(--muted);text-align:center}.footer{background:var(--ink);color:white;text-align:center;padding:35px 15px;font-size:10px}.back{display:inline-block;margin-top:20px;border-bottom:1px solid var(--pink);padding-bottom:4px}
-    @media(max-width:700px){.header{height:65px;padding:0 5%}.brand{font-size:17px}.nav{gap:10px;font-size:9px}.intro{padding:48px 18px}.content{padding:38px 5% 60px}.grid{grid-template-columns:repeat(2,1fr);gap:22px 12px}.card img{height:225px}.toolbar{align-items:flex-start;flex-direction:column}.toolbar input{width:100%}}
-    @media(max-width:390px){.nav{gap:7px;font-size:8px}.card img{height:190px}}
+    :root {
+      --ink: #211f1c;
+      --muted: #716d67;
+      --paper: #fff;
+      --ivory: #f7f5f0;
+      --champagne: #b49a72;
+      --line: #e8e4dc;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+      --page-gutter: clamp(1.25rem, 5vw, 5.5rem);
+      --content-width: 86rem;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 0.94rem;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    button, input {
+      font: inherit;
+    }
+
+    .announcement-bar {
+      min-height: 2rem;
+      padding: 0.35rem 1rem;
+      background: var(--ink);
+      color: white;
+      text-align: center;
+      font-size: 0.625rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 5.25rem;
+      padding: 0 var(--page-gutter);
+      border-bottom: 1px solid rgb(33 31 28 / 7%);
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(6px);
+    }
+
+    .brand {
+      display: inline-flex;
+      width: max-content;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .brand-name {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+    }
+
+    .brand-subtitle {
+      margin-top: 0.35rem;
+      font-size: 0.52rem;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(0.7rem, 1.3vw, 1.35rem);
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      position: relative;
+      color: #393631;
+      font-size: 0.67rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -0.15rem;
+      height: 1px;
+      background: var(--champagne);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 180ms ease;
+    }
+
+    .nav a:hover::after,
+    .nav a[aria-current="page"]::after {
+      transform: scaleX(1);
+    }
+
+    .intro {
+      padding: clamp(4rem, 9vw, 8rem) var(--page-gutter);
+      background: linear-gradient(180deg, #f7f5f0 0%, #faf9f6 100%);
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.9rem;
+      color: #927d5e;
+      font-size: 0.66rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(2.75rem, 5vw, 5rem);
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+    }
+
+    .intro p {
+      max-width: 38rem;
+      margin: 1rem auto 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .content {
+      width: min(100% - 2 * var(--page-gutter), var(--content-width));
+      margin: 0 auto;
+      padding: clamp(3rem, 7vw, 5rem) 0 5.5rem;
+    }
+
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.8rem;
+      padding: 0.9rem 1rem;
+      border: 1px solid var(--line);
+      background: #fdfcfb;
+    }
+
+    .toolbar span {
+      color: var(--ink);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .toolbar input {
+      width: min(20rem, 100%);
+      min-height: 2.7rem;
+      padding: 0.8rem 0.9rem;
+      border: 1px solid #d5cec4;
+      background: white;
+      color: var(--ink);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(1.1rem, 2.2vw, 1.75rem);
+    }
+
+    .card {
+      background: #faf8f5;
+      border: 1px solid var(--line);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgb(20 17 14 / 8%);
+    }
+
+    .card a {
+      display: block;
+    }
+
+    .card img {
+      width: 100%;
+      aspect-ratio: 0.82;
+      object-fit: cover;
+      background: #efeae2;
+    }
+
+    .card h2 {
+      margin: 0;
+      padding: 1rem 1rem 0;
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      font-weight: 500;
+      line-height: 1.15;
+    }
+
+    .card p {
+      margin: 0.35rem 0 0;
+      padding: 0 1rem;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .price {
+      display: block;
+      padding: 0 1rem 1.2rem;
+      color: var(--ink);
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .note {
+      margin-top: 2rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 1.25rem;
+      color: var(--ink);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 0.2rem;
+    }
+
+    .footer {
+      padding: 1.5rem 0 2rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 900px) {
+      .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 680px) {
+      .header {
+        padding: 0 1rem;
+      }
+
+      .nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .toolbar input {
+        width: 100%;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="announcement">QUALITY HAIR • CONFIDENCE • ALWAYS</div>
+  <div class="announcement-bar">QUALITY HAIR · CONFIDENCE · ALWAYS</div>
+
   <header class="header">
-    <a class="brand" href="index.html">ZEL'S <small>HAIR COLLECTION</small></a>
-    <nav class="nav"><a href="index.html">Home</a><a href="wigs.html">Wigs</a><a href="bundles.html">Bundles</a><a href="braiding-extensions.html">Braiding</a></nav>
+    <a class="brand" href="index.html">
+      <span class="brand-name">ZEL’S</span>
+      <span class="brand-subtitle">HAIR COLLECTION</span>
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="wigs.html" aria-current="page">Wigs</a>
+      <a href="bundles.html">Bundles</a>
+      <a href="braiding-extensions.html">Braiding Extensions</a>
+    </nav>
   </header>
-  <section class="intro"><div class="eyebrow">ZEL'S HAIR COLLECTION</div><h1>Wigs</h1><p>Explore the Zel's Hair Collection wig range. Product specifications and options will be added after confirmation.</p></section>
+
+  <section class="intro">
+    <p class="eyebrow">ZEL’S HAIR COLLECTION</p>
+    <h1>Wigs</h1>
+    <p>Explore our wig collection. Product specifications, colours, lengths and prices will be confirmed with Zel before the site goes live.</p>
+  </section>
+
   <main class="content">
-    <div class="toolbar"><span>Explore the collection</span><input type="search" id="productSearch" placeholder="Search this collection…" aria-label="Search products"></div>
-    <div class="grid" id="productGrid"><article class="card"><a href="index.html"><img src="IMG_4568.jpeg" alt="Frontal" loading="lazy"><h2>Frontal</h2><p>Wig</p></a><span class="price">Price to be confirmed</span></article>
-<article class="card"><a href="index.html"><img src="IMG_4573.jpeg" alt="Wig style 02" loading="lazy"><h2>Wig style 02</h2><p>Wig</p></a><span class="price">Price to be confirmed</span></article>
-<article class="card"><a href="index.html"><img src="IMG_4574.jpeg" alt="Wig style 03" loading="lazy"><h2>Wig style 03</h2><p>Wig</p></a><span class="price">Price to be confirmed</span></article>
-<article class="card"><a href="index.html"><img src="IMG_4575.jpeg" alt="Wig style 04" loading="lazy"><h2>Wig style 04</h2><p>Wig</p></a><span class="price">Price to be confirmed</span></article></div>
-    <div class="note">Product names, prices, lengths, colours and specifications will be confirmed with Zel before the store goes live.</div>
-    <a class="back" href="index.html">Back to homepage</a>
+    <div class="toolbar">
+      <span>Explore the collection</span>
+      <input type="search" id="productSearch" placeholder="Search this collection" aria-label="Search products">
+    </div>
+
+    <div class="product-grid" id="productGrid">
+      <article class="card">
+        <a href="index.html">
+          <img src="IMG_4568.jpeg" alt="Frontal">
+        </a>
+        <h2>Frontal</h2>
+        <p>Wig</p>
+        <span class="price">Price to be confirmed</span>
+      </article>
+
+      <article class="card">
+        <a href="index.html">
+          <img src="IMG_4573.jpeg" alt="Wig style 02">
+        </a>
+        <h2>Wig style 02</h2>
+        <p>Wig</p>
+        <span class="price">Price to be confirmed</span>
+      </article>
+
+      <article class="card">
+        <a href="index.html">
+          <img src="IMG_4574.jpeg" alt="Wig style 03">
+        </a>
+        <h2>Wig style 03</h2>
+        <p>Wig</p>
+        <span class="price">Price to be confirmed</span>
+      </article>
+
+      <article class="card">
+        <a href="index.html">
+          <img src="IMG_4575.jpeg" alt="Wig style 04">
+        </a>
+        <h2>Wig style 04</h2>
+        <p>Wig</p>
+        <span class="price">Price to be confirmed</span>
+      </article>
+
+      <article class="card">
+        <a href="index.html">
+          <img src="IMG_4566.png" alt="Wig style 05">
+        </a>
+        <h2>Wig style 05</h2>
+        <p>Wig</p>
+        <span class="price">Price to be confirmed</span>
+      </article>
+    </div>
+
+    <p class="note">
+      Product names, prices, lengths, colours and specifications will be confirmed with Zel before launch.
+    </p>
+
+    <a class="back-link" href="index.html">Back to homepage</a>
   </main>
-  <footer class="footer">© 2026 Zel's Hair Collection</footer>
+
+  <footer class="footer">
+    © 2026 Zel’s Hair Collection
+  </footer>
+
   <script>
-    const search = document.getElementById('productSearch');
-    search.addEventListener('input', () => {
-      const term = search.value.toLowerCase();
-      document.querySelectorAll('.card').forEach(card => {
-        card.hidden = !card.textContent.toLowerCase().includes(term);
+    const searchInput = document.getElementById("productSearch");
+    const cards = Array.from(document.querySelectorAll(".card"));
+
+    searchInput.addEventListener("input", (event) => {
+      const query = event.target.value.trim().toLowerCase();
+      cards.forEach((card) => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(query) ? "block" : "none";
       });
     });
   </script>
