@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop Wigs at Zel's Hair Collection.">
+  <title>Wigs | Zel's Hair Collection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#211d1c;--muted:#77716e;--ivory:#f8f5f1;--pink:#b77d86;--line:#e9e4df;--serif:"Playfair Display",Georgia,serif;--sans:"DM Sans",Arial,sans-serif}
+    *{box-sizing:border-box}body{margin:0;color:var(--ink);font:14px/1.65 var(--sans)}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.announcement{text-align:center;background:var(--ink);color:white;padding:8px;font-size:9px;letter-spacing:.18em}.header{height:76px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font:500 21px var(--serif);letter-spacing:.09em}.brand small{display:block;text-align:center;font:8px var(--sans);letter-spacing:.25em}.nav{display:flex;gap:24px;font-size:11px}.nav a:hover,.back:hover{color:var(--pink)}.intro{background:var(--ivory);text-align:center;padding:65px 20px}.eyebrow{font-size:9px;letter-spacing:.22em;color:var(--pink);font-weight:700}.intro h1{font:500 clamp(36px,5vw,52px)/1.15 var(--serif);margin:12px 0}.intro p{color:var(--muted);max-width:520px;margin:0 auto}.content{padding:55px 7% 85px}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:28px;color:var(--muted);font-size:11px}.toolbar input{width:min(260px,55%);border:1px solid var(--line);padding:11px 13px;font:inherit}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px 20px}.card img{width:100%;height:340px;object-fit:cover;background:var(--ivory)}.card h2{font:500 21px var(--serif);margin:12px 0 0}.card p{font-size:10px;color:var(--muted);margin:2px 0}.price{font-size:11px;color:var(--ink)}.note{margin-top:45px;padding:22px;background:var(--ivory);font-size:11px;color:var(--muted);text-align:center}.footer{background:var(--ink);color:white;text-align:center;padding:35px 15px;font-size:10px}.back{display:inline-block;margin-top:20px;border-bottom:1px solid var(--pink);padding-bottom:4px}
+    @media(max-width:700px){.header{height:65px;padding:0 5%}.brand{font-size:17px}.nav{gap:10px;font-size:9px}.intro{padding:48px 18px}.content{padding:38px 5% 60px}.grid{grid-template-columns:repeat(2,1fr);gap:22px 12px}.card img{height:225px}.toolbar{align-items:flex-start;flex-direction:column}.toolbar input{width:100%}}
+    @media(max-width:390px){.nav{gap:7px;font-size:8px}.card img{height:190px}}
+  </style>
+</head>
+<body>
+  <div class="announcement">QUALITY HAIR • CONFIDENCE • ALWAYS</div>
+  <header class="header">
+    <a class="brand" href="index.html">ZEL'S <small>HAIR COLLECTION</small></a>
+    <nav class="nav"><a href="index.html">Home</a><a href="wigs.html">Wigs</a><a href="bundles.html">Bundles</a><a href="braiding-extensions.html">Braiding</a></nav>
+  </header>
+  <section class="intro"><div class="eyebrow">ZEL'S HAIR COLLECTION</div><h1>Wigs</h1><p>Explore the Zel's Hair Collection wig range. Product specifications and options will be added after confirmation.</p></section>
+  <main class="content">
+    <div class="toolbar"><span>Explore the collection</span><input type="search" id="productSearch" placeholder="Search this collection…" aria-label="Search products"></div>
+    <div class="grid" id="productGrid"><article class="card"><a href="index.html"><img src="IMG_4568.jpeg" alt="Frontal" loading="lazy"><h2>Frontal</h2><p>Wig</p></a><span class="price">Price to be confirmed</span></article>
+<article class="card"><a href="index.html"><img src="IMG_4573.jpeg" alt="Wig style 02" loading="lazy"><h2>Wig style 02</h2><p>Wig</p></a><span class="price">Price to be confirmed</span></article>
+<article class="card"><a href="index.html"><img src="IMG_4574.jpeg" alt="Wig style 03" loading="lazy"><h2>Wig style 03</h2><p>Wig</p></a><span class="price">Price to be confirmed</span></article>
+<article class="card"><a href="index.html"><img src="IMG_4575.jpeg" alt="Wig style 04" loading="lazy"><h2>Wig style 04</h2><p>Wig</p></a><span class="price">Price to be confirmed</span></article></div>
+    <div class="note">Product names, prices, lengths, colours and specifications will be confirmed with Zel before the store goes live.</div>
+    <a class="back" href="index.html">Back to homepage</a>
+  </main>
+  <footer class="footer">© 2026 Zel's Hair Collection</footer>
+  <script>
+    const search = document.getElementById('productSearch');
+    search.addEventListener('input', () => {
+      const term = search.value.toLowerCase();
+      document.querySelectorAll('.card').forEach(card => {
+        card.hidden = !card.textContent.toLowerCase().includes(term);
+      });
+    });
+  </script>
+</body>
+</html>
