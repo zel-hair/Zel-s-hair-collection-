@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap');
 /* GENERAL RESET */
 
 * {
@@ -327,34 +328,36 @@ body {
     margin-bottom: 24px;
 }
 
-
 .hero-description {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 1.8;
+    line-height: 1.9;
+    letter-spacing: 0.1px;
     max-width: 560px;
     color: #F0E9E5;
-    margin-bottom: 42px;
+    margin: 0 0 42px;
 }
 
 .hero-intro {
     display: block;
-    font-style: italic;
+    font-style: normal;
     margin-bottom: 20px;
 }
 
 .hero-details {
     display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
     font-style: normal;
-    font-size: 16px;
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
 @media (max-width: 600px) {
     .hero-description {
-        font-size: 16px;
-        line-height: 1.8;
+        font-size: 14px;
+        line-height: 1.9;
         margin-bottom: 38px;
     }
 
@@ -363,9 +366,9 @@ body {
     }
 
     .hero-details {
-        font-size: 15px;
+        font-size: 13px;
     }
-}
+
 
 
 /* MOBILE LINE BREAKS */
@@ -449,34 +452,36 @@ body {
 
         margin-bottom: 20px;
     }
-
-    .hero-description {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+.hero-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 1.8;
+    line-height: 1.9;
+    letter-spacing: 0.1px;
     max-width: 560px;
     color: #F0E9E5;
-    margin-bottom: 42px;
+    margin: 0 0 42px;
 }
 
 .hero-intro {
     display: block;
-    font-style: italic;
+    font-style: normal;
     margin-bottom: 20px;
 }
 
 .hero-details {
     display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
     font-style: normal;
-    font-size: 16px;
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
 @media (max-width: 600px) {
     .hero-description {
-        font-size: 16px;
-        line-height: 1.8;
+        font-size: 14px;
+        line-height: 1.9;
         margin-bottom: 38px;
     }
 
@@ -485,8 +490,9 @@ body {
     }
 
     .hero-details {
-        font-size: 15px;
+        font-size: 13px;
     }
+
 }
 
     .mobile-break {
