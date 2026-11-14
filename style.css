@@ -292,7 +292,6 @@ body {
     z-index: 2;
 }
 
-
 /* HERO CONTENT */
 
 .hero-content {
@@ -301,6 +300,7 @@ body {
 
     width: 86%;
     max-width: 760px;
+
     margin-left: 7%;
     margin-right: auto;
 
@@ -311,6 +311,7 @@ body {
 
     font-family: Arial, Helvetica, sans-serif;
 }
+
 
 /* HERO HEADING */
 
@@ -323,22 +324,31 @@ body {
     letter-spacing: 2px;
     line-height: 1.4;
 
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
+
 
 /* HERO DESCRIPTION */
 
-.hero-content p {
+.hero-description {
     font-family: inherit;
     font-size: 17px;
     font-weight: 400;
 
     letter-spacing: 0;
-    line-height: 1.7;
+    line-height: 1.8;
 
-    max-width: 650px;
-    margin: 0 0 28px;
+    max-width: 620px;
+    margin: 0 0 42px;
 }
+
+
+/* MOBILE LINE BREAKS */
+
+.mobile-break {
+    display: none;
+}
+
 
 /* BUTTON CONTAINER */
 
@@ -348,6 +358,7 @@ body {
     align-items: center;
     gap: 12px;
 }
+
 
 /* BUTTONS */
 
@@ -370,7 +381,8 @@ body {
     transition: 0.3s ease;
 }
 
-/* SHOP */
+
+/* SHOP BUTTON */
 
 .shop-btn {
     background: #E9DFDA;
@@ -378,7 +390,8 @@ body {
     border: 1px solid #E9DFDA;
 }
 
-/* APPOINTMENT */
+
+/* APPOINTMENT BUTTON */
 
 .appointment-btn {
     background: transparent;
@@ -386,7 +399,8 @@ body {
     border: 1px solid #D8C9C3;
 }
 
-/* MOBILE */
+
+/* MOBILE HERO */
 
 @media (max-width: 600px) {
 
@@ -403,26 +417,35 @@ body {
 
     .hero-content h1 {
         font-size: 24px;
+        font-weight: 500;
+
         letter-spacing: 1.5px;
         line-height: 1.5;
-        margin-bottom: 16px;
+
+        margin-bottom: 20px;
     }
 
-    .hero-content p {
+    .hero-description {
         font-size: 15px;
-        line-height: 1.65;
-        margin-bottom: 22px;
+        line-height: 1.8;
+
+        max-width: 100%;
+        margin-bottom: 38px;
+    }
+
+    .mobile-break {
+        display: inline;
     }
 
     .hero-buttons {
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
+        gap: 12px;
     }
 
     .hero-btn {
         width: 210px;
-        min-height: 44px;
+        min-height: 46px;
     }
 
 }
