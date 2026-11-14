@@ -299,162 +299,130 @@ body {
     position: relative;
     z-index: 3;
 
-    width: 90%;
-    max-width: 800px;
+    width: 86%;
+    max-width: 760px;
+    margin-left: 7%;
+    margin-right: auto;
 
     padding: 40px 0;
 
-    text-align: center;
-    color: #ffffff;
+    text-align: left;
+    color: #F0E9E5;
 
     font-family: Arial, Helvetica, sans-serif;
 }
-
 
 /* HERO HEADING */
 
 .hero-content h1 {
     font-family: inherit;
-
     font-size: clamp(28px, 4vw, 46px);
     font-weight: 500;
 
     text-transform: uppercase;
     letter-spacing: 2px;
-    line-height: 1.5;
+    line-height: 1.4;
 
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
-
 
 /* HERO DESCRIPTION */
 
 .hero-content p {
     font-family: inherit;
-
     font-size: 17px;
     font-weight: 400;
 
     letter-spacing: 0;
     line-height: 1.7;
 
-    max-width: 720px;
-    margin: 0 auto 35px;
+    max-width: 650px;
+    margin: 0 0 28px;
 }
 
-
-/* HERO BUTTON CONTAINER */
+/* BUTTON CONTAINER */
 
 .hero-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
 }
 
-
-/* HERO BUTTONS */
+/* BUTTONS */
 
 .hero-btn {
-    min-width: 190px;
+    min-width: 185px;
     min-height: 48px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    padding: 12px 22px;
+    padding: 12px 20px;
 
     font-family: inherit;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
     letter-spacing: 1.5px;
 
     text-decoration: none;
-
-    transition: background 0.3s ease,
-                color 0.3s ease;
+    transition: 0.3s ease;
 }
 
-
-/* SHOP BUTTON */
+/* SHOP */
 
 .shop-btn {
-    background: #ffffff;
-    color: #24151a;
-    border: 1px solid #ffffff;
+    background: #E9DFDA;
+    color: #401D27;
+    border: 1px solid #E9DFDA;
 }
 
-.shop-btn:hover {
-    background: #762b3d;
-    color: #ffffff;
-    border-color: #762b3d;
-}
-
-
-/* APPOINTMENT BUTTON */
+/* APPOINTMENT */
 
 .appointment-btn {
     background: transparent;
-    color: #ffffff;
-    border: 1px solid #ffffff;
+    color: #E9DFDA;
+    border: 1px solid #D8C9C3;
 }
 
-.appointment-btn:hover {
-    background: #ffffff;
-    color: #24151a;
-}
-
-
-/* =================================
-   MOBILE HERO
-================================= */
+/* MOBILE */
 
 @media (max-width: 600px) {
 
-    .hero {
-        width: 100%;
-        height: auto;
-        min-height: 0;
-
-        aspect-ratio: 941 / 1672;
-    }
-
-    .hero-image {
-        object-fit: cover;
-        object-position: center;
-    }
-
     .hero-content {
-        width: 90%;
+        width: 86%;
+        max-width: none;
+
+        margin-left: 7%;
+        margin-right: auto;
+
         padding: 20px 0;
+        text-align: left;
     }
 
     .hero-content h1 {
-        font-size: 25px;
-        font-weight: 500;
-
+        font-size: 24px;
         letter-spacing: 1.5px;
         line-height: 1.5;
-
-        margin-bottom: 20px;
+        margin-bottom: 16px;
     }
 
     .hero-content p {
         font-size: 15px;
         line-height: 1.65;
-
-        margin-bottom: 24px;
+        margin-bottom: 22px;
     }
 
     .hero-buttons {
         flex-direction: column;
-        gap: 12px;
+        align-items: flex-start;
+        gap: 10px;
     }
 
     .hero-btn {
-        width: 220px;
-        min-height: 46px;
+        width: 210px;
+        min-height: 44px;
     }
 
 }
