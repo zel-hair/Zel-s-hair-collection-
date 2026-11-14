@@ -247,7 +247,9 @@ body {
         letter-spacing: 1.3px;
     }
 }
-/* HERO SECTION */
+/* =================================
+   HERO SECTION
+================================= */
 
 .hero {
     position: relative;
@@ -261,6 +263,7 @@ body {
     overflow: hidden;
     background-color: #421321;
 }
+
 
 /* HERO IMAGE */
 
@@ -277,6 +280,7 @@ body {
     z-index: 1;
 }
 
+
 /* BURGUNDY OVERLAY */
 
 .hero-overlay {
@@ -288,6 +292,7 @@ body {
     z-index: 2;
 }
 
+
 /* HERO CONTENT */
 
 .hero-content {
@@ -297,47 +302,48 @@ body {
     width: 90%;
     max-width: 800px;
 
+    padding: 40px 0;
+
     text-align: center;
     color: #ffffff;
 
-    padding: 40px 0;
-/* HERO TYPOGRAPHY */
-
-.hero-content {
-    font-family: "Helvetica Now",
-                 "Neue Haas Grotesk",
-                 "Neue Haas Unica",
-                 "Helvetica Neue",
-                 Helvetica,
-                 sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+
+/* HERO HEADING */
+
 .hero-content h1 {
-    font-size: clamp(36px, 5vw, 62px);
+    font-family: inherit;
+
+    font-size: clamp(28px, 4vw, 46px);
     font-weight: 500;
+
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    line-height: 1.2;
+    letter-spacing: 2px;
+    line-height: 1.5;
+
     margin-bottom: 24px;
 }
 
+
+/* HERO DESCRIPTION */
+
 .hero-content p {
-    font-size: 18px;
+    font-family: inherit;
+
+    font-size: 17px;
     font-weight: 400;
-    letter-spacing: 0.01em;
+
+    letter-spacing: 0;
     line-height: 1.7;
-    max-width: 750px;
+
+    max-width: 720px;
     margin: 0 auto 35px;
 }
 
-.hero-btn {
-    font-family: inherit;
-    letter-spacing: 0.08em;
-}
 
-
-
-/* BUTTONS */
+/* HERO BUTTON CONTAINER */
 
 .hero-buttons {
     display: flex;
@@ -346,21 +352,32 @@ body {
     gap: 14px;
 }
 
+
+/* HERO BUTTONS */
+
 .hero-btn {
-    min-width: 175px;
+    min-width: 190px;
     min-height: 48px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    padding: 12px 20px;
+    padding: 12px 22px;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
 
     text-decoration: none;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
+
+    transition: background 0.3s ease,
+                color 0.3s ease;
 }
+
+
+/* SHOP BUTTON */
 
 .shop-btn {
     background: #ffffff;
@@ -368,24 +385,43 @@ body {
     border: 1px solid #ffffff;
 }
 
+.shop-btn:hover {
+    background: #762b3d;
+    color: #ffffff;
+    border-color: #762b3d;
+}
+
+
+/* APPOINTMENT BUTTON */
+
 .appointment-btn {
     background: transparent;
     color: #ffffff;
     border: 1px solid #ffffff;
 }
 
-/* MOBILE HERO */
+.appointment-btn:hover {
+    background: #ffffff;
+    color: #24151a;
+}
+
+
+/* =================================
+   MOBILE HERO
+================================= */
 
 @media (max-width: 600px) {
 
     .hero {
+        width: 100%;
         height: auto;
         min-height: 0;
+
         aspect-ratio: 941 / 1672;
     }
 
     .hero-image {
-        object-fit: contain;
+        object-fit: cover;
         object-position: center;
     }
 
@@ -394,57 +430,31 @@ body {
         padding: 20px 0;
     }
 
-    /* HERO TYPOGRAPHY */
+    .hero-content h1 {
+        font-size: 25px;
+        font-weight: 500;
 
-.hero-content {
-    font-family: "Helvetica Now",
-                 "Neue Haas Grotesk",
-                 "Neue Haas Unica",
-                 "Helvetica Neue",
-                 Helvetica,
-                 sans-serif;
-}
+        letter-spacing: 1.5px;
+        line-height: 1.5;
 
-.hero-content h1 {
-    font-size: clamp(36px, 5vw, 62px);
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    line-height: 1.2;
-    margin-bottom: 24px;
-}
+        margin-bottom: 20px;
+    }
 
-.hero-content p {
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 0.01em;
-    line-height: 1.7;
-    max-width: 750px;
-    margin: 0 auto 35px;
-}
+    .hero-content p {
+        font-size: 15px;
+        line-height: 1.65;
 
-.hero-btn {
-    font-family: inherit;
-    letter-spacing: 0.08em;
-}
+        margin-bottom: 24px;
+    }
 
     .hero-buttons {
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
     }
 
     .hero-btn {
-        width: 210px;
-        min-height: 44px;
+        width: 220px;
+        min-height: 46px;
     }
 
-}
-.hero-content h1 {
-    font-size: 34px;
-    letter-spacing: -0.8px;
-}
-
-.hero-content p {
-    font-size: 15px;
-    line-height: 1.65;
 }
