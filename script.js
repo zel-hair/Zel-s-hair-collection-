@@ -36,3 +36,31 @@ if (document.readyState === 'loading') {
 } else {
     initializeShopAnimation();
 }
+// SHOP BLUR-TO-CLEAR EFFECT
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const hero = document.querySelector('.hero');
+    const shopIntro = document.querySelector('.category-intro');
+
+    if (!hero || !shopIntro) return;
+
+    const heroObserver = new IntersectionObserver((entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+                shopIntro.classList.remove('shop-is-clear');
+            } else {
+                shopIntro.classList.add('shop-is-clear');
+            }
+
+        });
+
+    }, {
+        threshold: 0
+    });
+
+    heroObserver.observe(hero);
+
+});
