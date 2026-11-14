@@ -3,22 +3,36 @@
 // the menu, search and shopping cart sections.
 // SHOP INTRODUCTION SCROLL ANIMATION
 
-const shopIntro = document.querySelector('.category-intro');
+// SHOP INTRODUCTION SCROLL ANIMATION
 
-if (shopIntro) {
-    const shopObserver = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    shopIntro.classList.add('is-visible');
-                    shopObserver.unobserve(shopIntro);
-                }
-            });
-        },
-        {
-            threshold: 0.25
-        }
-    );
+function initializeShopAnimation() {
 
-    shopObserver.observe(shopIntro);
+    const shopIntro = document.querySelector('.category-intro');
+
+    if (!shopIntro) return;
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+                shopIntro.classList.add('is-visible');
+
+                observer.unobserve(shopIntro);
+            }
+
+        });
+
+    }, {
+        threshold: 0.1
+    });
+
+    observer.observe(shopIntro);
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeShopAnimation);
+} else {
+    initializeShopAnimation();
 }
