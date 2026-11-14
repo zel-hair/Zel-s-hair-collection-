@@ -725,38 +725,105 @@ body {
         font-size: 9px;
     }
 }
-    .category-intro {
+   /* SHOP INTRODUCTION */
+
+/* SHOP INTRODUCTION */
+
+.category-intro {
     text-align: center;
-    margin: 0 auto 75px;
+    margin: 0 auto 45px;
     max-width: 600px;
 }
 
 .category-intro span {
-    display: block;
+    display: inline-block;
+    position: relative;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 38px;
+    font-size: 48px;
     font-weight: 500;
-    color: #351923;
-    margin-bottom: 12px;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: #401D27;
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+}
+
+.category-intro span::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 1px;
+    background: #8A7478;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .category-intro p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    line-height: 1.9;
+    font-size: 11px;
+    line-height: 1.8;
     color: #777174;
+    margin: 0;
 }
 
+/* MOBILE */
+
 @media (max-width: 600px) {
+
+    .shop-categories {
+        padding: 35px 7% 65px;
+    }
+
     .category-intro {
-        margin-bottom: 50px;
+        margin-bottom: 32px;
     }
 
     .category-intro span {
-        font-size: 34px;
+        font-size: 42px;
+        margin-bottom: 8px;
     }
 
     .category-intro p {
-        font-size: 11px;
+        font-size: 10px;
+    }
+}
+    /* SHOP SCROLL REVEAL */
+
+.category-intro.scroll-reveal span,
+.category-intro.scroll-reveal p {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* SHOP title appears first */
+
+.category-intro.scroll-reveal span {
+    transition-delay: 0.15s;
+}
+
+/* Description follows */
+
+.category-intro.scroll-reveal p {
+    transition-delay: 0.65s;
+}
+
+/* Once the section enters the screen */
+
+.category-intro.scroll-reveal.is-visible span,
+.category-intro.scroll-reveal.is-visible p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .category-intro.scroll-reveal span,
+    .category-intro.scroll-reveal p {
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
 }
