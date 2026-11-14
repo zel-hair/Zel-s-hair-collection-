@@ -827,3 +827,33 @@ body {
         transition: none;
     }
 }
+    /* SHOP BLUR-TO-CLEAR EFFECT */
+
+.category-intro,
+.category-intro span,
+.category-intro p {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    filter: blur(3px);
+    transition: filter 0.7s ease;
+}
+
+/* Clear when customer scrolls past hero */
+
+.category-intro.shop-is-clear,
+.category-intro.shop-is-clear span,
+.category-intro.shop-is-clear p {
+    filter: blur(0);
+}
+
+/* Respect reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    .category-intro,
+    .category-intro span,
+    .category-intro p {
+        filter: none;
+        transition: none;
+    }
+}
