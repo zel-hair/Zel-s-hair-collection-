@@ -511,3 +511,79 @@ body {
     }
 
 }
+    .hero-intro {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    line-height: 1.9;
+}
+
+.drop-cap {
+    float: left;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 0.8;
+    margin-right: 5px;
+    margin-top: 5px;
+    color: #F0E9E5;
+}
+
+@media (max-width: 600px) {
+    .drop-cap {
+        font-size: 52px;
+        margin-right: 4px;
+    }
+}
+    /* Initial animation state */
+.hero-intro,
+.hero-details,
+.hero-buttons .hero-btn {
+    opacity: 0;
+    transform: translateY(22px);
+    animation: heroFloatIn 1s ease forwards;
+}
+
+/* First paragraph */
+.hero-intro {
+    animation-delay: 0.4s;
+}
+
+/* Second paragraph */
+.hero-details {
+    animation-delay: 1.3s;
+}
+
+/* Shop button */
+.hero-buttons .shop-btn {
+    animation-delay: 2.2s;
+}
+
+/* Appointment button */
+.hero-buttons .appointment-btn {
+    animation-delay: 2.8s;
+}
+
+/* Floating entrance */
+@keyframes heroFloatIn {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .hero-intro,
+    .hero-details,
+    .hero-buttons .hero-btn {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
