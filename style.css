@@ -1532,3 +1532,125 @@ body {
         animation: none;
     }
 }
+/* DELIVERY INFORMATION */
+
+.delivery-section {
+    width: 100%;
+    padding: 85px 8%;
+    background: #FFFFFF;
+    overflow: hidden;
+}
+
+.delivery-heading {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.delivery-eyebrow {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #8A7478;
+    margin-bottom: 15px;
+}
+
+.delivery-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 58px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #401D27;
+    letter-spacing: -1px;
+}
+
+.delivery-heading h2 em {
+    font-weight: 400;
+    color: #8A7478;
+}
+
+.delivery-steps {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+}
+
+.delivery-step {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 25px;
+    border-top: 1px solid #EAE5E6;
+}
+
+.delivery-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1;
+    color: #8A7478;
+    margin-bottom: 24px;
+}
+
+.delivery-step-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #401D27;
+    margin-bottom: 15px;
+}
+
+.delivery-step-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.9;
+    color: #777174;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .delivery-section {
+        padding: 65px 7%;
+    }
+
+    .delivery-heading {
+        margin-bottom: 42px;
+    }
+
+    .delivery-heading h2 {
+        font-size: 43px;
+        letter-spacing: -0.5px;
+    }
+
+    .delivery-steps {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .delivery-step {
+        padding-top: 20px;
+    }
+
+    .delivery-number {
+        font-size: 43px;
+        margin-bottom: 15px;
+    }
+
+    .delivery-step-content h3 {
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+
+    .delivery-step-content p {
+        font-size: 12px;
+        line-height: 1.9;
+        max-width: 340px;
+    }
+}
