@@ -1873,3 +1873,129 @@ body {
         font-size: 12px;
     }
 }
+/* =================================
+   CUSTOMER REVIEWS
+================================= */
+
+.reviews-section {
+    width: 100%;
+    padding: 55px 7% 75px;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+
+.review-display {
+    width: 100%;
+    max-width: 560px;
+    padding: 34px 30px;
+    text-align: center;
+
+    background: rgba(185, 166, 170, 0.08);
+    border: 1px solid rgba(138, 116, 120, 0.12);
+
+    box-shadow: 0 10px 35px rgba(64, 29, 39, 0.035);
+
+    transition: opacity 0.3s ease;
+}
+
+.review-eyebrow {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #8A7478;
+    margin-bottom: 20px;
+}
+
+.review-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 29px;
+    font-weight: 500;
+    font-style: italic;
+    color: #401D27;
+    margin-bottom: 9px;
+}
+
+.review-stars {
+    color: #56845E;
+    font-size: 15px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.review-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #401D27;
+    max-width: 420px;
+    margin: 0 auto 28px;
+}
+
+.review-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 27px;
+}
+
+.review-navigation button {
+    border: none;
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    color: #401D27;
+    cursor: pointer;
+    padding: 8px 3px;
+    transition: opacity 0.3s ease;
+}
+
+.review-navigation button:hover {
+    opacity: 0.5;
+}
+
+.review-counter {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #8A7478;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .reviews-section {
+        padding: 40px 7% 60px;
+    }
+
+    .review-display {
+        padding: 28px 17px;
+    }
+
+    .review-eyebrow {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .review-name {
+        font-size: 26px;
+    }
+
+    .review-stars {
+        font-size: 14px;
+    }
+
+    .review-text {
+        font-size: 21px;
+    }
+
+    .review-navigation {
+        gap: 20px;
+    }
+}
