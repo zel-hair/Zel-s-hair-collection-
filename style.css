@@ -1654,7 +1654,9 @@ body {
         max-width: 340px;
     }
 }
-/* ZEL'S GALLERY & HAIR QUIZ */
+/* =================================
+   ZEL'S GALLERY & HAIR QUIZ
+================================= */
 
 .gallery-preview {
     width: 100%;
@@ -1662,6 +1664,8 @@ body {
     background: #FFFFFF;
     overflow: hidden;
 }
+
+/* GALLERY HEADING */
 
 .gallery-heading {
     text-align: center;
@@ -1693,6 +1697,8 @@ body {
     color: #8A7478;
 }
 
+/* GALLERY VIDEO */
+
 .gallery-video {
     width: 100%;
     max-width: 1050px;
@@ -1707,14 +1713,15 @@ body {
     object-fit: cover;
 }
 
+/* GALLERY DESCRIPTION */
+
 .gallery-description {
     max-width: 600px;
     margin: 38px auto 65px;
     text-align: center;
 }
 
-.gallery-description h3,
-.gallery-quiz h3 {
+.gallery-description h3 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 27px;
     font-weight: 500;
@@ -1723,20 +1730,20 @@ body {
     margin-bottom: 16px;
 }
 
-.gallery-description h3 em,
-.gallery-quiz h3 em {
+.gallery-description h3 em {
     color: #8A7478;
     font-style: italic;
 }
 
-.gallery-description p,
-.gallery-quiz p {
+.gallery-description p {
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     line-height: 1.9;
     color: #777174;
     margin-bottom: 23px;
 }
+
+/* GALLERY LINK */
 
 .gallery-link,
 .gallery-quiz-link {
@@ -1757,26 +1764,76 @@ body {
     opacity: 0.6;
 }
 
+/* =================================
+   HAIR QUIZ INVITATION
+================================= */
+
 .gallery-quiz {
     max-width: 650px;
     margin: 0 auto;
-    padding: 38px 20px;
     text-align: center;
-    border-top: 1px solid #EAE5E6;
-    border-bottom: 1px solid #EAE5E6;
+}
+
+/* HEADING OUTSIDE GLASS CONTAINER */
+
+.quiz-heading {
+    margin-bottom: 24px;
 }
 
 .quiz-eyebrow {
     display: block;
     font-family: 'Montserrat', sans-serif;
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 500;
     letter-spacing: 2px;
     color: #8A7478;
-    margin-bottom: 13px;
+    margin-bottom: 12px;
 }
 
-/* MOBILE */
+.quiz-heading h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #401D27;
+}
+
+.quiz-heading h3 em {
+    font-style: italic;
+    font-weight: 400;
+    color: #401D27;
+}
+
+/* GLASS CONTAINER */
+
+.quiz-glass {
+    padding: 35px 28px;
+    background: rgba(185, 166, 170, 0.13);
+    border: 1px solid rgba(138, 116, 120, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 12px 35px rgba(64, 29, 39, 0.07);
+}
+
+.quiz-glass p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    line-height: 1.9;
+    color: #401D27;
+    max-width: 430px;
+    margin: 0 auto 22px;
+}
+
+/* QUIZ LINK */
+
+.gallery-quiz-link {
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+/* =================================
+   MOBILE RESPONSIVENESS
+================================= */
 
 @media (max-width: 600px) {
 
@@ -1796,17 +1853,23 @@ body {
         margin: 28px auto 48px;
     }
 
-    .gallery-description h3,
-    .gallery-quiz h3 {
+    .gallery-description h3 {
         font-size: 23px;
     }
 
-    .gallery-description p,
-    .gallery-quiz p {
+    .gallery-description p {
         font-size: 11px;
     }
 
-    .gallery-quiz {
-        padding: 32px 12px;
+    .quiz-heading h3 {
+        font-size: 29px;
+    }
+
+    .quiz-glass {
+        padding: 28px 20px;
+    }
+
+    .quiz-glass p {
+        font-size: 12px;
     }
 }
