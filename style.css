@@ -857,3 +857,202 @@ body {
         transition: none;
     }
 }
+    /* =================================
+   WHAT'S YOUR VIBE SECTION
+================================= */
+
+.vibe-section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 85px 8%;
+    background-color: #F6EFF1;
+
+    background-image:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(138, 91, 108, 0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            rgba(138, 91, 108, 0.10),
+            transparent 30%
+        );
+}
+
+/* Decorative corner details */
+
+.vibe-section::before,
+.vibe-section::after {
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    border: 1px solid rgba(64, 29, 39, 0.10);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.vibe-section::before {
+    top: -100px;
+    right: -60px;
+}
+
+.vibe-section::after {
+    bottom: -100px;
+    left: -60px;
+}
+
+.vibe-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.vibe-eyebrow {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    color: #8A7478;
+    margin-bottom: 15px;
+}
+
+.vibe-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 58px;
+    font-weight: 500;
+    color: #401D27;
+    margin-bottom: 10px;
+}
+
+.vibe-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 1.9;
+    color: #777174;
+    margin-bottom: 42px;
+}
+
+/* NUMBERED OPTIONS */
+
+.vibe-options {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.vibe-option {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+    padding: 17px 8px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(64, 29, 39, 0.15);
+    text-align: left;
+    cursor: pointer;
+    transition: padding-left 0.3s ease;
+}
+
+.vibe-option:first-child {
+    border-top: 1px solid rgba(64, 29, 39, 0.15);
+}
+
+.vibe-option:hover {
+    padding-left: 16px;
+}
+
+.vibe-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    font-weight: 400;
+    color: #987780;
+    min-width: 32px;
+}
+
+.vibe-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    color: #401D27;
+}
+
+/* SELECTED OPTION */
+
+.vibe-option.active .vibe-number {
+    color: #401D27;
+}
+
+.vibe-option.active .vibe-name {
+    font-weight: 600;
+}
+
+/* PERSONALIZED MESSAGE */
+
+.vibe-message {
+    display: none;
+    max-width: 480px;
+    margin: 30px auto 0;
+    padding: 20px 15px;
+    border-top: 1px solid rgba(64, 29, 39, 0.2);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 2;
+    color: #5E424A;
+}
+
+.vibe-message.visible {
+    display: block;
+}
+
+.vibe-message a {
+    color: #401D27;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .vibe-section {
+        padding: 65px 7%;
+    }
+
+    .vibe-content h2 {
+        font-size: 46px;
+    }
+
+    .vibe-description {
+        font-size: 11px;
+        margin-bottom: 32px;
+    }
+
+    .vibe-option {
+        gap: 19px;
+        padding: 16px 5px;
+    }
+
+    .vibe-number {
+        font-size: 25px;
+    }
+
+    .vibe-name {
+        font-size: 12px;
+    }
+
+    .vibe-message {
+        font-size: 11px;
+        padding: 18px 8px;
+    }
+
+}
