@@ -112,3 +112,76 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+// CUSTOMER REVIEWS CAROUSEL
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const reviews = [
+        {
+            name: "Abena Acheampong",
+            text: "I love the textures of the hair so much."
+        },
+        {
+            name: "Nana Ama",
+            text: "The hair was exactly what I was looking for. I'm so happy with my purchase."
+        },
+        {
+            name: "Esi Mensah",
+            text: "Beautiful quality and the hair feels so soft."
+        },
+        {
+            name: "Akosua",
+            text: "I absolutely love my hair. Definitely ordering again!"
+        },
+        {
+            name: "Mabel Owusu",
+            text: "The quality exceeded my expectations. Really lovely hair."
+        }
+    ];
+
+    let currentReview = 0;
+
+    const reviewDisplay = document.getElementById('reviewDisplay');
+    const reviewName = document.getElementById('reviewName');
+    const reviewText = document.getElementById('reviewText');
+    const reviewCounter = document.getElementById('reviewCounter');
+
+    const nextButton = document.getElementById('nextReview');
+    const prevButton = document.getElementById('prevReview');
+
+    if (!reviewDisplay || !nextButton || !prevButton) return;
+
+    function showReview(index) {
+
+        reviewDisplay.style.opacity = '0';
+
+        setTimeout(function () {
+
+            reviewName.textContent = reviews[index].name;
+            reviewText.textContent = reviews[index].text;
+
+            reviewCounter.textContent =
+                String(index + 1).padStart(2, '0') +
+                ' / ' +
+                String(reviews.length).padStart(2, '0');
+
+            reviewDisplay.style.opacity = '1';
+
+        }, 200);
+    }
+
+    nextButton.addEventListener('click', function () {
+
+        currentReview = (currentReview + 1) % reviews.length;
+        showReview(currentReview);
+
+    });
+
+    prevButton.addEventListener('click', function () {
+
+        currentReview = (currentReview - 1 + reviews.length) % reviews.length;
+        showReview(currentReview);
+
+    });
+
+});
