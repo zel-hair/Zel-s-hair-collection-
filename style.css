@@ -1654,3 +1654,159 @@ body {
         max-width: 340px;
     }
 }
+/* ZEL'S GALLERY & HAIR QUIZ */
+
+.gallery-preview {
+    width: 100%;
+    padding: 85px 8%;
+    background: #FFFFFF;
+    overflow: hidden;
+}
+
+.gallery-heading {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.gallery-eyebrow {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #8A7478;
+    margin-bottom: 14px;
+}
+
+.gallery-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 62px;
+    font-weight: 500;
+    line-height: 1.05;
+    color: #401D27;
+    letter-spacing: -1px;
+}
+
+.gallery-heading h2 em {
+    font-weight: 400;
+    font-style: italic;
+    color: #8A7478;
+}
+
+.gallery-video {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.gallery-video video {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.gallery-description {
+    max-width: 600px;
+    margin: 38px auto 65px;
+    text-align: center;
+}
+
+.gallery-description h3,
+.gallery-quiz h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #401D27;
+    margin-bottom: 16px;
+}
+
+.gallery-description h3 em,
+.gallery-quiz h3 em {
+    color: #8A7478;
+    font-style: italic;
+}
+
+.gallery-description p,
+.gallery-quiz p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 1.9;
+    color: #777174;
+    margin-bottom: 23px;
+}
+
+.gallery-link,
+.gallery-quiz-link {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.4px;
+    color: #401D27;
+    text-decoration: none;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #B9A6AA;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-link:hover,
+.gallery-quiz-link:hover {
+    opacity: 0.6;
+}
+
+.gallery-quiz {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 38px 20px;
+    text-align: center;
+    border-top: 1px solid #EAE5E6;
+    border-bottom: 1px solid #EAE5E6;
+}
+
+.quiz-eyebrow {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #8A7478;
+    margin-bottom: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .gallery-preview {
+        padding: 65px 7%;
+    }
+
+    .gallery-heading {
+        margin-bottom: 28px;
+    }
+
+    .gallery-heading h2 {
+        font-size: 47px;
+    }
+
+    .gallery-description {
+        margin: 28px auto 48px;
+    }
+
+    .gallery-description h3,
+    .gallery-quiz h3 {
+        font-size: 23px;
+    }
+
+    .gallery-description p,
+    .gallery-quiz p {
+        font-size: 11px;
+    }
+
+    .gallery-quiz {
+        padding: 32px 12px;
+    }
+}
