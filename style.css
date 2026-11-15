@@ -1076,3 +1076,117 @@ body {
 .vibe-option:first-child {
     border-top-color: rgba(64, 29, 39, 0.10);
 }
+    /* WHOLESALE PREVIEW SECTION */
+
+.wholesale-preview {
+    width: 100%;
+    padding: 100px 8%;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 9%;
+}
+
+.wholesale-image {
+    width: 48%;
+    overflow: hidden;
+}
+
+.wholesale-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.wholesale-content {
+    width: 43%;
+}
+
+.wholesale-eyebrow {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #8A7478;
+    margin-bottom: 20px;
+}
+
+.wholesale-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1.15;
+    color: #401D27;
+    margin-bottom: 20px;
+}
+
+.wholesale-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 2;
+    color: #777174;
+    max-width: 380px;
+    margin-bottom: 30px;
+}
+
+.wholesale-link {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: #401D27;
+    text-decoration: none;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #B9A6AA;
+    transition: opacity 0.3s ease;
+}
+
+.wholesale-link:hover {
+    opacity: 0.6;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+
+    .wholesale-preview {
+        padding: 65px 7%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 35px;
+    }
+
+    .wholesale-image {
+        width: 100%;
+    }
+
+    .wholesale-content {
+        width: 100%;
+    }
+
+    .wholesale-eyebrow {
+        font-size: 9px;
+        margin-bottom: 14px;
+    }
+
+    .wholesale-content h2 {
+        font-size: 42px;
+        margin-bottom: 14px;
+    }
+
+    .wholesale-content p {
+        font-size: 12px;
+        line-height: 1.9;
+        margin-bottom: 24px;
+    }
+
+    .wholesale-link {
+        font-size: 9px;
+    }
+
+}
