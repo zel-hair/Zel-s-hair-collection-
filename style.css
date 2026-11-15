@@ -1056,3 +1056,23 @@ body {
     }
 
 }
+    /* Vibe section – warmer colour refinement */
+.vibe-section {
+    background-color: #F7F3EF;
+    background-image:
+        radial-gradient(circle at 10% 15%, rgba(138, 91, 108, 0.06), transparent 30%),
+        radial-gradient(circle at 90% 85%, rgba(138, 91, 108, 0.06), transparent 30%);
+}
+
+.vibe-section::before,
+.vibe-section::after {
+    border-color: rgba(64, 29, 39, 0.07);
+}
+
+.vibe-option {
+    border-bottom-color: rgba(64, 29, 39, 0.10);
+}
+
+.vibe-option:first-child {
+    border-top-color: rgba(64, 29, 39, 0.10);
+}
