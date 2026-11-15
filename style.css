@@ -1190,3 +1190,150 @@ body {
     }
 
 }
+    /* WHOLESALE PREVIEW */
+
+.wholesale-preview {
+    width: 100%;
+    padding: 80px 8%;
+    background: #FFFFFF;
+    text-align: center;
+}
+
+.wholesale-heading {
+    margin-bottom: 30px;
+}
+
+.wholesale-eyebrow {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #8A7478;
+    margin-bottom: 12px;
+}
+
+.wholesale-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 50px;
+    font-weight: 500;
+    color: #401D27;
+    line-height: 1.15;
+}
+
+.wholesale-image {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.wholesale-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.wholesale-description {
+    max-width: 500px;
+    margin: 30px auto 0;
+}
+
+.wholesale-description p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    line-height: 2;
+    color: #777174;
+    margin-bottom: 24px;
+}
+
+.wholesale-link {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: #401D27;
+    text-decoration: none;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #B9A6AA;
+    transition: opacity 0.3s ease;
+}
+
+.wholesale-link:hover {
+    opacity: 0.6;
+}
+
+@media (max-width: 600px) {
+
+    .wholesale-preview {
+        padding: 60px 7%;
+    }
+
+    .wholesale-heading {
+        margin-bottom: 22px;
+    }
+
+    .wholesale-heading h2 {
+        font-size: 42px;
+    }
+
+    .wholesale-eyebrow {
+        font-size: 9px;
+    }
+
+    .wholesale-description {
+        margin-top: 22px;
+    }
+
+    .wholesale-description p {
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+    .wholesale-link {
+        font-size: 9px;
+    }
+
+}
+    /* VIBE SECTION – WHITE EDITORIAL BACKGROUND */
+
+.vibe-section {
+    background-color: #FFFFFF;
+    background-image:
+        radial-gradient(
+            circle at 8% 18%,
+            rgba(64, 29, 39, 0.12) 0,
+            rgba(64, 29, 39, 0.12) 35px,
+            transparent 36px
+        ),
+        radial-gradient(
+            circle at 92% 22%,
+            rgba(138, 91, 108, 0.13) 0,
+            rgba(138, 91, 108, 0.13) 65px,
+            transparent 66px
+        ),
+        radial-gradient(
+            circle at 12% 85%,
+            rgba(64, 29, 39, 0.07) 0,
+            rgba(64, 29, 39, 0.07) 85px,
+            transparent 86px
+        ),
+        radial-gradient(
+            circle at 88% 88%,
+            rgba(185, 166, 170, 0.18) 0,
+            rgba(185, 166, 170, 0.18) 45px,
+            transparent 46px
+        );
+}
+
+/* Remove previous circular outlines */
+.vibe-section::before,
+.vibe-section::after {
+    display: none;
+}
+
+/* Keep content above decorative background */
+.vibe-content {
+    position: relative;
+    z-index: 2;
+}
