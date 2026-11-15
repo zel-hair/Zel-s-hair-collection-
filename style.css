@@ -1888,16 +1888,11 @@ body {
 .review-display {
     width: 100%;
     max-width: 560px;
-    padding: 34px 30px;
     text-align: center;
-
-    background: rgba(185, 166, 170, 0.08);
-    border: 1px solid rgba(138, 116, 120, 0.12);
-
-    box-shadow: 0 10px 35px rgba(64, 29, 39, 0.035);
-
     transition: opacity 0.3s ease;
 }
+
+/* CUSTOMER NAME */
 
 .review-eyebrow {
     display: block;
@@ -1911,52 +1906,58 @@ body {
 
 .review-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 29px;
+    font-size: 31px;
     font-weight: 500;
     font-style: italic;
     color: #401D27;
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 }
+
+/* GREEN STAR RATING */
 
 .review-stars {
     color: #56845E;
     font-size: 15px;
     letter-spacing: 4px;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
 }
+
+/* CUSTOMER COMMENT */
 
 .review-text {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 23px;
+    font-size: 25px;
     font-weight: 400;
     line-height: 1.5;
     color: #401D27;
-    max-width: 420px;
-    margin: 0 auto 28px;
+    max-width: 430px;
+    margin: 0 auto 20px;
 }
+
+/* CHEVRON NAVIGATION */
 
 .review-navigation {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 27px;
+    gap: 24px;
 }
 
 .review-navigation button {
     border: none;
     background: transparent;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 1.3px;
-    color: #401D27;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: #8A7478;
     cursor: pointer;
-    padding: 8px 3px;
-    transition: opacity 0.3s ease;
+    padding: 0 5px;
+    line-height: 1;
+    transition: color 0.3s ease;
 }
 
 .review-navigation button:hover {
-    opacity: 0.5;
+    color: #401D27;
 }
 
 .review-counter {
@@ -1974,28 +1975,20 @@ body {
         padding: 40px 7% 60px;
     }
 
-    .review-display {
-        padding: 28px 17px;
-    }
-
     .review-eyebrow {
         font-size: 8px;
         letter-spacing: 1.5px;
     }
 
     .review-name {
-        font-size: 26px;
-    }
-
-    .review-stars {
-        font-size: 14px;
+        font-size: 28px;
     }
 
     .review-text {
-        font-size: 21px;
+        font-size: 22px;
     }
 
-    .review-navigation {
-        gap: 20px;
+    .review-navigation button {
+        font-size: 28px;
     }
 }
