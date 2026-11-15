@@ -1316,3 +1316,220 @@ body {
         object-fit: contain;
     }
 }
+    /* =================================
+   APPOINTMENT PREVIEW SECTION
+================================= */
+
+.appointment-preview {
+    width: 100%;
+    padding: 85px 8%;
+    background: #FFFFFF;
+    overflow: hidden;
+}
+
+/* SECTION HEADING */
+
+.appointment-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.appointment-heading h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #401D27;
+}
+
+/* APPOINTMENT IMAGE */
+
+.appointment-image {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    animation: appointmentFloat 5s ease-in-out infinite;
+}
+
+.appointment-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* FLOATING ANIMATION */
+
+@keyframes appointmentFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+/* APPOINTMENT CONTENT */
+
+.appointment-content {
+    max-width: 650px;
+    margin: 65px auto 0;
+    text-align: center;
+}
+
+.appointment-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 58px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #401D27;
+    margin-bottom: 22px;
+}
+
+.appointment-content h3 em {
+    font-weight: 400;
+    color: #8A7478;
+}
+
+.appointment-intro {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #401D27;
+    margin-bottom: 14px;
+}
+
+.appointment-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    line-height: 2;
+    color: #777174;
+    max-width: 540px;
+    margin: 0 auto 38px;
+}
+
+/* SERVICES */
+
+.appointment-services {
+    max-width: 440px;
+    margin: 0 auto 35px;
+    text-align: left;
+}
+
+.services-label {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #8A7478;
+    margin-bottom: 18px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 17px 0;
+    border-bottom: 1px solid #EAE5E6;
+}
+
+.service-item span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+    color: #8A7478;
+}
+
+.service-item p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #401D27;
+}
+
+/* BOOKING */
+
+.appointment-closing {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #777174;
+    margin-bottom: 22px;
+}
+
+.appointment-link {
+    display: inline-block;
+    padding: 17px 30px;
+    background: #401D27;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    transition: opacity 0.3s ease;
+}
+
+.appointment-link:hover {
+    opacity: 0.75;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .appointment-preview {
+        padding: 60px 7%;
+    }
+
+    .appointment-heading {
+        margin-bottom: 30px;
+    }
+
+    .appointment-heading h2 {
+        font-size: 10px;
+        letter-spacing: 2.5px;
+    }
+
+    .appointment-content {
+        margin-top: 45px;
+    }
+
+    .appointment-content h3 {
+        font-size: 43px;
+    }
+
+    .appointment-intro {
+        font-size: 12px;
+    }
+
+    .appointment-description {
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+    .appointment-services {
+        width: 100%;
+    }
+
+    .service-item {
+        gap: 17px;
+    }
+
+    .service-item p {
+        font-size: 10px;
+    }
+
+    .appointment-link {
+        padding: 16px 24px;
+        font-size: 9px;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .appointment-image {
+        animation: none;
+    }
+}
