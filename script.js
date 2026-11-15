@@ -66,50 +66,48 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 // WHAT'S YOUR VIBE INTERACTION
 
-const vibeOptions = document.querySelectorAll('.vibe-option');
-const vibeMessage = document.getElementById('vibeMessage');
+document.addEventListener('DOMContentLoaded', () => {
 
-const vibeMessages = {
+    const vibeOptions = document.querySelectorAll('.vibe-option');
+    const vibeMessage = document.getElementById('vibeMessage');
 
-    waves: "Hi, Waves Girly! Zel's got you covered with some beautiful waves for your taste!",
+    const vibeMessages = {
+        waves: "Hi, Waves Girly! Zel's got you covered with some beautiful waves for your taste!",
 
-    pixie: "Hi, Pixie Cut Babe! Zel's got you covered with hair options to complement your style!",
+        pixie: "Hi, Pixie Cut Babe! Zel's got you covered with hair options to complement your style!",
 
-    straight: "Hi, Straight Doll! Sleek looks are always a statement. Zel's got something for your taste!",
+        straight: "Hi, Straight Doll! Sleek looks are always a statement. Zel's got something for your taste!",
 
-    curly: "Hi, Curly Hair Lady! Let's get those curls talking. Zel's got you covered!",
+        curly: "Hi, Curly Hair Lady! Let's get those curls talking. Zel's got you covered!",
 
-    afro: "Hi, Afro Queen! Zel's got you covered with some beautiful hair options to complement your taste!"
+        afro: "Hi, Afro Queen! Zel's got you covered with some beautiful hair options to complement your taste!"
+    };
 
-};
+    vibeOptions.forEach(option => {
 
-vibeOptions.forEach((option) => {
+        option.addEventListener('click', () => {
 
-    option.addEventListener('click', () => {
+            const selectedVibe = option.dataset.vibe;
 
-        const selectedVibe = option.dataset.vibe;
+            // Update selected option
+            vibeOptions.forEach(item => {
+                item.classList.remove('active');
+                item.setAttribute('aria-pressed', 'false');
+            });
 
-        // Remove previous selection
+            option.classList.add('active');
+            option.setAttribute('aria-pressed', 'true');
 
-        vibeOptions.forEach((item) => {
-            item.classList.remove('active');
-            item.setAttribute('aria-pressed', 'false');
+            // Update message
+            vibeMessage.innerHTML = `
+                ${vibeMessages[selectedVibe]}
+                <br><br>
+                Click on <a href="#shop">SHOP</a> to explore hair!
+            `;
+
+            vibeMessage.classList.add('visible');
+
         });
-
-        // Highlight selected option
-
-        option.classList.add('active');
-        option.setAttribute('aria-pressed', 'true');
-
-        // Display personalized message
-
-        vibeMessage.innerHTML = `
-            ${vibeMessages[selectedVibe]}
-            <br><br>
-            Click on <a href="#shop">SHOP</a> to explore hair!
-        `;
-
-        vibeMessage.classList.add('visible');
 
     });
 
