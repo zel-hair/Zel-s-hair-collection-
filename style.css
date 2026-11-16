@@ -2128,176 +2128,172 @@ body {
     }
 
 }
-/* ==========================================
+/* ======================================
    ZEL'S HAIR COLLECTION
-   ACCORDION FOOTER
-========================================== */
+   EDITORIAL BURGUNDY FOOTER
+====================================== */
 
-.zhc-footer {
+.zel-footer {
     width: 100%;
     margin: 0;
-    padding: 35px 6% 20px;
-    background: #FFFFFF;
+    padding: 75px 7% 25px;
+    background: #401D27;
+    color: #FFFFFF;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    text-align: left;
 }
 
-/* ACCORDION CONTAINER */
+/* MAIN FOOTER LAYOUT */
 
-.zhc-footer-accordion {
+.zel-footer-main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.3fr 1fr 1fr;
+    gap: 35px;
     width: 100%;
-    border-top: 1px solid #E6E1E2;
-}
-
-/* EACH ACCORDION ROW */
-
-.zhc-footer-item {
-    width: 100%;
-    border-bottom: 1px solid #E6E1E2;
-}
-
-/* CATEGORY HEADING */
-
-.zhc-footer-item summary {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 23px 5px;
-    list-style: none;
-    cursor: pointer;
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 1.8px;
-    color: #401D27;
-}
-
-/* REMOVE DEFAULT ARROW */
-
-.zhc-footer-item summary::-webkit-details-marker {
-    display: none;
-}
-
-.zhc-footer-item summary::marker {
-    display: none;
-    content: "";
-}
-
-/* PLUS ICON */
-
-.zhc-footer-item summary::after {
-    content: "+";
-    font-family: Arial, sans-serif;
-    font-size: 25px;
-    font-weight: 300;
-    color: #401D27;
-    line-height: 1;
-}
-
-/* MINUS ICON WHEN OPEN */
-
-.zhc-footer-item[open] summary::after {
-    content: "−";
-}
-
-/* EXPANDED LINKS */
-
-.zhc-footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 17px;
-    padding: 5px 5px 25px;
-}
-
-.zhc-footer-links a {
-    width: fit-content;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    color: #777174;
-    text-decoration: none;
-    transition: color 0.25s ease;
-}
-
-.zhc-footer-links a:hover {
-    color: #401D27;
+    padding-bottom: 65px;
 }
 
 /* BRAND */
 
-.zhc-footer-brand {
-    padding: 30px 0 20px;
-    text-align: center;
+.zel-footer-brand {
+    text-align: left;
 }
 
-.zhc-footer-brand a {
+.zel-footer-brand > a {
+    display: block;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
+    font-size: 43px;
+    line-height: 1;
     font-weight: 500;
-    letter-spacing: 2px;
-    color: #401D27;
+    color: #FFFFFF;
     text-decoration: none;
 }
 
-/* COPYRIGHT */
+.zel-footer-brand > span {
+    display: block;
+    margin-top: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #D3BFC3;
+}
 
-.zhc-footer-bottom {
+.zel-footer-brand p {
+    max-width: 230px;
+    margin-top: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 1.9;
+    color: #D3BFC3;
+}
+
+/* FOOTER COLUMNS */
+
+.zel-footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.zel-footer-column h3 {
+    margin: 7px 0 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    color: #D3BFC3;
+}
+
+.zel-footer-column a {
+    display: inline-block;
+    margin-bottom: 17px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.zel-footer-column a:hover {
+    color: #D3BFC3;
+}
+
+/* BOTTOM BAR */
+
+.zel-footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
-    padding-top: 18px;
-    border-top: 1px solid #E6E1E2;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding-top: 23px;
+    border-top: 1px solid rgba(255,255,255,.2);
 }
 
-.zhc-footer-bottom span {
+.zel-footer-bottom p,
+.zel-footer-bottom span,
+.zel-footer-legal a {
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
     font-size: 9px;
-    letter-spacing: 1px;
-    color: #999194;
+    letter-spacing: .7px;
+    color: #D3BFC3;
+    text-decoration: none;
+}
+
+.zel-footer-legal {
+    display: flex;
+    gap: 22px;
 }
 
 
-/* ==========================================
+/* ======================================
    MOBILE
-========================================== */
+====================================== */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
-    .zhc-footer {
-        padding: 28px 5% 18px;
+    .zel-footer {
+        padding: 50px 7% 22px;
     }
 
-    .zhc-footer-item summary {
-        padding: 22px 5px;
-        font-size: 12px;
-        letter-spacing: 1.6px;
+    .zel-footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 25px;
+        padding-bottom: 35px;
     }
 
-    .zhc-footer-links {
-        gap: 16px;
-        padding: 5px 5px 23px;
+    .zel-footer-brand {
+        grid-column: 1 / -1;
+        margin-bottom: 5px;
     }
 
-    .zhc-footer-links a {
-        font-size: 13px;
+    .zel-footer-brand > a {
+        font-size: 38px;
     }
 
-    .zhc-footer-brand {
-        padding: 27px 0 19px;
+    .zel-footer-brand p {
+        margin-top: 17px;
     }
 
-    .zhc-footer-brand a {
-        font-size: 18px;
+    .zel-footer-column h3 {
+        margin-bottom: 19px;
     }
 
-    .zhc-footer-bottom {
+    .zel-footer-column a {
+        font-size: 11px;
+        margin-bottom: 14px;
+    }
+
+    .zel-footer-bottom {
+        align-items: flex-start;
         flex-direction: column;
-        justify-content: center;
-        gap: 9px;
-        text-align: center;
+        gap: 13px;
+    }
+
+    .zel-footer-legal {
+        flex-wrap: wrap;
     }
 
 }
