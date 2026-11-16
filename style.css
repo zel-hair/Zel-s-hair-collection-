@@ -2414,3 +2414,18 @@ body {
     }
 
 }
+/* FULL-WIDTH NEWSLETTER */
+
+.newsletter-section {
+    width: 100vw;
+    max-width: none;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    background: #401D27;
+    padding: 90px 7%;
+    box-sizing: border-box;
+}
