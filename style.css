@@ -2128,32 +2128,48 @@ body {
     }
 
 }
-/* =================================
-   FULL-WIDTH NEWSLETTER
-================================= */
-
+/* Newsletter: full-width section with centered content */
 .newsletter-section {
-    display: block;
-    position: relative;
-
-    width: 100% !important;
-    max-width: none !important;
-
-    margin: 0 !important;
-    padding: 90px 7%;
-
-    background-color: #401D27 !important;
-
     box-sizing: border-box;
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: -50vw;
 }
 
 .newsletter-content {
-    width: 100%;
-    max-width: 680px;
-    margin: 0 auto;
-    text-align: center;
+    box-sizing: border-box;
+    width: min(100%, 720px);
+    margin-inline: auto;
 }
 
+.newsletter-form {
+    display: flex;
+    width: 100%;
+}
+
+.newsletter-form input {
+    flex: 1;
+    min-width: 0;
+}
+
+@media (max-width: 600px) {
+    .newsletter-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+    }
+}
 
 /* =================================
    WEBSITE FOOTER
@@ -2259,30 +2275,6 @@ body {
 /* =================================
    MOBILE RESPONSIVENESS
 ================================= */
-
-@media (max-width: 600px) {
-
-    /* NEWSLETTER */
-
-    .newsletter-section {
-        padding: 70px 7%;
-    }
-
-    .newsletter-content h2 {
-        font-size: 40px;
-    }
-
-    .newsletter-content > p {
-        font-size: 12px;
-    }
-
-    .newsletter-form input {
-        font-size: 11px;
-    }
-
-    .newsletter-form button {
-        font-size: 9px;
-    }
 
 
     /* FOOTER */
