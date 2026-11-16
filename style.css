@@ -2107,3 +2107,24 @@ body {
         font-size: 11px;
     }
 }
+/* GALLERY DESCRIPTION TYPOGRAPHY */
+
+.gallery-preview .gallery-description p {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.9;
+    color: #777174;
+    text-align: center;
+    max-width: 540px;
+    margin: 0 auto 23px;
+}
+
+@media (max-width: 600px) {
+
+    .gallery-preview .gallery-description p {
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+}
