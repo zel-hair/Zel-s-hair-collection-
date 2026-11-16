@@ -455,40 +455,60 @@
 
 <section class="reviews-section" id="reviews">
 
-    <div class="review-display" id="reviewDisplay">
+    <h2 class="reviews-heading">Reviews</h2>
 
-        <span class="review-eyebrow">
-            KIND WORDS FROM OUR CUSTOMERS
-        </span>
+    <div class="reviews-carousel">
 
-        <h3 class="review-name" id="reviewName">
-            Abena Acheampong
-        </h3>
+        <button class="review-arrow" id="prevReview"
+                aria-label="Previous review">
+            ‹
+        </button>
 
-        <div class="review-stars">
-            ★★★★★
+        <div class="review-card" id="reviewCard">
+
+            <div class="review-top">
+
+                <div class="review-stars">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                </div>
+
+                <span class="review-label">Customer review</span>
+
+            </div>
+
+            <h3 class="review-title" id="reviewTitle">
+                I love the textures of the hair
+            </h3>
+
+            <p class="review-message" id="reviewMessage">
+                I love the textures of the hair so much.
+            </p>
+
+            <div class="review-author" id="reviewAuthor">
+                Abena Acheampong
+            </div>
+
         </div>
 
-        <p class="review-text" id="reviewText">
-            I love the textures of the hair so much.
-        </p>
-
-        <div class="review-navigation">
-
-            <button type="button" id="prevReview" aria-label="Previous review">
-                ‹
-            </button>
-
-            <span class="review-counter" id="reviewCounter">
-                01 / 05
-            </span>
-
-            <button type="button" id="nextReview" aria-label="Next review">
-                ›
-            </button>
-
-        </div>
+        <button class="review-arrow" id="nextReview"
+                aria-label="Next review">
+            ›
+        </button>
 
     </div>
+
+    <div class="review-summary">
+        <span>5.0 / 5</span>
+        <span>·</span>
+        <span>5 sample reviews</span>
+    </div>
+
+    <p class="review-disclaimer">
+        A little preview of what customers have to say.
+    </p>
 
 </section>
