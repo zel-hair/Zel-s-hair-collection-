@@ -2285,3 +2285,214 @@ body {
         font-size: 10px;
     }
 }
+/* ==========================
+   ZEL'S FLOATING ASSISTANTS
+========================== */
+
+.zels-whatsapp,
+.zels-ai-button {
+    position: fixed;
+    right: 22px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.18);
+}
+
+/* WHATSAPP */
+
+.zels-whatsapp {
+    bottom: 24px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #25D366;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+/* AI BUTTON */
+
+.zels-ai-button {
+    bottom: 91px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #401D27;
+    color: white;
+    flex-direction: column;
+}
+
+.zels-ai-face {
+    font-size: 27px;
+    line-height: 1;
+}
+
+.zels-ai-label {
+    position: absolute;
+    right: 64px;
+    background: #401D27;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+/* AI CHAT PANEL */
+
+.zels-ai-panel {
+    position: fixed;
+    right: 22px;
+    bottom: 160px;
+    width: 340px;
+    max-width: calc(100vw - 36px);
+    background: #fff;
+    border: 1px solid #e9dfe1;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.18);
+    z-index: 9998;
+    overflow: hidden;
+    display: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.zels-ai-panel.active {
+    display: block;
+}
+
+.zels-ai-header {
+    background: #401D27;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.zels-ai-header h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    margin: 9px 0 5px;
+}
+
+.zels-ai-header p {
+    font-size: 10px;
+    color: #eee0e3;
+    margin: 0;
+}
+
+.zels-ai-status {
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #d9c1c8;
+}
+
+.zels-ai-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.zels-ai-chat {
+    padding: 18px;
+    min-height: 190px;
+    max-height: 270px;
+    overflow-y: auto;
+}
+
+.zels-ai-message {
+    background: #f5eff0;
+    color: #401D27;
+    padding: 13px;
+    border-radius: 9px;
+    font-size: 12px;
+    line-height: 1.7;
+    max-width: 90%;
+    margin-bottom: 14px;
+}
+
+.zels-ai-message.user {
+    background: #401D27;
+    color: white;
+    margin-left: auto;
+}
+
+.zels-ai-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.zels-ai-suggestions button {
+    background: white;
+    border: 1px solid #cbb9bd;
+    color: #401D27;
+    border-radius: 20px;
+    padding: 8px 11px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.zels-ai-input {
+    display: flex;
+    border-top: 1px solid #eee;
+    padding: 12px;
+    gap: 8px;
+}
+
+.zels-ai-input input {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid #e4dadd;
+    padding: 11px;
+    font-size: 11px;
+    outline: none;
+}
+
+.zels-ai-input button {
+    background: #401D27;
+    color: white;
+    border: none;
+    padding: 0 13px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.zels-ai-predictions {
+    padding: 0 12px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.zels-ai-predictions button {
+    border: none;
+    background: #f5eff0;
+    color: #401D27;
+    padding: 7px 10px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .zels-ai-panel {
+        right: 12px;
+        bottom: 155px;
+    }
+
+    .zels-whatsapp,
+    .zels-ai-button {
+        right: 15px;
+    }
+}
