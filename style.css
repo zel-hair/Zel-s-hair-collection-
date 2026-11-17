@@ -2128,3 +2128,157 @@ body {
     }
 
 }
+/* ==========================
+   ZEL'S HAIR COLLECTION FOOTER
+========================== */
+
+.zels-footer {
+    width: 100%;
+    box-sizing: border-box;
+    background: #401D27;
+    color: #F5EEEE;
+    padding: 65px 7% 22px;
+    margin: 0;
+    position: relative;
+}
+
+.zels-footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr 1fr 1fr;
+    gap: 35px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.zels-footer-brand h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0 0 15px;
+}
+
+.zels-footer-brand h2 span {
+    display: block;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-top: 3px;
+}
+
+.zels-footer-brand p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 1.9;
+    color: #D4C2C6;
+    max-width: 230px;
+    margin-bottom: 22px;
+}
+
+.zels-footer-shop {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #F5EEEE;
+    text-decoration: none;
+    border-bottom: 1px solid #B9A6AA;
+    padding-bottom: 6px;
+}
+
+.zels-footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.zels-footer-column h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    margin: 5px 0 10px;
+    color: #FFFFFF;
+}
+
+.zels-footer-column a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    color: #D4C2C6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.zels-footer-column a:hover,
+.zels-footer-bottom a:hover {
+    color: #FFFFFF;
+}
+
+.zels-footer-bottom {
+    max-width: 1400px;
+    margin: 55px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.zels-footer-bottom p,
+.zels-footer-bottom a,
+.zels-footer-bottom span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    color: #D4C2C6;
+    text-decoration: none;
+}
+
+.zels-footer-bottom div {
+    display: flex;
+    gap: 22px;
+}
+
+.zels-footer-bottom span {
+    letter-spacing: 1.5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .zels-footer {
+        padding: 48px 7% 22px;
+    }
+
+    .zels-footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 22px;
+    }
+
+    .zels-footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .zels-footer-bottom {
+        margin-top: 38px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .zels-footer-bottom div {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .zels-footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 15px;
+    }
+
+    .zels-footer-column a {
+        font-size: 10px;
+    }
+}
