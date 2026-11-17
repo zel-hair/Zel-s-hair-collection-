@@ -575,5 +575,74 @@
     </div>
 
 </footer>
+    <!-- FLOATING WHATSAPP BUTTON -->
+<a
+    href="https://wa.me/233536115258?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20your%20hair%20collection."
+    class="zels-whatsapp"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat with Zel's on WhatsApp"
+>
+    <span>W</span>
+</a>
+
+
+<!-- FLOATING AI ASSISTANT BUTTON -->
+<button
+    class="zels-ai-button"
+    id="zelsAiButton"
+    aria-label="Open Zel's AI hair assistant"
+    aria-expanded="false"
+>
+    <span class="zels-ai-face">✦</span>
+    <span class="zels-ai-label">ASK ZEL'S AI</span>
+</button>
+
+
+<!-- AI CHAT WINDOW -->
+<div class="zels-ai-panel" id="zelsAiPanel">
+
+    <div class="zels-ai-header">
+        <div>
+            <span class="zels-ai-status">● HERE TO HELP</span>
+            <h3>Zel's Hair Assistant</h3>
+            <p>Let's find your next favourite look.</p>
+        </div>
+
+        <button id="zelsAiClose" aria-label="Close assistant">
+            ×
+        </button>
+    </div>
+
+    <div class="zels-ai-chat" id="zelsAiChat">
+
+        <div class="zels-ai-message">
+            Hello! Welcome to Zel's Hair Collection.
+            What are you looking for today?
+        </div>
+
+        <div class="zels-ai-suggestions">
+            <button data-question="I'm looking for wigs">Wigs</button>
+            <button data-question="Show me hair bundles">Bundles</button>
+            <button data-question="I'm looking for braiding hair">Braiding hair</button>
+            <button data-question="Tell me about delivery">Delivery</button>
+        </div>
+
+    </div>
+
+    <form class="zels-ai-input" id="zelsAiForm">
+        <input
+            type="text"
+            id="zelsAiInput"
+            placeholder="What hair are you looking for?"
+            autocomplete="off"
+        >
+
+        <button type="submit">SEND</button>
+    </form>
+
+    <div class="zels-ai-predictions" id="zelsAiPredictions"></div>
+
+</div>
 
     
