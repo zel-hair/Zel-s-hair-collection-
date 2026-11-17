@@ -269,3 +269,148 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+/* ZEL'S AI ASSISTANT */
+
+const aiButton = document.getElementById("zelsAiButton");
+const aiPanel = document.getElementById("zelsAiPanel");
+const aiClose = document.getElementById("zelsAiClose");
+const aiForm = document.getElementById("zelsAiForm");
+const aiInput = document.getElementById("zelsAiInput");
+const aiChat = document.getElementById("zelsAiChat");
+const aiPredictions = document.getElementById("zelsAiPredictions");
+
+if (aiButton && aiPanel) {
+
+    aiButton.addEventListener("click", () => {
+        aiPanel.classList.toggle("active");
+
+        const isOpen = aiPanel.classList.contains("active");
+
+        aiButton.setAttribute("aria-expanded", isOpen);
+    });
+
+    aiClose.addEventListener("click", () => {
+        aiPanel.classList.remove("active");
+        aiButton.setAttribute("aria-expanded", "false");
+    });
+
+    const searchSuggestions = [
+        "Wigs",
+        "Bundles",
+        "Braiding hair",
+        "Straight hair",
+        "Bouncy curls",
+        "Frontal",
+        "Wholesale",
+        "Delivery information",
+        "Appointments"
+    ];
+
+    aiInput.addEventListener("input", () => {
+
+        const query = aiInput.value.toLowerCase().trim();
+
+        aiPredictions.innerHTML = "";
+
+        if (!query) return;
+
+        const matches = searchSuggestions.filter(item =>
+            item.toLowerCase().includes(query)
+        );
+
+        matches.slice(0, 4).forEach(item => {
+
+            const suggestion = document.createElement("button");
+
+            suggestion.textContent = item;
+
+            suggestion.addEventListener("click", () => {
+                aiInput.value = item;
+                aiPredictions.innerHTML = "";
+                aiForm.requestSubmit();
+            });
+
+            aiPredictions.appendChild(suggestion);
+
+        });
+
+    });
+
+    function addAiMessage(message, type) {
+        const bubble = document.createElement("div");
+
+        bubble.className = "zels-ai-message " + type;
+        bubble.textContent = message;
+
+        aiChat.appendChild(bubble);
+        aiChat.scrollTop = aiChat.scrollHeight;
+    }
+
+    function answerQuestion(question) {
+
+        const q = question.toLowerCase();
+
+        if (q.includes("wig")) {
+            return "You're looking for wigs! Explore our wigs collection to see the available styles.";
+        }
+
+        if (q.includes("bundle")) {
+            return "Our bundles collection is a great place to explore different textures and styles.";
+        }
+
+        if (q.includes("braid")) {
+            return "You can explore our braiding extensions collection for your next hairstyle.";
+        }
+
+        if (q.includes("delivery")) {
+            return "Zel's Hair Collection offers nationwide delivery. Contact us on WhatsApp for delivery enquiries.";
+        }
+
+        if (q.includes("appointment")) {
+            return "You can explore our appointments section for more information.";
+        }
+
+        if (q.includes("wholesale")) {
+            return "Interested in wholesale? Visit our wholesale section for more information.";
+        }
+
+        return "Thanks for your enquiry! For personalised product recommendations, please contact Zel's on WhatsApp while we connect the AI assistant to our product catalogue.";
+    }
+
+    aiForm.addEventListener("submit", (event) => {
+
+        event.preventDefault();
+
+        const question = aiInput.value.trim();
+
+        if (!question) return;
+
+        addAiMessage(question, "user");
+
+        aiInput.value = "";
+        aiPredictions.innerHTML = "";
+
+        setTimeout(() => {
+            addAiMessage(answerQuestion(question), "assistant");
+        }, 400);
+
+    });
+
+    document.querySelectorAll(".zels-ai-suggestions button")
+        .forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const question = button.dataset.question;
+
+                addAiMessage(question, "user");
+
+                setTimeout(() => {
+                    addAiMessage(answerQuestion(question), "assistant");
+                }, 400);
+
+            });
+
+        });
+
+}
