@@ -345,3 +345,25 @@ if (aiButton && aiPanel) {
             });
         });
 }
+/* ZEL'S AI WELCOME GREETING */
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const aiGreeting = document.getElementById('zelsAiGreeting');
+    const aiButton = document.getElementById('zelsAiButton');
+
+    if (!aiGreeting || !aiButton) return;
+
+    // Allow the page to load before showing the greeting.
+    setTimeout(function () {
+
+        aiGreeting.classList.add('show-greeting');
+
+        // Automatically return the greeting into the AI button.
+        setTimeout(function () {
+            aiGreeting.classList.remove('show-greeting');
+        }, 3000);
+
+    }, 1000);
+
+});
