@@ -575,9 +575,13 @@
     rel="noopener"
     aria-label="Chat with Zel's on WhatsApp"
 >
-    <span>W</span>
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path
+            fill="currentColor"
+            d="M16 3C8.83 3 3 8.73 3 15.8c0 2.5.74 4.82 2.02 6.78L3.5 29l6.62-1.73A13.1 13.1 0 0 0 16 28.5c7.17 0 13-5.73 13-12.8S23.17 3 16 3Zm0 23.2c-1.92 0-3.8-.52-5.43-1.5l-.39-.23-3.93 1.03 1.05-3.81-.26-.4a10.6 10.6 0 0 1-1.64-5.69C5.4 9.75 10.16 5.1 16 5.1s10.6 4.65 10.6 10.5S21.84 26.2 16 26.2Zm5.83-7.9c-.32-.16-1.9-.93-2.2-1.03-.3-.11-.51-.16-.73.16-.21.32-.84 1.03-1.03 1.24-.19.21-.38.24-.7.08-.32-.16-1.35-.49-2.57-1.55-.95-.82-1.59-1.83-1.78-2.15-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.56.16-.19.21-.32.32-.54.11-.21.05-.4-.03-.56-.08-.16-.73-1.75-1-2.4-.26-.63-.53-.54-.73-.55h-.62c-.22 0-.56.08-.86.4-.3.32-1.13 1.1-1.13 2.68s1.16 3.11 1.32 3.33c.16.21 2.28 3.45 5.52 4.83.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.77 2.17-1.52.27-.75.27-1.4.19-1.53-.08-.14-.3-.22-.62-.38Z"
+        />
+    </svg>
 </a>
-
 
 <!-- FLOATING AI ASSISTANT BUTTON -->
 <button
@@ -586,58 +590,16 @@
     aria-label="Open Zel's AI hair assistant"
     aria-expanded="false"
 >
-    <span class="zels-ai-face">✦</span>
+    <span class="zels-ai-face" aria-hidden="true">
+        <svg viewBox="0 0 32 32">
+            <path d="M16 2.5 19.2 12.8 29.5 16l-10.3 3.2L16 29.5l-3.2-10.3L2.5 16l10.3-3.2L16 2.5Z"/>
+            <path d="m25 2 1.4 4.6L31 8l-4.6 1.4L25 14l-1.4-4.6L19 8l4.6-1.4L25 2Z"/>
+        </svg>
+    </span>
+
     <span class="zels-ai-label">ASK ZEL'S AI</span>
+
+    <span class="zels-ai-greeting" id="zelsAiGreeting">
+        Hi! I'm Zel's AI. Need help finding your next hair look? Send me a message!
+    </span>
 </button>
-
-
-<!-- AI CHAT WINDOW -->
-<div class="zels-ai-panel" id="zelsAiPanel">
-
-    <div class="zels-ai-header">
-        <div>
-            <span class="zels-ai-status">● HERE TO HELP</span>
-            <h3>Zel's Hair Assistant</h3>
-            <p>Let's find your next favourite look.</p>
-        </div>
-
-        <button id="zelsAiClose" aria-label="Close assistant">
-            ×
-        </button>
-    </div>
-
-    <div class="zels-ai-chat" id="zelsAiChat">
-
-        <div class="zels-ai-message">
-            Hello! Welcome to Zel's Hair Collection.
-            What are you looking for today?
-        </div>
-
-        <div class="zels-ai-suggestions">
-            <button data-question="I'm looking for wigs">Wigs</button>
-            <button data-question="Show me hair bundles">Bundles</button>
-            <button data-question="I'm looking for braiding hair">Braiding hair</button>
-            <button data-question="Tell me about delivery">Delivery</button>
-        </div>
-
-    </div>
-
-    <form class="zels-ai-input" id="zelsAiForm">
-        <input
-            type="text"
-            id="zelsAiInput"
-            placeholder="What hair are you looking for?"
-            autocomplete="off"
-        >
-
-        <button type="submit">SEND</button>
-    </form>
-
-    <div class="zels-ai-predictions" id="zelsAiPredictions"></div>
-
-</div>
-    <script src="script.js"></script>
-</body>
-</html>
-
-    
