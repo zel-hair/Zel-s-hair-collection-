@@ -2495,3 +2495,65 @@ body {
         right: 15px;
     }
 }
+/* WHATSAPP LOGO */
+
+.zels-whatsapp svg {
+    width: 34px;
+    height: 34px;
+    display: block;
+}
+
+/* AI ICON */
+
+.zels-ai-button {
+    background: #401D27;
+    color: #FFFFFF;
+}
+
+.zels-ai-face {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zels-ai-face svg {
+    width: 29px;
+    height: 29px;
+    fill: #FFFFFF;
+}
+
+/* AI GREETING POPUP */
+
+.zels-ai-greeting {
+    position: absolute;
+    right: 67px;
+    bottom: 0;
+    width: 225px;
+    padding: 13px 15px;
+    background: #FFFFFF;
+    color: #401D27;
+    border-radius: 10px;
+    box-shadow: 0 5px 22px rgba(0,0,0,0.15);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    line-height: 1.7;
+    text-align: left;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(12px) scale(0.9);
+    transform-origin: right center;
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease,
+        visibility 0.35s ease;
+
+    pointer-events: none;
+}
+
+.zels-ai-greeting.show-greeting {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0) scale(1);
+}
