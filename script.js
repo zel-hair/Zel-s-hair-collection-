@@ -3,6 +3,40 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+    // ACCESSIBLE MOBILE NAVIGATION
+
+    const menuButton = document.querySelector('.menu-button');
+    const mainNav = document.getElementById('mainNav');
+
+    if (menuButton && mainNav) {
+        menuButton.addEventListener('click', () => {
+            const isOpen = mainNav.classList.toggle('is-open');
+
+            menuButton.setAttribute('aria-expanded', String(isOpen));
+            menuButton.setAttribute(
+                'aria-label',
+                isOpen ? 'Close menu' : 'Open menu'
+            );
+        });
+
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('is-open');
+                menuButton.setAttribute('aria-expanded', 'false');
+                menuButton.setAttribute('aria-label', 'Open menu');
+            });
+        });
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') {
+                mainNav.classList.remove('is-open');
+                menuButton.setAttribute('aria-expanded', 'false');
+                menuButton.setAttribute('aria-label', 'Open menu');
+            }
+        });
+    }
+
+
     // SHOP INTRODUCTION SCROLL ANIMATION
 
     const shopIntro = document.querySelector('.category-intro');
@@ -19,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         shopObserver.observe(shopIntro);
     }
+
 
     // WHAT'S YOUR VIBE
 
@@ -39,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             option.addEventListener('click', function () {
                 const message = vibeMessages[this.dataset.vibe];
+
                 if (!message) return;
 
                 vibeOptions.forEach(item => {
@@ -72,11 +108,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // CUSTOMER REVIEWS — all five reviews are displayed in the HTML.
 
-    // CUSTOMER REVIEWS — centered one-at-a-time carousel
+    // CUSTOMER REVIEWS — CENTERED ONE-AT-A-TIME CAROUSEL
 
     const reviewTrack = document.querySelector('.reviews-track');
+
     const reviewCards = reviewTrack
         ? Array.from(reviewTrack.querySelectorAll('.review-card'))
         : [];
@@ -91,12 +127,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
         currentReview = (index + reviewCards.length) % reviewCards.length;
 
-        reviewTrack.style.transform = `translateX(-${currentReview * 100}%)`;
+        reviewTrack.style.transform =
+            `translateX(-${currentReview * 20}%)`;
 
         reviewCards.forEach((card, cardIndex) => {
             card.setAttribute(
                 'aria-hidden',
                 cardIndex === currentReview ? 'false' : 'true'
+            );
+
+            card.toggleAttribute(
+                'inert',
+                cardIndex !== currentReview
             );
         });
     }
@@ -113,6 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
         showReview(0);
     }
 
+
     // ZEL'S AI ASSISTANT
 
     const aiButton = document.getElementById('zelsAiButton');
@@ -124,6 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const aiPredictions = document.getElementById('zelsAiPredictions');
 
     if (aiButton && aiPanel) {
+
         aiButton.addEventListener('click', () => {
             aiPanel.classList.toggle('active');
 
@@ -156,6 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!aiChat) return;
 
             const bubble = document.createElement('div');
+
             bubble.className = 'zels-ai-message ' + type;
             bubble.textContent = message;
 
@@ -202,6 +247,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return "Thanks for your enquiry! For personalised product recommendations, please contact Zel's on WhatsApp while we connect the assistant to our product catalogue.";
         }
 
+
         // LIVE SUGGESTIONS WHILE THE CUSTOMER TYPES
 
         if (aiInput && aiPredictions) {
@@ -235,6 +281,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
+
         // CUSTOMER QUESTION SUBMISSION
 
         if (aiForm && aiInput) {
@@ -259,6 +306,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
+
         // PRESET QUESTIONS IN THE CHAT WINDOW
 
         document.querySelectorAll('.zels-ai-suggestions button').forEach(button => {
@@ -276,10 +324,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+
     // PERMANENT NEWSLETTER SECTION — NO POPUP
 
     const newsletterForm = document.getElementById('newsletterForm');
-    const newsletterFeedback = document.getElementById('newsletterFeedback');
+
+    const newsletterFeedback = newsletterForm
+        ? newsletterForm.parentElement.querySelector('.form-message')
+        : null;
 
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', event => {
@@ -295,12 +347,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     'Thank you for your interest! Newsletter sign-up will be available soon.';
             }
 
-            // No email service is connected yet,
-            // so do not imply the address was subscribed.
+            // No email service is connected yet.
         });
     }
 
-    // AI GREETING — RUNS ONLY IF THE GREETING ELEMENT EXISTS IN THE HTML
+
+    // AI GREETING
 
     const aiGreeting = document.getElementById('zelsAiGreeting');
 
