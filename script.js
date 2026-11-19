@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
         shopObserver.observe(shopIntro);
     }
 
-
     // SHOP BLUR-TO-CLEAR EFFECT
 
     const hero = document.querySelector('.hero');
@@ -37,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function () {
         heroObserver.observe(hero);
     }
 
-
     // WHAT'S YOUR VIBE
 
     const vibeOptions = document.querySelectorAll('.vibe-option');
@@ -45,26 +43,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const vibeMessages = {
         waves: "Hi, Waves Girly! Zel's has beautiful options to help you find a look you'll love.",
-
         pixie: "Hi, Pixie Cut Babe! Explore styles that complement your look and personal taste.",
-
         straight: "Hi, Straight Doll! Sleek and timeless looks? You're in the right place.",
-
         curly: "Hi, Curly Hair Lady! Let's find a texture that brings your look together.",
-
         afro: "Hi, Afro Queen! Explore hair options to complement your style."
     };
 
     if (vibeOptions.length && vibeMessage) {
-
         vibeOptions.forEach(option => {
-
             option.setAttribute('aria-pressed', 'false');
 
             option.addEventListener('click', function () {
-
                 const message = vibeMessages[this.dataset.vibe];
-
                 if (!message) return;
 
                 vibeOptions.forEach(item => {
@@ -93,55 +83,44 @@ document.addEventListener('DOMContentLoaded', function () {
                 );
 
                 vibeMessage.classList.add('visible');
-
             });
-
         });
-
     }
-
 
     // CUSTOMER REVIEWS — FIVE ROTATING REVIEWS
 
     const reviews = [
-
         {
             title: 'I love the textures of the hair',
             message: 'I love the textures of the hair so much.',
             author: 'Abena Acheampong'
         },
-
         {
             title: 'Exactly what I was looking for',
             message: "The hair was exactly what I was looking for. I'm so happy with my purchase.",
             author: 'Nana Ama'
         },
-
         {
             title: 'Beautiful hair quality',
             message: 'Beautiful quality and the hair feels so soft.',
             author: 'Esi Mensah'
         },
-
         {
             title: 'Absolutely love my hair',
             message: 'I absolutely love my hair. Definitely ordering again!',
             author: 'Akosua'
         },
-
         {
             title: 'Exceeded my expectations',
             message: 'The quality exceeded my expectations. Really lovely hair.',
             author: 'Mabel Owusu'
         }
-
     ];
 
     const reviewCard = document.getElementById('reviewCard');
     const reviewTitle = document.getElementById('reviewTitle');
     const reviewMessage = document.getElementById('reviewMessage');
     const reviewAuthor = document.getElementById('reviewAuthor');
-
     const nextReview = document.getElementById('nextReview');
     const prevReview = document.getElementById('prevReview');
 
@@ -153,28 +132,21 @@ document.addEventListener('DOMContentLoaded', function () {
         nextReview &&
         prevReview
     ) {
-
         let currentReview = 0;
         let transitionTimer;
 
         function showReview(index) {
-
             currentReview = (index + reviews.length) % reviews.length;
-
             reviewCard.style.opacity = '0';
 
             window.clearTimeout(transitionTimer);
 
             transitionTimer = window.setTimeout(() => {
-
                 reviewTitle.textContent = reviews[currentReview].title;
                 reviewMessage.textContent = reviews[currentReview].message;
                 reviewAuthor.textContent = reviews[currentReview].author;
-
                 reviewCard.style.opacity = '1';
-
             }, 180);
-
         }
 
         nextReview.addEventListener('click', () => {
@@ -186,44 +158,32 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         showReview(0);
-
     }
-
 
     // ZEL'S AI ASSISTANT
 
     const aiButton = document.getElementById('zelsAiButton');
     const aiPanel = document.getElementById('zelsAiPanel');
     const aiClose = document.getElementById('zelsAiClose');
-
     const aiForm = document.getElementById('zelsAiForm');
     const aiInput = document.getElementById('zelsAiInput');
     const aiChat = document.getElementById('zelsAiChat');
     const aiPredictions = document.getElementById('zelsAiPredictions');
 
     if (aiButton && aiPanel) {
-
         aiButton.addEventListener('click', () => {
-
             aiPanel.classList.toggle('active');
-
             aiButton.setAttribute(
                 'aria-expanded',
                 aiPanel.classList.contains('active')
             );
-
         });
 
         if (aiClose) {
-
             aiClose.addEventListener('click', () => {
-
                 aiPanel.classList.remove('active');
-
                 aiButton.setAttribute('aria-expanded', 'false');
-
             });
-
         }
 
         const suggestions = [
@@ -239,23 +199,17 @@ document.addEventListener('DOMContentLoaded', function () {
         ];
 
         function addAiMessage(message, type) {
-
             if (!aiChat) return;
 
             const bubble = document.createElement('div');
-
             bubble.className = 'zels-ai-message ' + type;
-
             bubble.textContent = message;
 
             aiChat.appendChild(bubble);
-
             aiChat.scrollTop = aiChat.scrollHeight;
-
         }
 
         function answerQuestion(question) {
-
             const q = question.toLowerCase();
 
             if (q.includes('wig')) {
@@ -278,4 +232,115 @@ document.addEventListener('DOMContentLoaded', function () {
                 return 'You can explore our appointments section for more information.';
             }
 
-            if (q.includes
+            if (q.includes('wholesale')) {
+                return 'Interested in wholesale? Visit our wholesale section for more information.';
+            }
+
+            if (q.includes('straight') || q.includes('bouncy') || q.includes('curl') || q.includes('frontal')) {
+                return 'Explore our hair bundles and wigs collections to find the texture or style you have in mind.';
+            }
+
+            return "Thanks for your enquiry! For personalised product recommendations, please contact Zel's on WhatsApp while we connect the assistant to our product catalogue.";
+        }
+
+        // LIVE SUGGESTIONS WHILE THE CUSTOMER TYPES
+
+        if (aiInput && aiPredictions) {
+            aiInput.addEventListener('input', () => {
+                const query = aiInput.value.toLowerCase().trim();
+                aiPredictions.replaceChildren();
+
+                if (!query) return;
+
+                suggestions
+                    .filter(item => item.toLowerCase().includes(query))
+                    .slice(0, 4)
+                    .forEach(item => {
+                        const button = document.createElement('button');
+                        button.type = 'button';
+                        button.textContent = item;
+
+                        button.addEventListener('click', () => {
+                            aiInput.value = item;
+                            aiPredictions.replaceChildren();
+                            if (aiForm) aiForm.requestSubmit();
+                        });
+
+                        aiPredictions.appendChild(button);
+                    });
+            });
+        }
+
+        // CUSTOMER QUESTION SUBMISSION
+
+        if (aiForm && aiInput) {
+            aiForm.addEventListener('submit', event => {
+                event.preventDefault();
+
+                const question = aiInput.value.trim();
+                if (!question) return;
+
+                addAiMessage(question, 'user');
+                aiInput.value = '';
+
+                if (aiPredictions) aiPredictions.replaceChildren();
+
+                window.setTimeout(() => {
+                    addAiMessage(answerQuestion(question), 'assistant');
+                }, 400);
+            });
+        }
+
+        // PRESET QUESTIONS IN THE CHAT WINDOW
+
+        document.querySelectorAll('.zels-ai-suggestions button').forEach(button => {
+            button.addEventListener('click', () => {
+                const question = button.dataset.question;
+                if (!question) return;
+
+                addAiMessage(question, 'user');
+
+                window.setTimeout(() => {
+                    addAiMessage(answerQuestion(question), 'assistant');
+                }, 400);
+            });
+        });
+    }
+
+    // PERMANENT NEWSLETTER SECTION — NO POPUP
+
+    const newsletterForm = document.getElementById('newsletterForm');
+    const newsletterFeedback = document.getElementById('newsletterFeedback');
+
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', event => {
+            event.preventDefault();
+
+            if (!newsletterForm.checkValidity()) {
+                newsletterForm.reportValidity();
+                return;
+            }
+
+            if (newsletterFeedback) {
+                newsletterFeedback.textContent = 'Thank you for your interest! Newsletter sign-up will be available soon.';
+            }
+
+            // No email service is connected yet, so do not imply the address was subscribed.
+        });
+    }
+
+    // AI GREETING — RUNS ONLY IF THE GREETING ELEMENT EXISTS IN THE HTML
+
+    const aiGreeting = document.getElementById('zelsAiGreeting');
+
+    if (aiGreeting && aiButton) {
+        window.setTimeout(() => {
+            aiGreeting.classList.add('show-greeting');
+
+            window.setTimeout(() => {
+                aiGreeting.classList.remove('show-greeting');
+            }, 3000);
+        }, 1000);
+    }
+
+});
