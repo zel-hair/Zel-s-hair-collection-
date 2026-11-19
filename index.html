@@ -70,6 +70,10 @@
 
     </header>
 
+    <script src="script.js"></script>
+
+</body>
+</html>
 <!-- HERO SECTION -->
 
 <main>
@@ -200,6 +204,9 @@
     </div>
 
 </section>
+    <script src="script.js"></script>
+</body>
+</html>
 <!-- WHAT'S YOUR VIBE SECTION -->
 
 <section class="vibe-section">
@@ -437,55 +444,75 @@
         <a href="gallery.html" class="gallery-link">
             EXPLORE THE GALLERY
         </a>
+    </div>
 
-</section>
+</div>
     <!-- CUSTOMER REVIEWS -->
 
 <section class="reviews-section" id="reviews">
 
     <h2 class="reviews-heading">Reviews</h2>
 
-    <div class="reviews-carousel">
-
-        <button class="review-arrow" id="prevReview"
-                aria-label="Previous review">
-            ‹
-        </button>
-
-        <div class="review-card" id="reviewCard">
-
+    <div class="reviews-grid">
+        <article class="review-card">
             <div class="review-top">
-
-                <div class="review-stars">
-                    <span>★</span>
-                    <span>★</span>
-                    <span>★</span>
-                    <span>★</span>
-                    <span>★</span>
+                <div class="review-stars" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                 </div>
-
                 <span class="review-label">Customer review</span>
-
             </div>
+            <h3 class="review-title">I love the textures of the hair</h3>
+            <p class="review-message">I love the textures of the hair so much.</p>
+            <div class="review-author">Abena Acheampong</div>
+        </article>
 
-            <h3 class="review-title" id="reviewTitle">
-                I love the textures of the hair
-            </h3>
-
-            <p class="review-message" id="reviewMessage">
-                I love the textures of the hair so much.
-            </p>
-
-            <div class="review-author" id="reviewAuthor">
-                Abena Acheampong
+        <article class="review-card">
+            <div class="review-top">
+                <div class="review-stars" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <span class="review-label">Customer review</span>
             </div>
+            <h3 class="review-title">Exactly what I was looking for</h3>
+            <p class="review-message">The hair was exactly what I was looking for. I'm so happy with my purchase.</p>
+            <div class="review-author">Nana Ama</div>
+        </article>
 
-        </div>
+        <article class="review-card">
+            <div class="review-top">
+                <div class="review-stars" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <span class="review-label">Customer review</span>
+            </div>
+            <h3 class="review-title">Beautiful hair quality</h3>
+            <p class="review-message">Beautiful quality and the hair feels so soft.</p>
+            <div class="review-author">Esi Mensah</div>
+        </article>
 
-        <button class="review-arrow" id="nextReview"
-                aria-label="Next review">
-            ›
-        </button>
+        <article class="review-card">
+            <div class="review-top">
+                <div class="review-stars" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <span class="review-label">Customer review</span>
+            </div>
+            <h3 class="review-title">Absolutely love my hair</h3>
+            <p class="review-message">I absolutely love my hair. Definitely ordering again!</p>
+            <div class="review-author">Akosua</div>
+        </article>
+
+        <article class="review-card">
+            <div class="review-top">
+                <div class="review-stars" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <span class="review-label">Customer review</span>
+            </div>
+            <h3 class="review-title">Exceeded my expectations</h3>
+            <p class="review-message">The quality exceeded my expectations. Really lovely hair.</p>
+            <div class="review-author">Mabel Owusu</div>
+        </article>
 
     </div>
 
@@ -498,58 +525,6 @@
     <p class="review-disclaimer">
         A little preview of what customers have to say.
     </p>
-    </section>
-    <!-- ZEL'S NEWSLETTER SECTION -->
-
-<section class="newsletter-section" id="newsletter">
-
-    <div class="newsletter-accent"></div>
-
-    <div class="newsletter-content">
-
-        <span class="newsletter-eyebrow">
-            A LITTLE NOTE FROM ZEL'S
-        </span>
-
-        <div class="newsletter-monogram">Z.</div>
-
-        <h2 id="newsletterTitle">
-            GOOD HAIR NEWS,
-            <em>STRAIGHT TO YOUR INBOX.</em>
-        </h2>
-
-        <p class="newsletter-description">
-            A little inspiration goes a long way.
-            Be among the first to hear about new arrivals,
-            restocks, special updates and everything
-            happening at Zel's Hair Collection.
-        </p>
-
-        <form class="newsletter-form" id="newsletterForm">
-
-            <input
-                type="email"
-                id="newsletterEmail"
-                placeholder="Your email address"
-                required
-            >
-
-            <button type="submit">
-                KEEP ME IN THE LOOP
-            </button>
-
-        </form>
-
-        <p class="newsletter-small">
-            Only the good stuff. Unsubscribe whenever you like.
-        </p>
-
-        <p class="newsletter-feedback"
-           id="newsletterFeedback"
-           aria-live="polite"></p>
-
-    </div>
-
 </section>
     <!-- ZEL'S FOOTER -->
 <footer class="zels-footer">
@@ -627,13 +602,9 @@
     rel="noopener"
     aria-label="Chat with Zel's on WhatsApp"
 >
-    <svg viewBox="0 0 32 32" aria-hidden="true">
-        <path
-            fill="currentColor"
-            d="M16 3C8.83 3 3 8.73 3 15.8c0 2.5.74 4.82 2.02 6.78L3.5 29l6.62-1.73A13.1 13.1 0 0 0 16 28.5c7.17 0 13-5.73 13-12.8S23.17 3 16 3Zm0 23.2c-1.92 0-3.8-.52-5.43-1.5l-.39-.23-3.93 1.03 1.05-3.81-.26-.4a10.6 10.6 0 0 1-1.64-5.69C5.4 9.75 10.16 5.1 16 5.1s10.6 4.65 10.6 10.5S21.84 26.2 16 26.2Zm5.83-7.9c-.32-.16-1.9-.93-2.2-1.03-.3-.11-.51-.16-.73.16-.21.32-.84 1.03-1.03 1.24-.19.21-.38.24-.7.08-.32-.16-1.35-.49-2.57-1.55-.95-.82-1.59-1.83-1.78-2.15-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.56.16-.19.21-.32.32-.54.11-.21.05-.4-.03-.56-.08-.16-.73-1.75-1-2.4-.26-.63-.53-.54-.73-.55h-.62c-.22 0-.56.08-.86.4-.3.32-1.13 1.1-1.13 2.68s1.16 3.11 1.32 3.33c.16.21 2.28 3.45 5.52 4.83.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.77 2.17-1.52.27-.75.27-1.4.19-1.53-.08-.14-.3-.22-.62-.38Z"
-        />
-    </svg>
+    <span>W</span>
 </a>
+
 
 <!-- FLOATING AI ASSISTANT BUTTON -->
 <button
@@ -642,17 +613,57 @@
     aria-label="Open Zel's AI hair assistant"
     aria-expanded="false"
 >
-    <span class="zels-ai-face" aria-hidden="true">
-        <svg viewBox="0 0 32 32">
-            <path d="M16 2.5 19.2 12.8 29.5 16l-10.3 3.2L16 29.5l-3.2-10.3L2.5 16l10.3-3.2L16 2.5Z"/>
-            <path d="m25 2 1.4 4.6L31 8l-4.6 1.4L25 14l-1.4-4.6L19 8l4.6-1.4L25 2Z"/>
-        </svg>
-    </span>
-
+    <span class="zels-ai-face">✦</span>
     <span class="zels-ai-label">ASK ZEL'S AI</span>
-
-    <span class="zels-ai-greeting" id="zelsAiGreeting">
-        Hi! I'm Zel's AI. Need help finding your next hair look? Send me a message!
-    </span>
 </button>
+
+
+<!-- AI CHAT WINDOW -->
+<div class="zels-ai-panel" id="zelsAiPanel">
+
+    <div class="zels-ai-header">
+        <div>
+            <span class="zels-ai-status">● HERE TO HELP</span>
+            <h3>Zel's Hair Assistant</h3>
+            <p>Let's find your next favourite look.</p>
+        </div>
+
+        <button id="zelsAiClose" aria-label="Close assistant">
+            ×
+        </button>
+    </div>
+
+    <div class="zels-ai-chat" id="zelsAiChat">
+
+        <div class="zels-ai-message">
+            Hello! Welcome to Zel's Hair Collection.
+            What are you looking for today?
+        </div>
+
+        <div class="zels-ai-suggestions">
+            <button data-question="I'm looking for wigs">Wigs</button>
+            <button data-question="Show me hair bundles">Bundles</button>
+            <button data-question="I'm looking for braiding hair">Braiding hair</button>
+            <button data-question="Tell me about delivery">Delivery</button>
+        </div>
+
+    </div>
+
+    <form class="zels-ai-input" id="zelsAiForm">
+        <input
+            type="text"
+            id="zelsAiInput"
+            placeholder="What hair are you looking for?"
+            autocomplete="off"
+        >
+
+        <button type="submit">SEND</button>
+    </form>
+
+    <div class="zels-ai-predictions" id="zelsAiPredictions"></div>
+
+</div>
+    </body>
+</html>
+
     
