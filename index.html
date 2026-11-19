@@ -22,7 +22,7 @@
         <!-- Hamburger Menu -->
         <button class="header-icon menu-button"
                 type="button"
-                aria-label="Open menu">
+                aria-label="Open menu" aria-controls="mainNav" aria-expanded="false">
 
             <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M3 7H21"></path>
@@ -31,6 +31,16 @@
             </svg>
 
         </button>
+
+        <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="#shop">Shop hair</a>
+            <a href="#wholesale">Wholesale</a>
+            <a href="#appointments">Appointments</a>
+            <a href="#delivery">Delivery</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#reviews">Reviews</a>
+        </nav>
 
         <!-- Brand Name -->
         <a href="index.html" class="brand-name">
@@ -41,39 +51,33 @@
         <div class="header-actions">
 
             <!-- Search -->
-            <button class="header-icon search-button"
-                    type="button"
-                    aria-label="Search products">
+            <a class="header-icon search-button"
+               href="#shop"
+               aria-label="Browse hair collections">
 
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                     <circle cx="10.8" cy="10.8" r="7"></circle>
                     <path d="M16 16L21 21"></path>
                 </svg>
 
-            </button>
+            </a>
 
-            <!-- Shopping Bag -->
-            <button class="header-icon cart-button"
-                    type="button"
-                    aria-label="Shopping bag">
+            <!-- Shopping Bag / Shop shortcut -->
+            <a class="header-icon cart-button"
+               href="shop.html"
+               aria-label="Shop hair">
 
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M5 8H19L20 21H4L5 8Z"></path>
                     <path d="M9 9V6A3 3 0 0 1 15 6V9"></path>
                 </svg>
 
-                <span class="cart-count">0</span>
-
-            </button>
+            </a>
 
         </div>
 
     </header>
 
-    <script src="script.js"></script>
-
-</body>
-</html>
 <!-- HERO SECTION -->
 
 <main>
@@ -132,7 +136,7 @@
 
 </div>
 
-    <div class="category-row">
+    <div class="category-row" id="wigs">
 
         <div class="category-image">
             <img src="IMG_4551.jpeg" alt="Wigs collection">
@@ -156,7 +160,7 @@
     </div>
 
 
-    <div class="category-row reverse">
+    <div class="category-row reverse" id="bundles">
 
         <div class="category-image">
             <img src="IMG_4550.jpeg" alt="Hair bundles collection">
@@ -180,7 +184,7 @@
     </div>
 
 
-    <div class="category-row">
+    <div class="category-row" id="braiding">
 
         <div class="category-image">
             <img src="IMG_4549.jpeg" alt="Braiding extensions collection">
@@ -204,9 +208,6 @@
     </div>
 
 </section>
-    <script src="script.js"></script>
-</body>
-</html>
 <!-- WHAT'S YOUR VIBE SECTION -->
 
 <section class="vibe-section">
@@ -427,26 +428,18 @@
     </div>
     
     <div class="gallery-video">
-        <video
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-        >
+        <video autoplay muted loop playsinline preload="metadata">
             <source src="89947edc-99c5-4650-9aa6-1e24f6a832fc.mp4" type="video/mp4">
             Your browser does not support this video.
         </video>
-</div>
-
-    
-
-        <a href="gallery.html" class="gallery-link">
-            EXPLORE THE GALLERY
-        </a>
     </div>
 
-</div>
+    <a href="gallery.html" class="gallery-link">
+        EXPLORE THE GALLERY
+    </a>
+
+</section>
+
     <!-- CUSTOMER REVIEWS -->
 
 <section class="reviews-section" id="reviews">
@@ -535,6 +528,21 @@
         A little preview of what customers have to say.
     </p>
 </section>
+    <!-- PERMANENT NEWSLETTER SECTION -->
+<section class="newsletter" id="newsletter" aria-labelledby="newsletterTitle">
+    <div class="newsletter-inner">
+        <span class="newsletter-eyebrow">A NOTE FROM ZEL'S</span>
+        <h2 id="newsletterTitle">A little <em>hair mail?</em></h2>
+        <p>Sign up for free updates on new arrivals, offers and hair-care notes. Unsubscribe whenever you like.</p>
+        <form class="newsletter-form" id="newsletterForm">
+            <label class="visually-hidden" for="newsletterEmail">Email address</label>
+            <input type="email" id="newsletterEmail" name="email" placeholder="Enter your email address" autocomplete="email" required>
+            <button type="submit">SIGN ME UP</button>
+        </form>
+        <p class="form-message" id="newsletterFeedback" aria-live="polite"></p>
+    </div>
+</section>
+
     <!-- ZEL'S FOOTER -->
 <footer class="zels-footer">
 
@@ -611,7 +619,10 @@
     rel="noopener"
     aria-label="Chat with Zel's on WhatsApp"
 >
-    <span>W</span>
+    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <path d="M16 3.2A12.6 12.6 0 0 0 5.2 22.3L3.6 28.8l6.7-1.7A12.7 12.7 0 1 0 16 3.2Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+        <path d="M12.1 10.2c-.4-.8-.8-.8-1.2-.8h-1c-.4 0-.9.2-1.3.7-.4.5-1.7 1.6-1.7 3.9s1.7 4.5 1.9 4.8c.2.3 3.3 5.2 8.1 7.1 4 1.6 4.8 1.3 5.7 1.2.9-.1 2.8-1.1 3.2-2.2.4-1.1.4-2 .3-2.2-.1-.2-.4-.3-.9-.6s-2.8-1.4-3.2-1.6c-.4-.1-.7-.2-1 .3-.3.5-1.2 1.6-1.5 1.9-.3.3-.5.4-1 .1-.5-.2-2-.7-3.8-2.3-1.4-1.2-2.3-2.7-2.6-3.2-.3-.5 0-.7.2-.9.2-.2.5-.6.7-.8.2-.3.3-.5.5-.8.2-.3.1-.6 0-.8-.1-.2-1.1-2.7-1.5-3.6Z" fill="currentColor" transform="translate(2 0) scale(.82)"/>
+    </svg>
 </a>
 
 
@@ -672,7 +683,7 @@
     <div class="zels-ai-predictions" id="zelsAiPredictions"></div>
 
 </div>
-    </body>
-</html>
 
-    
+<script src="script.js" defer></script>
+</body>
+</html>
