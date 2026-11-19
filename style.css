@@ -3273,3 +3273,159 @@ input:focus-visible {
         transform: none !important;
     }
 }
+
+
+/* ============================================
+   FINAL DETAIL: DELIVERY + CENTERED REVIEWS
+   Keeps all original delivery information and review text.
+============================================ */
+.delivery-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 82px 8% 86px;
+    background: linear-gradient(135deg, #FBF8F6 0%, #F4ECEB 100%);
+}
+.delivery-section::before,
+.delivery-section::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    border: 1px solid rgba(138, 84, 99, 0.17);
+    border-radius: 50%;
+}
+.delivery-section::before {
+    width: 330px; height: 330px;
+    top: -145px; left: -115px;
+    box-shadow: 0 0 0 22px rgba(138,84,99,0.035), 0 0 0 46px rgba(138,84,99,0.025);
+}
+.delivery-section::after {
+    width: 390px; height: 390px;
+    right: -175px; bottom: -205px;
+    box-shadow: 0 0 0 22px rgba(138,84,99,0.035), 0 0 0 48px rgba(138,84,99,0.025);
+}
+.delivery-heading { margin-bottom: 38px; }
+.delivery-steps {
+    position: relative;
+    z-index: 1;
+    max-width: 1040px;
+    gap: 30px;
+}
+.delivery-step {
+    min-height: 0;
+    padding: 15px 18px 17px;
+    display: grid;
+    grid-template-columns: 42px minmax(0,1fr);
+    align-items: start;
+    column-gap: 13px;
+    border: 0;
+    border-top: 1px solid rgba(64,29,39,0.17);
+    background: transparent;
+    box-shadow: none;
+    transition: background .25s ease, border-color .25s ease;
+}
+.delivery-step:hover {
+    transform: none;
+    background: rgba(255,255,255,.42);
+    border-color: rgba(64,29,39,.32);
+    box-shadow: none;
+}
+.delivery-number {
+    width: 38px; height: 38px;
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    margin: 0;
+    border: 1px solid rgba(138,84,99,.35);
+    border-radius: 50%;
+    color: #805563;
+    font-size: 22px;
+}
+.delivery-step-content h3 { margin: 3px 0 7px; font-size: 12px; }
+.delivery-step-content p { margin: 0; font-size: 13px; line-height: 1.7; }
+
+.reviews-section {
+    padding: 88px 6% 92px;
+    background: linear-gradient(180deg, #F8F5F3 0%, #F3ECEA 100%);
+    overflow: hidden;
+}
+.reviews-heading { margin-bottom: 34px; }
+.reviews-carousel {
+    width: min(850px, 100%);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(14px, 3vw, 30px);
+}
+.reviews-viewport {
+    width: min(650px, calc(100% - 112px));
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: 0 16px 42px rgba(45,17,27,.075);
+}
+.reviews-track {
+    display: flex;
+    width: 100%;
+    transition: transform .55s cubic-bezier(.22,.7,.25,1);
+    will-change: transform;
+}
+.reviews-track .review-card {
+    flex: 0 0 20%;
+    width: 20%;
+    min-height: 225px;
+    padding: 34px clamp(24px, 5vw, 48px);
+    border: 1px solid rgba(64,29,39,.09);
+    border-radius: 3px;
+    background: rgba(255,255,255,.96);
+    box-shadow: none;
+    text-align: left;
+}
+.reviews-track .review-card:hover { transform: none; box-shadow: none; }
+.review-arrow {
+    flex: 0 0 44px;
+    width: 44px; height: 44px;
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    padding: 0 0 4px;
+    border: 1px solid rgba(64,29,39,.28);
+    border-radius: 50%;
+    background: transparent;
+    color: #401D27;
+    font-family: Georgia, serif;
+    font-size: 31px;
+    line-height: 1;
+    cursor: pointer;
+    transition: color .25s ease, background .25s ease, border-color .25s ease, transform .25s ease;
+}
+.review-arrow:hover {
+    color: #fff;
+    background: #401D27;
+    border-color: #401D27;
+    transform: scale(1.05);
+}
+.review-summary { margin-top: 23px; }
+
+@media (max-width: 700px) {
+    .delivery-section { padding: 65px 7%; }
+    .delivery-heading { margin-bottom: 30px; }
+    .delivery-steps { grid-template-columns: 1fr; gap: 9px; }
+    .delivery-step { grid-template-columns: 38px minmax(0,1fr); padding: 13px 8px 15px; }
+    .delivery-number { width: 34px; height: 34px; font-size: 20px; }
+    .delivery-step-content h3 { font-size: 11px; }
+    .delivery-step-content p { font-size: 13px; line-height: 1.7; }
+    .delivery-section::before { width: 230px; height: 230px; top: -115px; left: -115px; }
+    .delivery-section::after { width: 260px; height: 260px; right: -150px; bottom: -145px; }
+    .reviews-section { padding: 68px 5% 72px; }
+    .reviews-heading { font-size: 45px; margin-bottom: 26px; }
+    .reviews-carousel { gap: 9px; }
+    .reviews-viewport { width: calc(100% - 82px); }
+    .reviews-track .review-card { min-height: 235px; padding: 25px 20px; }
+    .review-arrow { flex-basis: 34px; width: 34px; height: 34px; font-size: 25px; }
+    .review-title { font-size: 15px; }
+    .review-message { font-size: 13px; line-height: 1.8; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .reviews-track { transition: none; }
+    .review-arrow { transition: none; }
+}
