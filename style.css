@@ -2557,105 +2557,40 @@ body {
     visibility: visible;
     transform: translateX(0) scale(1);
 }
+
 /* =================================
-   ZEL'S NEWSLETTER POPUP
+   ZEL'S PERMANENT NEWSLETTER SECTION
 ================================= */
 
-.newsletter-overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 10001;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 20px;
-
-    background: rgba(25, 15, 18, 0.48);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-
-    transition: opacity 0.4s ease,
-                visibility 0.4s ease;
-}
-
-.newsletter-overlay.newsletter-visible {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
-
-.newsletter-popup {
+.newsletter-section {
     position: relative;
-
     width: 100%;
-    max-width: 440px;
-
-    background: #FFFFFF;
-    border-radius: 15px;
+    padding: 75px 7% 80px;
+    background: #F6EFF1;
     overflow: hidden;
-
-    box-shadow: 0 20px 70px rgba(0,0,0,0.2);
-
-    transform: translateY(25px) scale(0.96);
-    transition: transform 0.45s ease;
+    text-align: center;
 }
 
-.newsletter-visible .newsletter-popup {
-    transform: translateY(0) scale(1);
-}
-
-/* BURGUNDY ACCENT */
+/* DECORATIVE ACCENT */
 
 .newsletter-accent {
-    height: 5px;
-    width: 100%;
+    width: 48px;
+    height: 2px;
+    margin: 0 auto 28px;
     background: #401D27;
-}
-
-/* CLOSE BUTTON */
-
-.newsletter-close {
-    position: absolute;
-    top: 15px;
-    right: 17px;
-
-    width: 32px;
-    height: 32px;
-
-    border: none;
-    background: #F7F2F3;
-    color: #401D27;
-
-    border-radius: 50%;
-
-    font-size: 22px;
-    font-weight: 300;
-
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: background 0.3s ease;
-}
-
-.newsletter-close:hover {
-    background: #EDE1E4;
 }
 
 /* CONTENT */
 
 .newsletter-content {
-    padding: 43px 38px 35px;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0;
     text-align: center;
 }
+
+/* EYEBROW */
 
 .newsletter-eyebrow {
     font-family: 'Montserrat', sans-serif;
@@ -2669,23 +2604,21 @@ body {
 
 .newsletter-monogram {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 34px;
+    font-size: 38px;
     font-style: italic;
     color: #401D27;
-
-    margin: 18px 0 12px;
+    margin: 15px 0 12px;
 }
 
 /* HEADING */
 
 .newsletter-content h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 35px;
-    line-height: 1.08;
+    font-size: 43px;
+    line-height: 1.12;
     font-weight: 500;
-
     color: #401D27;
-    margin-bottom: 17px;
+    margin-bottom: 18px;
 }
 
 .newsletter-content h2 em {
@@ -2698,35 +2631,35 @@ body {
 
 .newsletter-description {
     font-family: 'Montserrat', sans-serif;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.9;
     color: #777174;
-
-    max-width: 320px;
-    margin: 0 auto 25px;
+    max-width: 440px;
+    margin: 0 auto 28px;
 }
 
 /* EMAIL FORM */
 
 .newsletter-form {
     display: flex;
-    flex-direction: column;
+    align-items: stretch;
     gap: 10px;
+    width: 100%;
+    max-width: 510px;
+    margin: 0 auto;
 }
 
 .newsletter-form input {
-    width: 100%;
-    height: 47px;
-
+    flex: 1;
+    min-width: 0;
+    height: 49px;
     border: 1px solid #E4DADD;
-    border-radius: 4px;
-
-    padding: 0 14px;
-
+    border-radius: 3px;
+    padding: 0 15px;
+    background: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     color: #401D27;
-
     outline: none;
 }
 
@@ -2735,20 +2668,17 @@ body {
 }
 
 .newsletter-form button {
-    width: 100%;
-    height: 47px;
-
+    min-width: 175px;
+    height: 49px;
+    padding: 0 18px;
     background: #401D27;
     color: #FFFFFF;
-
-    border: none;
-    border-radius: 4px;
-
+    border: 1px solid #401D27;
+    border-radius: 3px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 600;
-    letter-spacing: 1.5px;
-
+    letter-spacing: 1.3px;
     cursor: pointer;
     transition: background 0.3s ease;
 }
@@ -2777,27 +2707,48 @@ body {
 
 /* MOBILE */
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
 
-    .newsletter-overlay {
-        padding: 18px;
+    .newsletter-section {
+        padding: 58px 7% 62px;
     }
 
-    .newsletter-popup {
-        max-width: 370px;
-        border-radius: 13px;
+    .newsletter-accent {
+        margin-bottom: 23px;
     }
 
     .newsletter-content {
-        padding: 38px 25px 29px;
+        max-width: 100%;
+    }
+
+    .newsletter-monogram {
+        font-size: 34px;
     }
 
     .newsletter-content h2 {
-        font-size: 31px;
+        font-size: 34px;
+        line-height: 1.12;
     }
 
     .newsletter-description {
         font-size: 10px;
+        line-height: 1.9;
+        margin-bottom: 24px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+        height: 47px;
+    }
+
+    .newsletter-form button {
+        min-width: 0;
     }
 
 }
