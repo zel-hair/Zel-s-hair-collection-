@@ -1,3 +1,4 @@
+
 // ZEL'S HAIR COLLECTION — HOMEPAGE INTERACTIONS
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -19,34 +20,17 @@ document.addEventListener('DOMContentLoaded', function () {
         shopObserver.observe(shopIntro);
     }
 
-    // SHOP BLUR-TO-CLEAR EFFECT
-
-    const hero = document.querySelector('.hero');
-
-    if (hero && shopIntro && 'IntersectionObserver' in window) {
-        const heroObserver = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                shopIntro.classList.toggle(
-                    'shop-is-clear',
-                    !entry.isIntersecting
-                );
-            });
-        }, { threshold: 0 });
-
-        heroObserver.observe(hero);
-    }
-
     // WHAT'S YOUR VIBE
 
     const vibeOptions = document.querySelectorAll('.vibe-option');
     const vibeMessage = document.getElementById('vibeMessage');
 
     const vibeMessages = {
-        waves: "Hi, Waves Girly! Zel's has beautiful options to help you find a look you'll love.",
-        pixie: "Hi, Pixie Cut Babe! Explore styles that complement your look and personal taste.",
-        straight: "Hi, Straight Doll! Sleek and timeless looks? You're in the right place.",
-        curly: "Hi, Curly Hair Lady! Let's find a texture that brings your look together.",
-        afro: "Hi, Afro Queen! Explore hair options to complement your style."
+        waves: "Hi, Waves Girly! Zel's got you covered with some beautiful waves for your taste!",
+        pixie: "Hi, Pixie Cut Babe! Zel's got you covered with hair options to complement your style!",
+        straight: "Hi, Straight Doll! Sleek looks are always a statement. Zel's got something for your taste!",
+        curly: "Hi, Curly Hair Lady! Let's get those curls talking. Zel's got you covered!",
+        afro: "Hi, Afro Queen! Zel's got you covered with some beautiful hair options to complement your taste."
     };
 
     if (vibeOptions.length && vibeMessage) {
@@ -78,8 +62,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     text,
                     document.createElement('br'),
                     document.createElement('br'),
-                    document.createTextNode('Ready to explore? '),
-                    link
+                    document.createTextNode('Click on '),
+                    link,
+                    document.createTextNode(' to explore hair!')
                 );
 
                 vibeMessage.classList.add('visible');
@@ -87,78 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // CUSTOMER REVIEWS — FIVE ROTATING REVIEWS
-
-    const reviews = [
-        {
-            title: 'I love the textures of the hair',
-            message: 'I love the textures of the hair so much.',
-            author: 'Abena Acheampong'
-        },
-        {
-            title: 'Exactly what I was looking for',
-            message: "The hair was exactly what I was looking for. I'm so happy with my purchase.",
-            author: 'Nana Ama'
-        },
-        {
-            title: 'Beautiful hair quality',
-            message: 'Beautiful quality and the hair feels so soft.',
-            author: 'Esi Mensah'
-        },
-        {
-            title: 'Absolutely love my hair',
-            message: 'I absolutely love my hair. Definitely ordering again!',
-            author: 'Akosua'
-        },
-        {
-            title: 'Exceeded my expectations',
-            message: 'The quality exceeded my expectations. Really lovely hair.',
-            author: 'Mabel Owusu'
-        }
-    ];
-
-    const reviewCard = document.getElementById('reviewCard');
-    const reviewTitle = document.getElementById('reviewTitle');
-    const reviewMessage = document.getElementById('reviewMessage');
-    const reviewAuthor = document.getElementById('reviewAuthor');
-    const nextReview = document.getElementById('nextReview');
-    const prevReview = document.getElementById('prevReview');
-
-    if (
-        reviewCard &&
-        reviewTitle &&
-        reviewMessage &&
-        reviewAuthor &&
-        nextReview &&
-        prevReview
-    ) {
-        let currentReview = 0;
-        let transitionTimer;
-
-        function showReview(index) {
-            currentReview = (index + reviews.length) % reviews.length;
-            reviewCard.style.opacity = '0';
-
-            window.clearTimeout(transitionTimer);
-
-            transitionTimer = window.setTimeout(() => {
-                reviewTitle.textContent = reviews[currentReview].title;
-                reviewMessage.textContent = reviews[currentReview].message;
-                reviewAuthor.textContent = reviews[currentReview].author;
-                reviewCard.style.opacity = '1';
-            }, 180);
-        }
-
-        nextReview.addEventListener('click', () => {
-            showReview(currentReview + 1);
-        });
-
-        prevReview.addEventListener('click', () => {
-            showReview(currentReview - 1);
-        });
-
-        showReview(0);
-    }
+    // CUSTOMER REVIEWS — ALL FIVE REVIEWS ARE DISPLAYED IN THE HTML.
 
     // ZEL'S AI ASSISTANT
 
