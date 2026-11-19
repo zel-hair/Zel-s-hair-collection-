@@ -72,7 +72,46 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // CUSTOMER REVIEWS — ALL FIVE REVIEWS ARE DISPLAYED IN THE HTML.
+    // CUSTOMER REVIEWS — all five reviews are displayed in the HTML.
+
+    // CUSTOMER REVIEWS — centered one-at-a-time carousel
+
+    const reviewTrack = document.querySelector('.reviews-track');
+    const reviewCards = reviewTrack
+        ? Array.from(reviewTrack.querySelectorAll('.review-card'))
+        : [];
+
+    const previousReview = document.getElementById('prevReview');
+    const nextReview = document.getElementById('nextReview');
+
+    let currentReview = 0;
+
+    function showReview(index) {
+        if (!reviewTrack || !reviewCards.length) return;
+
+        currentReview = (index + reviewCards.length) % reviewCards.length;
+
+        reviewTrack.style.transform = `translateX(-${currentReview * 100}%)`;
+
+        reviewCards.forEach((card, cardIndex) => {
+            card.setAttribute(
+                'aria-hidden',
+                cardIndex === currentReview ? 'false' : 'true'
+            );
+        });
+    }
+
+    if (reviewTrack && reviewCards.length) {
+        previousReview?.addEventListener('click', () => {
+            showReview(currentReview - 1);
+        });
+
+        nextReview?.addEventListener('click', () => {
+            showReview(currentReview + 1);
+        });
+
+        showReview(0);
+    }
 
     // ZEL'S AI ASSISTANT
 
@@ -87,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (aiButton && aiPanel) {
         aiButton.addEventListener('click', () => {
             aiPanel.classList.toggle('active');
+
             aiButton.setAttribute(
                 'aria-expanded',
                 aiPanel.classList.contains('active')
@@ -150,7 +190,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 return 'Interested in wholesale? Visit our wholesale section for more information.';
             }
 
-            if (q.includes('straight') || q.includes('bouncy') || q.includes('curl') || q.includes('frontal')) {
+            if (
+                q.includes('straight') ||
+                q.includes('bouncy') ||
+                q.includes('curl') ||
+                q.includes('frontal')
+            ) {
                 return 'Explore our hair bundles and wigs collections to find the texture or style you have in mind.';
             }
 
@@ -162,6 +207,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (aiInput && aiPredictions) {
             aiInput.addEventListener('input', () => {
                 const query = aiInput.value.toLowerCase().trim();
+
                 aiPredictions.replaceChildren();
 
                 if (!query) return;
@@ -171,13 +217,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     .slice(0, 4)
                     .forEach(item => {
                         const button = document.createElement('button');
+
                         button.type = 'button';
                         button.textContent = item;
 
                         button.addEventListener('click', () => {
                             aiInput.value = item;
                             aiPredictions.replaceChildren();
-                            if (aiForm) aiForm.requestSubmit();
+
+                            if (aiForm) {
+                                aiForm.requestSubmit();
+                            }
                         });
 
                         aiPredictions.appendChild(button);
@@ -192,12 +242,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 event.preventDefault();
 
                 const question = aiInput.value.trim();
+
                 if (!question) return;
 
                 addAiMessage(question, 'user');
+
                 aiInput.value = '';
 
-                if (aiPredictions) aiPredictions.replaceChildren();
+                if (aiPredictions) {
+                    aiPredictions.replaceChildren();
+                }
 
                 window.setTimeout(() => {
                     addAiMessage(answerQuestion(question), 'assistant');
@@ -210,6 +264,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.zels-ai-suggestions button').forEach(button => {
             button.addEventListener('click', () => {
                 const question = button.dataset.question;
+
                 if (!question) return;
 
                 addAiMessage(question, 'user');
@@ -236,10 +291,12 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             if (newsletterFeedback) {
-                newsletterFeedback.textContent = 'Thank you for your interest! Newsletter sign-up will be available soon.';
+                newsletterFeedback.textContent =
+                    'Thank you for your interest! Newsletter sign-up will be available soon.';
             }
 
-            // No email service is connected yet, so do not imply the address was subscribed.
+            // No email service is connected yet,
+            // so do not imply the address was subscribed.
         });
     }
 
@@ -254,6 +311,7 @@ document.addEventListener('DOMContentLoaded', function () {
             window.setTimeout(() => {
                 aiGreeting.classList.remove('show-greeting');
             }, 3000);
+
         }, 1000);
     }
 
