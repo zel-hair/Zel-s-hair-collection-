@@ -1,1 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop hair bundles, braiding extensions and wigs at Zel's Hair Collection.">
+  <title>Shop Hair | Zel's Hair Collection</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="shop.css">
+  <script src="shop.js" defer></script>
+</head>
+<body class="shop-page">
+  <div class="announcement-strip">QUALITY HAIR <span>·</span> CONFIDENCE <span>·</span> ALWAYS</div>
 
+  <header class="site-header shop-site-header">
+    <button class="header-icon menu-button" type="button" aria-label="Open menu"
+      aria-controls="shopMainNav" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7H21"></path><path d="M3 12H21"></path><path d="M3 17H21"></path></svg>
+    </button>
+
+    <nav class="main-nav shop-main-nav" id="shopMainNav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="shop.html" aria-current="page">Shop hair</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="delivery.html">Delivery</a>
+      <a href="help.html">Help</a>
+    </nav>
+
+    <a href="index.html" class="brand-name">Zel's Hair Collection</a>
+
+    <div class="header-actions">
+      <button class="header-icon search-button" id="shopSearchToggle" type="button"
+        aria-label="Open product search" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="10.8" cy="10.8" r="7"></circle><path d="M16 16L21 21"></path>
+        </svg>
+      </button>
+      <a class="header-icon cart-button" href="#shop-products" aria-label="Shopping cart">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 8H19L20 21H4L5 8Z"></path><path d="M9 9V6A3 3 0 0 1 15 6V9"></path>
+        </svg>
+        <span class="shop-cart-count" id="shopCartCount" aria-live="polite">0</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="shop-hero">
+      <div class="shop-hero-decoration shop-hero-decoration-one" aria-hidden="true"></div>
+      <div class="shop-hero-decoration shop-hero-decoration-two" aria-hidden="true"></div>
+      <div class="shop-hero-copy">
+        <span class="shop-eyebrow">THE ZEL'S HAIR EDIT</span>
+        <h1>Find your <em>next look.</em></h1>
+        <p>Explore hair bundles, braiding extensions and wigs selected for your next style.</p>
+      </div>
+      <div class="shop-hero-mark" aria-hidden="true"><span>Z</span><small>THE HAIR EDIT</small></div>
+    </section>
+
+    <section class="shop-category-navigation" aria-label="Shop categories">
+      <p class="shop-section-kicker">FIND YOUR COLLECTION</p>
+      <div class="shop-category-links">
+        <a href="#bundles">Hair Bundles <span>01</span></a>
+        <a href="#braiding-extensions">Braiding Extensions <span>02</span></a>
+        <a href="#wigs">Wigs <span>03</span></a>
+      </div>
+    </section>
+
+    <section class="shop-search-panel" id="shopSearchPanel" hidden>
+      <label for="shopSearchInput">Search the collection</label>
+      <div class="shop-search-field">
+        <input id="shopSearchInput" type="search" placeholder="Try body wave, braiding hair, wigs..." autocomplete="off">
+        <button id="shopSearchClear" type="button" aria-label="Clear search">×</button>
+      </div>
+      <p id="shopSearchFeedback" aria-live="polite"></p>
+    </section>
+
+    <div class="shop-products-wrap" id="shop-products">
+      <section class="shop-product-section" id="bundles" data-category="bundles">
+        <div class="shop-category-heading">
+          <div><span class="shop-section-kicker">01 / THE COLLECTION</span><h2>Hair <em>Bundles</em></h2></div>
+          <p>Find a texture that feels like you.</p>
+        </div>
+        <div class="shop-product-grid">
+          <article class="shop-product-card" data-name="The Body Wave" data-category="bundles">
+            <div class="shop-product-image-wrap">
+              <span class="shop-stock-count" aria-label="12 available">12</span>
+              <img src="IMG_4563.jpeg" alt="Body wave hair bundles" loading="lazy">
+            </div>
+            <div class="shop-product-info">
+              <h3>The Body Wave</h3><p class="shop-product-price">GHC 150</p>
+              <button class="shop-add-button" type="button" data-product-id="bundle-body-wave" data-product-name="The Body Wave" data-stock="12">ADD TO CART <span>+</span></button>
+            </div>
+          </article>
+          <article class="shop-product-card" data-name="The Bouncy Curl" data-category="bundles">
+            <div class="shop-product-image-wrap">
+              <span class="shop-stock-count" aria-label="8 available">8</span>
+              <img src="IMG_4567.jpeg" alt="Bouncy curl hair bundles" loading="lazy">
+            </div>
+            <div class="shop-product-info">
+              <h3>The Bouncy Curl</h3><p class="shop-product-price">GHC 150</p>
+              <button class="shop-add-button" type="button" data-product-id="bundle-bouncy-curl" data-product-name="The Bouncy Curl" data-stock="8">ADD TO CART <span>+</span></button>
+            </div>
+          </article>
+          <article class="shop-product-card" data-name="The Silky Straight" data-category="bundles">
+            <div class="shop-product-image-wrap">
+              <span class="shop-stock-count" aria-label="10 available">10</span>
+              <img src="IMG_4570.jpeg" alt="Silky straight hair bundles" loading="lazy">
+            </div>
+            <div class="shop-product-info">
+              <h3>The Silky Straight</h3><p class="shop-product-price">GHC 150</p>
+              <button class="shop-add-button" type="button" data-product-id="bundle-silky-straight" data-product-name="The Silky Straight" data-stock="10">ADD TO CART <span>+</span></button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="shop-product-section shop-product-section-pink" id="braiding-extensions" data-category="braiding">
+        <div class="shop-category-heading">
+          <div><span class="shop-section-kicker">02 / THE COLLECTION</span><h2>Braiding <em>Extensions</em></h2></div>
+          <p>Options for your next braided style.</p>
+        </div>
+        <div class="shop-product-grid">
+          <article class="shop-product-card" data-name="The Classic Braid" data-category="braiding">
+            <div class="shop-product-image-wrap">
+              <span class="shop-stock-count" aria-label="15 available">15</span>
+              <img src="IMG_4549.jpeg" alt="Braiding extensions" loading="lazy">
+            </div>
+            <div class="shop-product-info">
+              <h3>The Classic Braid</h3><p class="shop-product-price">GHC 150</p>
+              <button class="shop-add-button" type="button" data-product-id="braid-classic" data-product-name="The Classic Braid" data-stock="15">ADD TO CART <span>+</span></button>
+            </div>
+          </article>
+          <article class="shop-product-card" data-name="The Everyday Braid" data-category="braiding">
+            <div class="shop-product-image-wrap">
+              <span class="shop-stock-count" aria-label="9 available">9</span>
+              <img src="IMG_4549.jpeg" alt="Braiding hair extensions collection" loading="lazy">
+            </div>
+            <div class="shop-product-info">
+              <h3>The Everyday Braid</h3><p class="shop-product-price">GHC 150</p>
+              <button class="shop-add-button" type="button" data-product-id="braid-everyday" data-product-name="The Everyday Braid" data-stock="9">ADD TO CART <span>+</span></button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="shop-product-section" id="wigs" data-category="wigs">
+        <div class="shop-category-heading">
+          <div><span class="shop-section-kicker">03 / THE COLLECTION</span><h2>Wigs</h2></div>
+          <p>Find a style for your next moment.</p>
+        </div>
+        <div class="shop-product-grid">
+          <article class="shop-product-card" data-name="The Lace Frontal" data-category="wigs">
+            <div class="shop-product-image-wrap">
+              <span class="shop-stock-count" aria-label="6 available">6</span>
+              <img src="IMG_4568.jpeg" alt="Lace frontal wig" loading="lazy">
+            </div>
+            <div class="shop-product-info">
+              <h3>The Lace Frontal</h3><p class="shop-product-price">GHC 150</p>
+              <button class="shop-add-button" type="button" data-product-id="wig-lace-frontal" data-product-name="The Lace Frontal" data-stock="6">ADD TO CART <span>+</span></button>
+            </div>
+          </article>
+          <article class="shop-product-card" data-name="The Zel's Classic" data-category="wigs">
+            <div class="shop-product-image-wrap">
+              <span class="shop-stock-count" aria-label="7 available">7</span>
+              <img src="IMG_4551.jpeg" alt="Wig from Zel's hair collection" loading="lazy">
+            </div>
+            <div class="shop-product-info">
+              <h3>The Zel's Classic</h3><p class="shop-product-price">GHC 150</p>
+              <button class="shop-add-button" type="button" data-product-id="wig-zels-classic" data-product-name="The Zel's Classic" data-stock="7">ADD TO CART <span>+</span></button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <p class="shop-no-results" id="shopNoResults" hidden>No products match that search. Try another name or category.</p>
+    </div>
+
+    <section class="shop-help-note">
+      <span class="shop-help-sparkle" aria-hidden="true">✳</span>
+      <div><span class="shop-section-kicker">NEED A LITTLE HELP?</span><h2>Not sure what to choose?</h2><p>Ask Zel's AI assistant for help finding a style, or visit our Help page.</p></div>
+      <a href="help.html" class="shop-help-link">VISIT HELP <span>↗</span></a>
+    </section>
+  </main>
+
+  <div class="shop-toast" id="shopToast" role="status" aria-live="polite"></div>
+
+  <footer class="zels-footer">
+    <div class="zels-footer-content">
+      <div class="zels-footer-brand">
+        <h2>ZEL'S <span>HAIR COLLECTION</span></h2>
+        <p>Hair for every look, every mood and every version of you.</p>
+        <a href="shop.html" class="zels-footer-shop">EXPLORE OUR COLLECTION</a>
+      </div>
+      <div class="zels-footer-column"><h3>SHOP</h3><a href="#bundles">Hair Bundles</a><a href="#braiding-extensions">Braiding Extensions</a><a href="#wigs">Wigs</a></div>
+      <div class="zels-footer-column"><h3>CUSTOMER CARE</h3><a href="delivery.html">Delivery</a><a href="help.html">Help</a><a href="gallery.html">Gallery</a></div>
+    </div>
+    <div class="zels-footer-bottom"><p>© 2026 Zel's Hair Collection. All rights reserved.</p><span>MADE WITH CARE.</span></div>
+  </footer>
+</body>
+</html>
