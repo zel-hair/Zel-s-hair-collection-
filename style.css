@@ -1270,3 +1270,125 @@ body { font-size: 16px; }
 
 }
 
+/* =====================================================
+   ZEL'S — CATEGORY & WHOLESALE IMAGE REFINEMENT
+   Full-frame photography | Clean editorial proportions
+   ===================================================== */
+
+/* CATEGORY IMAGE FRAMES */
+.category-card-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #f3f3f1;
+    position: relative;
+}
+
+.category-card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform .7s cubic-bezier(.2,.7,.2,1);
+}
+
+.category-card:hover .category-card-image img {
+    transform: scale(1.025);
+}
+
+/* WHOLESALE IMAGE CAROUSEL */
+.wholesale-carousel {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.wholesale-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.wholesale-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 78%;
+    gap: 20px;
+    width: 100%;
+}
+
+.wholesale-slide {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    min-width: 0;
+    overflow: hidden;
+    background: #f3f3f1;
+    scroll-snap-align: start;
+}
+
+.wholesale-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* MOBILE REFINEMENT */
+@media (max-width: 760px) {
+
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .category-card-image {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+    }
+
+    .category-card-info {
+        padding: 14px 2px 0;
+    }
+
+    .category-card-info h3 {
+        font-size: clamp(27px, 7vw, 34px);
+    }
+
+    .category-card-info p {
+        min-height: 0;
+        font-size: 13px;
+        line-height: 1.7;
+        margin-bottom: 13px;
+    }
+
+    .category-link {
+        font-size: 9px;
+    }
+
+    .wholesale-track {
+        grid-auto-columns: 82%;
+        gap: 13px;
+    }
+
+    .wholesale-slide {
+        aspect-ratio: 4 / 5;
+    }
+}
+
+/* SMALL PHONES */
+@media (max-width: 380px) {
+    .category-grid {
+        gap: 32px;
+    }
+
+    .wholesale-track {
+        grid-auto-columns: 86%;
+    }
+}
+
+
