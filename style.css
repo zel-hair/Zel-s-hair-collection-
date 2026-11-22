@@ -856,3 +856,417 @@ body { font-size: 16px; }
 @media (prefers-reduced-motion: reduce) {
   .reveal-item, .reveal-item.is-visible { opacity: 1; transform: none; transition: none; }
 }
+
+/* =====================================================
+   ZEL'S HAIR COLLECTION
+   HOMEPAGE PROPORTION & SPACING REFINEMENTS
+   ===================================================== */
+
+/* 1. HERO — IMAGE AND MESSAGE AS ONE COMPOSITION */
+
+.hero {
+  width: min(100% - 64px, var(--content-width));
+  min-height: 620px;
+  margin: 38px auto 90px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  position: relative;
+  overflow: hidden;
+  background: #f4f4f2;
+}
+
+.hero-image {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 620px;
+  object-fit: cover;
+  object-position: center 45%;
+}
+
+.hero-overlay {
+  display: block;
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, .55) 0%,
+    rgba(0, 0, 0, .25) 45%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.hero-content {
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 2;
+  align-self: center;
+  width: min(55%, 600px);
+  max-width: 600px;
+  padding: 55px clamp(28px, 6vw, 85px);
+  color: #fff;
+  text-align: left;
+}
+
+.hero-eyebrow,
+.hero-description,
+.hero-intro,
+.hero-details {
+  color: rgba(255, 255, 255, .9);
+}
+
+.hero-heading {
+  color: #fff;
+  font-size: clamp(48px, 5.5vw, 76px);
+}
+
+.hero-description {
+  max-width: 420px;
+}
+
+.hero-btn.appointment-btn {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+.hero-btn.appointment-btn:hover,
+.hero-btn.appointment-btn:focus-visible {
+  background: #fff;
+  color: #171717;
+}
+
+
+/* 2. HAIR CATEGORIES — ONE FULL ROW PER CATEGORY */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 76px;
+  width: 100%;
+}
+
+.category-card {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.category-card-image {
+  width: min(100%, 760px);
+  aspect-ratio: 16 / 10;
+  margin: 0 auto;
+  background: #f7f7f5;
+}
+
+.category-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.category-card-info {
+  width: min(100%, 650px);
+  padding: 23px 12px 0;
+  text-align: center;
+}
+
+.category-card-info h3 {
+  margin: 10px 0;
+  font-size: clamp(28px, 3vw, 38px);
+}
+
+.category-card-info p {
+  margin: 0 auto 17px;
+  max-width: 460px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.category-link {
+  margin: 0 auto;
+}
+
+
+/* 3. WHOLESALE — MORE SPACE AROUND THE PHOTOGRAPHS */
+
+.wholesale-preview {
+  width: min(100% - 64px, var(--content-width));
+  padding: 105px 0 110px;
+}
+
+.wholesale-heading {
+  margin-bottom: 42px;
+}
+
+.wholesale-carousel {
+  width: 100%;
+  padding: 0 0 12px;
+}
+
+.wholesale-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 78%;
+  gap: 28px;
+  width: 100%;
+}
+
+.wholesale-slide {
+  width: 100%;
+  aspect-ratio: 1.35 / 1;
+  overflow: hidden;
+  background: #f7f7f5;
+}
+
+.wholesale-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.wholesale-description {
+  margin-top: 35px;
+}
+
+
+/* 4. REVIEWS — FULL ACTIVE CARD WITH A SMALL NEXT PREVIEW */
+
+.reviews-carousel {
+  width: min(100%, 1080px);
+  grid-template-columns: 36px minmax(0, 1fr) 36px;
+  gap: 18px;
+}
+
+.reviews-viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.reviews-track {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.review-card {
+  flex: 0 0 78%;
+  min-width: 0;
+  padding: 34px clamp(22px, 4vw, 48px);
+}
+
+.review-title {
+  font-size: clamp(23px, 2.5vw, 30px);
+  line-height: 1.3;
+}
+
+.review-message {
+  min-height: 0;
+  font-size: 14px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.review-author {
+  margin-top: 18px;
+  font-size: 12px;
+}
+
+
+/* 5. GALLERY VIDEO — PRESERVE THE FULL HAIRSTYLE */
+
+.gallery-video {
+  width: min(100%, 1050px);
+  height: auto;
+  aspect-ratio: auto;
+  margin: 0 auto 30px;
+  overflow: hidden;
+  background: #f7f7f5;
+}
+
+.gallery-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 720px;
+  object-fit: contain;
+}
+
+
+/* 6. RESPONSIVE ADJUSTMENTS */
+
+@media (max-width: 760px) {
+
+  .hero {
+    width: 100%;
+    min-height: 590px;
+    margin: 0 auto 65px;
+  }
+
+  .hero-image {
+    min-height: 590px;
+    height: 100%;
+    object-position: center 45%;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, .72) 0%,
+      rgba(0, 0, 0, .3) 55%,
+      rgba(0, 0, 0, .05) 100%
+    );
+  }
+
+  .hero-content {
+    align-self: end;
+    width: 100%;
+    max-width: 600px;
+    padding: 35px 25px 42px;
+    text-align: left;
+  }
+
+  .hero-heading {
+    max-width: 500px;
+    margin: 12px 0;
+    font-size: clamp(39px, 10vw, 52px);
+  }
+
+  .hero-description {
+    max-width: 420px;
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .hero-buttons {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .hero-btn {
+    font-size: 9px;
+  }
+
+  .category-grid {
+    gap: 55px;
+  }
+
+  .category-card-image {
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 4 / 3;
+  }
+
+  .category-card-info {
+    padding-top: 19px;
+  }
+
+  .category-card-info h3 {
+    font-size: 29px;
+  }
+
+  .category-card-info p {
+    min-height: 0;
+    font-size: 13px;
+  }
+
+  .wholesale-preview {
+    width: calc(100% - 36px);
+    padding: 75px 0 80px;
+  }
+
+  .wholesale-heading {
+    margin-bottom: 30px;
+  }
+
+  .wholesale-track {
+    grid-auto-columns: 88%;
+    gap: 17px;
+  }
+
+  .wholesale-slide {
+    aspect-ratio: 1.12 / 1;
+  }
+
+  .reviews-section {
+    padding: 75px 14px 80px;
+  }
+
+  .reviews-carousel {
+    grid-template-columns: 29px minmax(0, 1fr) 29px;
+    gap: 7px;
+  }
+
+  .review-card {
+    flex-basis: 82%;
+    padding: 27px 20px;
+  }
+
+  .review-title {
+    font-size: 23px;
+  }
+
+  .review-message {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .gallery-video {
+    width: 100%;
+    aspect-ratio: auto;
+  }
+
+  .gallery-video video {
+    width: 100%;
+    height: auto;
+    max-height: 620px;
+    object-fit: contain;
+  }
+}
+
+
+/* SMALLER MOBILE SCREENS */
+
+@media (max-width: 380px) {
+
+  .hero {
+    min-height: 550px;
+  }
+
+  .hero-image {
+    min-height: 550px;
+  }
+
+  .hero-content {
+    padding: 28px 19px 34px;
+  }
+
+  .hero-heading {
+    font-size: 38px;
+  }
+
+  .category-grid {
+    gap: 45px;
+  }
+
+  .category-card-image {
+    aspect-ratio: 4 / 3;
+  }
+
+  .wholesale-track {
+    grid-auto-columns: 91%;
+  }
+
+  .review-card {
+    flex-basis: 84%;
+    padding: 23px 16px;
+  }
+
+}
+
