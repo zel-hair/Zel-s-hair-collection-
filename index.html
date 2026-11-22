@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ZEL'S HAIR COLLECTION</title>
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Explore wigs, hair bundles, braiding extensions, appointments and wholesale with Zel's Hair Collection.">
+    <title>Zel's Hair Collection | Hair for Your Next Look</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -27,18 +29,19 @@
         </button>
 
         <nav class="main-nav" id="mainNav" aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="#shop">Shop hair</a>
+            <a href="#shop">Shop</a>
             <a href="#wholesale">Wholesale</a>
             <a href="#appointments">Appointments</a>
             <a href="#delivery">Delivery</a>
             <a href="#gallery">Gallery</a>
+            <a href="help.html">Help</a>
             <a href="#reviews">Reviews</a>
         </nav>
 
-        <!-- Brand Name -->
-        <a href="index.html" class="brand-name">
-            Zel's Hair Collection
+        <!-- Brand Wordmark -->
+        <a href="index.html" class="brand-name" aria-label="Zel's Hair Collection home">
+            <span class="brand-main">ZEL'S</span>
+            <span class="brand-sub">HAIR COLLECTION</span>
         </a>
 
         <!-- Header Actions -->
@@ -102,87 +105,50 @@
     </section>
 
 </main>
-<section class="shop-categories" id="shop">
+<section class="shop-categories" id="shop" aria-labelledby="shopTitle">
     <div class="category-intro scroll-reveal">
-
-    <span>SHOP</span>
-
-    <p>
-        Explore our selection of wigs, hair bundles
-        and braiding extensions.
-    </p>
-
-</div>
-
-    <div class="category-row" id="wigs">
-
-        <div class="category-image">
-            <img src="IMG_4551.jpeg" alt="Wigs collection">
-        </div>
-
-        <div class="category-info">
-            <span class="category-number">01 / WIGS</span>
-
-            <h2>Wigs</h2>
-
-            <p>
-                Explore our selection of wigs, with styles
-                for different looks and preferences.
-            </p>
-
-            <a href="shop.html#wigs" class="category-link">
-    EXPLORE WIGS
-</a>
-        </div>
-
+        <span>THE COLLECTION</span>
+        <h2 id="shopTitle">Find your next <em>look.</em></h2>
+        <p>Explore wigs, bundles and braiding extensions.</p>
     </div>
 
-    <div class="category-row reverse" id="bundles">
+    <div class="category-grid">
+        <article class="category-card scroll-reveal" id="wigs">
+            <a class="category-card-image" href="shop.html#wigs" aria-label="Explore wigs">
+                <img src="IMG_4551.jpeg" alt="Wigs collection" loading="lazy">
+            </a>
+            <div class="category-card-info">
+                <span class="category-number">01 / WIGS</span>
+                <h3>Wigs</h3>
+                <p>Styles for the looks you love.</p>
+                <a href="shop.html#wigs" class="category-link">EXPLORE WIGS</a>
+            </div>
+        </article>
 
-        <div class="category-image">
-            <img src="IMG_4550.jpeg" alt="Hair bundles collection">
-        </div>
+        <article class="category-card scroll-reveal" id="bundles">
+            <a class="category-card-image" href="shop.html#bundles" aria-label="Explore hair bundles">
+                <img src="IMG_4550.jpeg" alt="Hair bundles collection" loading="lazy">
+            </a>
+            <div class="category-card-info">
+                <span class="category-number">02 / BUNDLES</span>
+                <h3>Hair Bundles</h3>
+                <p>Textures to complement your next style.</p>
+                <a href="shop.html#bundles" class="category-link">EXPLORE BUNDLES</a>
+            </div>
+        </article>
 
-        <div class="category-info">
-            <span class="category-number">02 / BUNDLES</span>
-
-            <h2>Hair Bundles</h2>
-
-            <p>
-                Find different textures and styles
-                to complement your next hairstyle.
-            </p>
-
-            <a href="shop.html#bundles" class="category-link">
-    EXPLORE BUNDLES
-</a>
-        </div>
-
+        <article class="category-card scroll-reveal" id="braiding">
+            <a class="category-card-image" href="shop.html#braiding-extensions" aria-label="Explore braiding extensions">
+                <img src="IMG_4549.jpeg" alt="Braiding extensions collection" loading="lazy">
+            </a>
+            <div class="category-card-info">
+                <span class="category-number">03 / BRAIDING EXTENSIONS</span>
+                <h3>Braiding Extensions</h3>
+                <p>Find the finishing touch for your next braid look.</p>
+                <a href="shop.html#braiding-extensions" class="category-link">EXPLORE EXTENSIONS</a>
+            </div>
+        </article>
     </div>
-
-    <div class="category-row" id="braiding">
-
-        <div class="category-image">
-            <img src="IMG_4549.jpeg" alt="Braiding extensions collection">
-        </div>
-
-        <div class="category-info">
-            <span class="category-number">03 / BRAIDING EXTENSIONS</span>
-
-            <h2>Braiding Extensions</h2>
-
-            <p>
-                Explore extensions for your next
-                braided hairstyle.
-            </p>
-
-            <a href="shop.html#braiding-extensions" class="category-link">
-    EXPLORE EXTENSIONS
-</a>
-        </div>
-
-    </div>
-
 </section>
 <!-- WHAT'S YOUR VIBE SECTION -->
 
@@ -203,27 +169,27 @@
 
         <div class="vibe-options">
 
-            <button class="vibe-option" data-vibe="waves">
+            <button type="button" class="vibe-option" aria-pressed="false" data-vibe="waves">
                 <span class="vibe-number">01</span>
                 <span class="vibe-name">Waves Girly</span>
             </button>
 
-            <button class="vibe-option" data-vibe="pixie">
+            <button type="button" class="vibe-option" aria-pressed="false" data-vibe="pixie">
                 <span class="vibe-number">02</span>
                 <span class="vibe-name">Pixie Cut Babe</span>
             </button>
 
-            <button class="vibe-option" data-vibe="straight">
+            <button type="button" class="vibe-option" aria-pressed="false" data-vibe="straight">
                 <span class="vibe-number">03</span>
                 <span class="vibe-name">Straight Doll</span>
             </button>
 
-            <button class="vibe-option" data-vibe="curly">
+            <button type="button" class="vibe-option" aria-pressed="false" data-vibe="curly">
                 <span class="vibe-number">04</span>
                 <span class="vibe-name">Curly Hair Lady</span>
             </button>
 
-            <button class="vibe-option" data-vibe="afro">
+            <button type="button" class="vibe-option" aria-pressed="false" data-vibe="afro">
                 <span class="vibe-number">05</span>
                 <span class="vibe-name">Afro Queen</span>
             </button>
@@ -245,7 +211,7 @@
         <h2>Wholesale with Zel's</h2>
     </div>
 
-    <div class="wholesale-carousel">
+    <div class="wholesale-carousel" tabindex="0" role="region" aria-label="Wholesale campaign images. Swipe or use the arrow keys to browse.">
 
         <div class="wholesale-track">
 

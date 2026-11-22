@@ -589,3 +589,270 @@ button { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+
+/* ==========================================================
+   SLEEK HOMEPAGE REFINEMENT — STRONGER TYPE, IMAGE SCALE,
+   RESPONSIVE GRID, AND PURPOSEFUL MOTION
+   ========================================================== */
+
+:root {
+  --header-height: 88px;
+  --content-width: 1320px;
+}
+
+body { font-size: 16px; }
+
+/* A more confident, editorial wordmark */
+.brand-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  line-height: 1;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  letter-spacing: .075em;
+}
+.brand-main { font-size: clamp(23px, 2.2vw, 29px); }
+.brand-sub {
+  display: block;
+  margin-top: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .27em;
+}
+.main-nav a { font-size: 11px; letter-spacing: .035em; }
+.header-actions { gap: 17px; }
+
+/* Clearer, more readable hero */
+.hero { width: min(100% - 64px, var(--content-width)); margin-top: 42px; margin-bottom: 88px; }
+.hero-heading { font-size: clamp(48px, 5.4vw, 76px); line-height: 1.02; }
+.hero-description { font-size: 15px; line-height: 1.85; }
+.hero-eyebrow { font-size: 10px; }
+.hero-btn { min-height: 46px; padding-inline: 23px; font-size: 10px; }
+
+/* Larger, more deliberate category photography */
+.shop-categories { width: min(100% - 64px, var(--content-width)); padding: 36px 0 100px; }
+.category-intro { max-width: 760px; margin-bottom: 48px; }
+.category-intro h2 {
+  margin: 10px 0 8px;
+  color: #171717;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(38px, 4.2vw, 58px);
+  font-weight: 400;
+  line-height: 1.08;
+}
+.category-intro h2 em { font-weight: 400; }
+.category-intro p { font-size: 16px; }
+.category-intro > span { font-size: 10px; }
+.category-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(18px, 2.2vw, 32px); }
+.category-card { min-width: 0; }
+.category-card-image { display: block; width: 100%; aspect-ratio: 1 / 1.08; overflow: hidden; background: #f3f3f1; }
+.category-card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+.category-card:hover .category-card-image img { transform: scale(1.035); }
+.category-card-info { padding: 17px 2px 0; }
+.category-number { font-size: 10px; }
+.category-card-info h3 {
+  margin: 9px 0 7px;
+  color: #171717;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(25px, 2.5vw, 34px);
+  font-weight: 400;
+  line-height: 1.1;
+}
+.category-card-info p { margin: 0 0 15px; color: #686868; font-size: 14px; line-height: 1.65; }
+.category-link, .wholesale-link, .appointment-link, .gallery-link { font-size: 10px; }
+
+/* Vibe selector: readable, responsive and tactile */
+.vibe-section { padding: 96px 24px 100px; }
+.vibe-title, .vibe-content h2 { font-size: clamp(44px, 5vw, 66px); }
+.vibe-description { font-size: 15px; margin-bottom: 38px; }
+.vibe-eyebrow { font-size: 10px; }
+.vibe-option { min-height: 108px; }
+.vibe-number { font-size: 10px; }
+.vibe-name { font-size: 18px; }
+.vibe-message { font-size: 14px; }
+
+/* Wholesale: first image dominant, next image peeking in */
+.wholesale-preview { width: min(100% - 64px, var(--content-width)); padding: 96px 0 100px; }
+.wholesale-heading { margin-bottom: 34px; }
+.wholesale-heading h2 { font-size: clamp(40px, 4.4vw, 58px); }
+.wholesale-eyebrow { font-size: 10px; }
+.wholesale-carousel {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+}
+.wholesale-carousel:active { cursor: grabbing; }
+.wholesale-carousel::-webkit-scrollbar { display: none; }
+.wholesale-track { display: grid; grid-auto-flow: column; grid-auto-columns: 78%; gap: 18px; width: 100%; }
+.wholesale-slide { aspect-ratio: 1.28 / 1; scroll-snap-align: start; }
+.wholesale-slide img { width: 100%; height: 100%; object-fit: cover; }
+.wholesale-description { max-width: 650px; margin-top: 30px; }
+.wholesale-description p { font-size: 14px; line-height: 1.8; }
+
+/* Appointment and delivery text should be comfortably readable */
+.appointment-preview { width: min(100% - 64px, 1180px); }
+.appointment-heading h2 { font-size: 11px; }
+.appointment-content h3 { font-size: clamp(38px, 4vw, 54px); }
+.appointment-intro { font-size: 19px; }
+.appointment-description { font-size: 14px; line-height: 1.8; }
+.services-label { font-size: 10px; }
+.service-item { min-height: 46px; }
+.service-item span { font-size: 11px; }
+.service-item p { font-size: 11px; }
+.appointment-closing { font-size: 13px; }
+.delivery-section { padding: 92px 28px 98px; }
+.delivery-heading h2 { font-size: clamp(39px, 4.2vw, 54px); }
+.delivery-eyebrow { font-size: 10px; }
+.delivery-steps { gap: 34px; }
+.delivery-step { padding: 27px 22px 12px; }
+.delivery-number { font-size: 27px; }
+.delivery-step-content h3 { font-size: 11px; }
+.delivery-step-content p { font-size: 13px; line-height: 1.8; }
+
+/* Gallery, reviews and newsletter */
+.gallery-preview { padding: 96px 28px 100px; }
+.gallery-eyebrow { font-size: 10px; }
+.gallery-heading h2 { font-size: clamp(42px, 4.7vw, 60px); }
+.reviews-section { padding: 92px 28px 96px; }
+.reviews-heading { font-size: clamp(42px, 4.5vw, 56px); }
+.reviews-carousel { width: min(100%, 980px); }
+.review-card { flex: 0 0 100%; padding: 34px clamp(22px, 5vw, 58px); }
+.review-stars { font-size: 13px; }
+.review-label { font-size: 10px; }
+.review-title { font-size: 25px; }
+.review-message { min-height: 0; font-size: 14px; line-height: 1.8; }
+.review-author { font-size: 12px; }
+.review-summary, .review-disclaimer { font-size: 11px; }
+.newsletter { padding: 92px 28px 96px; }
+.newsletter-eyebrow { font-size: 10px; }
+.newsletter h2 { font-size: clamp(42px, 4.6vw, 58px); }
+.newsletter-inner > p:not(.form-message) { font-size: 14px; line-height: 1.8; }
+.newsletter-form input { height: 52px; font-size: 14px; }
+.newsletter-form button { font-size: 10px; }
+.form-message { font-size: 12px; }
+.zels-footer-brand { font-size: 19px; }
+.zels-footer-links a { font-size: 11px; }
+.zels-footer-bottom p { font-size: 10px; }
+
+/* Motion is subtle and only begins when elements enter view */
+.reveal-item { opacity: 0; transform: translateY(22px); transition: opacity .65s ease, transform .65s cubic-bezier(.2,.7,.2,1); }
+.reveal-item.is-visible { opacity: 1; transform: translateY(0); }
+.category-card:nth-child(2) { transition-delay: .08s; }
+.category-card:nth-child(3) { transition-delay: .16s; }
+
+/* The mobile header keeps the menu, wordmark and actions on one line */
+@media (max-width: 760px) {
+  :root { --header-height: 72px; }
+  .site-header { min-height: var(--header-height); padding: 0 15px; grid-template-columns: 34px minmax(0, 1fr) 62px; gap: 5px; }
+  .brand-name { gap: 1px; }
+  .brand-main { font-size: 21px; }
+  .brand-sub { margin-top: 3px; font-size: 7px; letter-spacing: .22em; }
+  .main-nav.is-open { display: flex; }
+  .main-nav a { padding: 14px 0; font-size: 13px; }
+  .header-actions { gap: 8px; }
+  .header-icon { width: 25px; height: 32px; }
+
+  .hero { width: 100%; margin: 0 auto 58px; }
+  .hero-image { width: 100%; height: min(108vw, 540px); object-position: center 46%; }
+  .hero-content { padding: 30px 22px 8px; }
+  .hero-eyebrow { font-size: 9px; }
+  .hero-heading { max-width: 520px; margin: 13px auto; font-size: clamp(39px, 10.5vw, 51px); }
+  .hero-description { max-width: 430px; font-size: 14px; line-height: 1.75; }
+  .hero-buttons { gap: 10px; margin-top: 22px; }
+  .hero-btn { min-height: 42px; padding-inline: 17px; font-size: 9px; }
+
+  .shop-categories { width: calc(100% - 30px); padding: 24px 0 68px; }
+  .category-intro { margin-bottom: 29px; }
+  .category-intro h2 { font-size: clamp(36px, 9vw, 46px); }
+  .category-intro p { font-size: 14px; }
+  .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 13px; }
+  .category-card-image { aspect-ratio: 4 / 5; }
+  .category-card-info { padding-top: 12px; }
+  .category-number { font-size: 8px; letter-spacing: .1em; }
+  .category-card-info h3 { margin: 7px 0 6px; font-size: clamp(21px, 5.5vw, 27px); }
+  .category-card-info p { min-height: 42px; margin-bottom: 10px; font-size: 12px; line-height: 1.5; }
+  .category-link { font-size: 9px; }
+
+  .vibe-section { padding: 68px 17px 72px; }
+  .vibe-title, .vibe-content h2 { font-size: 43px; }
+  .vibe-description { font-size: 13px; }
+  .vibe-options { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .vibe-option { min-height: 80px; padding: 13px 5px; }
+  .vibe-name { font-size: 16px; }
+  .vibe-message { font-size: 13px; }
+
+  .wholesale-preview { width: calc(100% - 30px); padding: 68px 0 72px; }
+  .wholesale-heading { margin-bottom: 26px; }
+  .wholesale-heading h2 { font-size: clamp(35px, 8.5vw, 45px); }
+  .wholesale-track { grid-auto-columns: 82%; gap: 13px; }
+  .wholesale-slide { aspect-ratio: 1.08 / 1; }
+  .wholesale-description { margin-top: 22px; }
+  .wholesale-description p { font-size: 13px; }
+
+  .appointment-preview { width: calc(100% - 34px); padding: 68px 0 72px; column-gap: 16px; }
+  .appointment-heading { margin-bottom: 22px; }
+  .appointment-heading h2 { font-size: 9px; }
+  .appointment-content h3 { font-size: clamp(25px, 6.5vw, 33px); }
+  .appointment-intro { font-size: 14px; line-height: 1.4; }
+  .appointment-description { margin-bottom: 16px; font-size: 11px; line-height: 1.65; }
+  .services-label { font-size: 8px; }
+  .service-item { min-height: 36px; gap: 8px; }
+  .service-item span, .service-item p { font-size: 8px; }
+  .appointment-closing { font-size: 10px; }
+  .appointment-link { font-size: 8px; }
+
+  .delivery-section { padding: 68px 15px 72px; }
+  .delivery-heading { margin-bottom: 27px; }
+  .delivery-heading h2 { font-size: clamp(32px, 8vw, 42px); }
+  .delivery-steps { grid-template-columns: 1fr; gap: 14px; max-width: 520px; }
+  .delivery-step { display: flex; gap: 17px; padding: 17px 4px 13px; }
+  .delivery-number { font-size: 23px; }
+  .delivery-step-content h3 { min-height: 0; margin: 2px 0 7px; font-size: 10px; }
+  .delivery-step-content p { font-size: 12px; line-height: 1.7; }
+
+  .gallery-preview { padding: 68px 15px 72px; }
+  .gallery-heading h2 { font-size: 43px; }
+  .gallery-video { aspect-ratio: 4 / 3; }
+  .reviews-section { padding: 68px 13px 72px; }
+  .reviews-heading { margin-bottom: 24px; font-size: 43px; }
+  .reviews-carousel { grid-template-columns: 30px minmax(0, 1fr) 30px; gap: 7px; }
+  .review-arrow { width: 29px; height: 29px; font-size: 16px; }
+  .review-card { padding: 26px 19px; }
+  .review-title { font-size: 21px; }
+  .review-message { font-size: 13px; }
+  .newsletter { padding: 68px 18px 72px; }
+  .newsletter h2 { font-size: 43px; }
+  .newsletter-inner > p:not(.form-message) { font-size: 13px; }
+  .newsletter-form input { font-size: 12px; }
+  .newsletter-form button { font-size: 9px; }
+  .zels-footer { padding: 29px 18px 18px; }
+  .zels-footer-content { align-items: flex-start; }
+  .zels-footer-brand { font-size: 17px; }
+  .zels-footer-links { gap: 13px 17px; }
+  .zels-footer-links a { font-size: 10px; }
+}
+
+@media (max-width: 380px) {
+  .brand-main { font-size: 19px; }
+  .brand-sub { font-size: 6px; }
+  .header-actions { gap: 4px; }
+  .category-card-info h3 { font-size: 20px; }
+  .category-card-info p { font-size: 11px; }
+  .appointment-preview { column-gap: 11px; }
+  .appointment-content h3 { font-size: 24px; }
+  .appointment-description { font-size: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-item, .reveal-item.is-visible { opacity: 1; transform: none; transition: none; }
+}
