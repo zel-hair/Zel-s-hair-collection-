@@ -1,282 +1,387 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Book a hair appointment with Zel's Hair Collection.">
+  <meta name="description" content="Explore hair services and book an appointment with Zel's Hair Collection.">
   <title>Appointments | Zel's Hair Collection</title>
-  <link rel="stylesheet" href="appointments.css">
-</head>
-<body>
-  <header class="site-header">
-    <a class="wordmark" href="index.html" aria-label="Zel's Hair Collection home">ZEL'S</a>
 
-    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+  <link rel="stylesheet" href="appointments.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+
+    <a href="index.html" class="wordmark">
+      ZEL'S
+    </a>
+
+    <nav class="main-nav" id="mainNav">
       <a href="index.html">Home</a>
       <a href="shop.html">Shop</a>
       <a href="gallery.html">Gallery</a>
       <a href="delivery.html">Delivery</a>
       <a href="wholesale.html">Wholesale</a>
-      <a class="nav-current" href="appointments.html" aria-current="page">Appointments</a>
+      <a href="appointments.html" class="active">Appointments</a>
     </nav>
 
-    <a class="header-book" href="https://wa.me/233536115258" target="_blank" rel="noopener">
-      Book now
-    </a>
-
-    <button class="menu-toggle" id="menuToggle" type="button"
-      aria-label="Open navigation" aria-expanded="false" aria-controls="mainNav">
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      aria-controls="mainNav"
+    >
       <span></span>
       <span></span>
     </button>
+
   </header>
 
-  
-<main>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-image-wrap">
-      <img
-        class="hero-image"
-        src="66678199-9F80-4122-B075-10F193E548B4.png"
-        alt="Hair styling at Zel's Hair Collection"
-      >
-    </div>
+  <main>
 
-    <div class="hero-content">
-      <p class="eyebrow">ZEL'S HAIR COLLECTION</p>
+    <!-- HERO -->
 
-      <h1>BOOK AN<br>APPOINTMENT</h1>
+    <section class="hero">
 
-      <p class="hero-copy">
-        Choose your service and send us a WhatsApp message to book.
-      </p>
+      <div class="hero-image-wrap">
+        <img
+          src="66678199-9F80-4122-B075-10F193E548B4.png"
+          alt="Hair styling at Zel's Hair Collection"
+          class="hero-image"
+        >
+      </div>
 
-      <a
-        class="text-link"
-        href="https://wa.me/233536115258"
-        target="_blank"
-        rel="noopener"
-      >
-        BOOK VIA WHATSAPP
-      </a>
-    </div>
-  </section>
+      <div class="hero-content">
+
+        <p class="eyebrow">ZEL'S HAIR COLLECTION</p>
+
+        <h1>
+          BOOK AN<br>
+          APPOINTMENT
+        </h1>
+
+        <p class="hero-copy">
+          Find your style and get to know how our appointments work.
+        </p>
+
+      </div>
+
+    </section>
 
 
-  <!-- SERVICES -->
-  <section class="services section-space" id="services">
+    <!-- SERVICES -->
 
-    <div class="section-heading">
-      <p class="eyebrow">MAKE YOUR SELECTION</p>
-      <h2>OUR SERVICES</h2>
-    </div>
+    <section class="services section-space" id="services">
 
-    <div class="service-grid">
+      <div class="section-heading">
 
-      <article class="service-card">
-        <div class="service-card-bottom">
+        <p class="eyebrow">WHAT WE OFFER</p>
+
+        <h2>OUR SERVICES</h2>
+
+        <p class="section-description">
+          Take a look at the services available for booking.
+        </p>
+
+      </div>
+
+
+      <div class="service-list">
+
+        <article class="service-item">
+          <span class="service-number">01</span>
           <h3>Sew-ins</h3>
+          <span class="service-category">HAIR INSTALLATION</span>
+        </article>
 
-          <a
-            class="text-link small-link"
-            href="https://wa.me/233536115258?text=Hello%2C%20I%27d%20like%20to%20book%20a%20sew-in%20appointment."
-            target="_blank"
-            rel="noopener"
-          >
-            BOOK NOW
-          </a>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-card-bottom">
+        <article class="service-item">
+          <span class="service-number">02</span>
           <h3>Ponytails</h3>
+          <span class="service-category">PONYTAIL STYLING</span>
+        </article>
 
-          <a
-            class="text-link small-link"
-            href="https://wa.me/233536115258?text=Hello%2C%20I%27d%20like%20to%20book%20a%20ponytail%20appointment."
-            target="_blank"
-            rel="noopener"
-          >
-            BOOK NOW
-          </a>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-card-bottom">
+        <article class="service-item">
+          <span class="service-number">03</span>
           <h3>Braids</h3>
+          <span class="service-category">BRAIDING</span>
+        </article>
 
-          <a
-            class="text-link small-link"
-            href="https://wa.me/233536115258?text=Hello%2C%20I%27d%20like%20to%20book%20a%20braiding%20appointment."
-            target="_blank"
-            rel="noopener"
+      </div>
+
+    </section>
+
+
+    <!-- HOW TO BOOK -->
+
+    <section class="booking-info section-space">
+
+      <div class="booking-info-inner">
+
+        <div class="section-heading left-heading">
+
+          <p class="eyebrow">BEFORE YOU BOOK</p>
+
+          <h2>HOW IT WORKS</h2>
+
+          <p class="section-description">
+            A few things to do before your appointment is confirmed.
+          </p>
+
+        </div>
+
+
+        <div class="booking-steps">
+
+          <div class="booking-step">
+            <span class="step-number">01</span>
+            <p>Choose the service you'd like.</p>
+          </div>
+
+          <div class="booking-step">
+            <span class="step-number">02</span>
+            <p>Send us your preferred appointment date.</p>
+          </div>
+
+          <div class="booking-step">
+            <span class="step-number">03</span>
+            <p>We'll get back to you about availability.</p>
+          </div>
+
+          <div class="booking-step">
+            <span class="step-number">04</span>
+            <p>Your appointment is confirmed once we've responded.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FREQUENTLY ASKED QUESTIONS -->
+
+    <section class="faqs section-space" id="faqs">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">GOOD TO KNOW</p>
+
+        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+
+      </div>
+
+
+      <div class="faq-list">
+
+        <article class="faq-item">
+
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>How do I book?</span>
+            <span class="faq-symbol" aria-hidden="true">+</span>
+          </button>
+
+          <div class="faq-answer" hidden>
+            <p>
+              Select your preferred service in the booking section below and send us the prepared message on WhatsApp.
+            </p>
+          </div>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>How do I check available dates?</span>
+            <span class="faq-symbol" aria-hidden="true">+</span>
+          </button>
+
+          <div class="faq-answer" hidden>
+            <p>
+              Send us a message a few days ahead to check availability.
+            </p>
+          </div>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Can I choose my appointment date?</span>
+            <span class="faq-symbol" aria-hidden="true">+</span>
+          </button>
+
+          <div class="faq-answer" hidden>
+            <p>
+              Yes. Include your preferred date in your message and we'll let you know if it's available.
+            </p>
+          </div>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Can I book more than one service?</span>
+            <span class="faq-symbol" aria-hidden="true">+</span>
+          </button>
+
+          <div class="faq-answer" hidden>
+            <p>
+              Yes. Include all the services you'd like in your booking message.
+            </p>
+          </div>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>When is my appointment confirmed?</span>
+            <span class="faq-symbol" aria-hidden="true">+</span>
+          </button>
+
+          <div class="faq-answer" hidden>
+            <p>
+              Your appointment is confirmed once we respond and confirm the details with you.
+            </p>
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL BOOKING SELECTOR -->
+
+    <section class="booking-selector section-space" id="book">
+
+      <div class="booking-selector-inner">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">LET'S GET STARTED</p>
+
+          <h2>CHOOSE YOUR SERVICE</h2>
+
+          <p class="section-description">
+            Select the style you'd like to book.
+          </p>
+
+        </div>
+
+
+        <!-- SERVICE OPTIONS -->
+
+        <div class="service-options" role="group" aria-label="Choose a hair service">
+
+          <button
+            class="service-option"
+            type="button"
+            data-service="Sew-in"
+            aria-pressed="false"
           >
-            BOOK NOW
-          </a>
+            <span>Sew-ins</span>
+            <span class="option-indicator" aria-hidden="true"></span>
+          </button>
+
+
+          <button
+            class="service-option"
+            type="button"
+            data-service="Ponytail"
+            aria-pressed="false"
+          >
+            <span>Ponytails</span>
+            <span class="option-indicator" aria-hidden="true"></span>
+          </button>
+
+
+          <button
+            class="service-option"
+            type="button"
+            data-service="Braids"
+            aria-pressed="false"
+          >
+            <span>Braids</span>
+            <span class="option-indicator" aria-hidden="true"></span>
+          </button>
+
         </div>
-      </article>
-
-    </div>
-  </section>
 
 
-  <!-- HOW TO BOOK -->
-  <section class="booking section-space">
+        <!-- MESSAGE PREVIEW -->
 
-    <div class="booking-content">
-      <p class="eyebrow">A FEW SIMPLE STEPS</p>
+        <div class="message-area" id="messageArea" hidden>
 
-      <h2>HOW TO BOOK</h2>
+          <label for="bookingMessage">
+            YOUR BOOKING MESSAGE
+          </label>
 
-      <ol class="booking-steps">
-        <li>
-          <span>01</span>
-          Choose your service.
-        </li>
-
-        <li>
-          <span>02</span>
-          Message us on WhatsApp.
-        </li>
-
-        <li>
-          <span>03</span>
-          Send your preferred date.
-        </li>
-
-        <li>
-          <span>04</span>
-          Wait for confirmation.
-        </li>
-      </ol>
-
-      <a
-        class="text-link"
-        href="https://wa.me/233536115258"
-        target="_blank"
-        rel="noopener"
-      >
-        MESSAGE US
-      </a>
-    </div>
-
-  </section>
-
-
-  <!-- FAQS -->
-  <section class="faqs section-space" id="faqs">
-
-    <div class="section-heading">
-      <p class="eyebrow">A LITTLE MORE INFORMATION</p>
-      <h2>NEED TO KNOW?</h2>
-    </div>
-
-    <div class="faq-list">
-
-      <article class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-          <span>How do I book?</span>
-          <span class="faq-symbol" aria-hidden="true">+</span>
-        </button>
-
-        <div class="faq-answer" hidden>
-          <p>
-            Book through WhatsApp. Send all your details to our booking number.
+          <p class="message-instruction">
+            Your message is ready. You can edit it before sending.
           </p>
-        </div>
-      </article>
 
+          <textarea
+            id="bookingMessage"
+            rows="5"
+            placeholder="Your booking message will appear here..."
+          ></textarea>
 
-      <article class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-          <span>How do I check available dates?</span>
-          <span class="faq-symbol" aria-hidden="true">+</span>
-        </button>
+          <button
+            class="book-submit"
+            type="button"
+            id="sendBooking"
+          >
+            BOOK ME
+          </button>
 
-        <div class="faq-answer" hidden>
-          <p>
-            Send us a WhatsApp message a few days ahead to check availability.
+          <p class="booking-note">
+            You'll be redirected to WhatsApp to send your message.
           </p>
+
         </div>
-      </article>
+
+      </div>
+
+    </section>
+
+  </main>
 
 
-      <article class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-          <span>Can I choose my appointment date?</span>
-          <span class="faq-symbol" aria-hidden="true">+</span>
-        </button>
-
-        <div class="faq-answer" hidden>
-          <p>
-            Yes. Include your preferred date in your message and we'll let you know if it's available.
-          </p>
-        </div>
-      </article>
-
-
-      <article class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-          <span>Can I book more than one service?</span>
-          <span class="faq-symbol" aria-hidden="true">+</span>
-        </button>
-
-        <div class="faq-answer" hidden>
-          <p>
-            Yes. Include all the services you'd like when you message us.
-          </p>
-        </div>
-      </article>
-
-
-      <article class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-          <span>How do I know my appointment is confirmed?</span>
-          <span class="faq-symbol" aria-hidden="true">+</span>
-        </button>
-
-        <div class="faq-answer" hidden>
-          <p>
-            We'll reply on WhatsApp to confirm your appointment details.
-          </p>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-
-  <!-- FINAL BOOKING SECTION -->
-  <section class="closing section-space">
-
-    <p class="eyebrow">ZEL'S HAIR COLLECTION</p>
-
-    <h2>READY TO BOOK?</h2>
-
-    <p>Send us a WhatsApp message.</p>
-
-    <a
-      class="text-link"
-      href="https://wa.me/233536115258"
-      target="_blank"
-      rel="noopener"
-    >
-      BOOK AN APPOINTMENT
-    </a>
-
-  </section>
-
-</main>
+  <!-- FOOTER -->
 
   <footer class="site-footer">
-    <a class="footer-wordmark" href="index.html">ZEL'S HAIR COLLECTION</a>
-    <p>© <span id="currentYear"></span> Zel's Hair Collection</p>
+
+    <a href="index.html" class="footer-wordmark">
+      ZEL'S HAIR COLLECTION
+    </a>
+
+    <p>
+      © <span id="currentYear"></span> Zel's Hair Collection
+    </p>
+
   </footer>
 
+
   <script src="appointments.js"></script>
+
 </body>
 </html>
