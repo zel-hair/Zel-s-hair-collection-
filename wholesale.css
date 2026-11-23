@@ -1552,3 +1552,12 @@ a {
     animation: none !important;
   }
 }
+/* REMOVE DECORATIVE SVG ARROWS */
+body svg {
+  display: none !important;
+}
+
+/* KEEP THE HEADER MESSAGE ICON */
+.header-message svg {
+  display: block !important;
+}
