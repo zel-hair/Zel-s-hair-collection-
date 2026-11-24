@@ -1,1 +1,355 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery | Zel's Hair Collection</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="delivery.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="brand">ZEL'S HAIR COLLECTION</a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="delivery.html" class="active">Delivery</a>
+      <a href="wholesale.html">Wholesale</a>
+      <a href="appointments.html">Appointments</a>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+    <section class="delivery-hero">
+      <div class="hero-topline">
+        <span>DELIVERY INFORMATION</span>
+        <span>ZEL'S HAIR COLLECTION</span>
+      </div>
+
+      <div class="hero-content">
+        <p class="eyebrow">YOUR ORDER, ON ITS WAY</p>
+
+        <h1>
+          GOOD HAIR.<br>
+          <span>GOOD DELIVERY.</span>
+        </h1>
+
+        <p class="hero-description">
+          Everything you need to know about getting your order from us to you.
+        </p>
+
+        <a href="#how-it-works" class="text-link">HOW IT WORKS</a>
+      </div>
+
+      <div class="hero-bottom">
+        <span>ORDER WITH EASE</span>
+        <span>DELIVERED WITH CARE</span>
+      </div>
+    </section>
+
+
+    <!-- INTRODUCTION -->
+    <section class="delivery-intro">
+      <div class="section-label">01 / THE PROCESS</div>
+
+      <div class="intro-content">
+        <h2>Getting your order<br>to you should be easy.</h2>
+
+        <p>
+          From placing your order to receiving your hair, we want the process
+          to be clear and straightforward.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="section-label">02 / HOW IT WORKS</div>
+
+      <div class="steps-list">
+
+        <article class="delivery-step">
+          <span class="step-number">01</span>
+          <div>
+            <h3>Place your order</h3>
+            <p>Choose the hair you want and complete your order.</p>
+          </div>
+        </article>
+
+        <article class="delivery-step">
+          <span class="step-number">02</span>
+          <div>
+            <h3>Share your details</h3>
+            <p>Provide your location and contact information.</p>
+          </div>
+        </article>
+
+        <article class="delivery-step">
+          <span class="step-number">03</span>
+          <div>
+            <h3>Confirm delivery</h3>
+            <p>We'll communicate the delivery arrangements with you.</p>
+          </div>
+        </article>
+
+        <article class="delivery-step">
+          <span class="step-number">04</span>
+          <div>
+            <h3>Receive your order</h3>
+            <p>Keep your phone close so you can stay in touch.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- DELIVERY DETAILS -->
+    <section class="delivery-details">
+      <div class="section-label">03 / BEFORE YOU ORDER</div>
+
+      <div class="details-heading">
+        <h2>A few things<br>to keep in mind.</h2>
+        <p>Here's what to check before your order is sent out.</p>
+      </div>
+
+      <div class="details-grid">
+        <article class="detail-card">
+          <span>01</span>
+          <h3>Your location</h3>
+          <p>Make sure your delivery address or meeting point is clear.</p>
+        </article>
+
+        <article class="detail-card">
+          <span>02</span>
+          <h3>Your contact</h3>
+          <p>Use a reachable phone number for delivery communication.</p>
+        </article>
+
+        <article class="detail-card">
+          <span>03</span>
+          <h3>Your order</h3>
+          <p>Check that your selected items and order details are correct.</p>
+        </article>
+      </div>
+    </section>
+
+
+    <!-- DELIVERY QUESTIONS GAME -->
+    <section class="delivery-game" id="delivery-game">
+
+      <div class="game-heading">
+        <span class="section-label">04 / A QUICK QUESTION</span>
+
+        <p class="game-kicker">LET'S TALK DELIVERY</p>
+
+        <h2>What's delivery<br><span>like for you?</span></h2>
+
+        <p class="game-description">
+          Three quick questions. We'd love to know what matters to you.
+        </p>
+      </div>
+
+      <div class="game-progress">
+        <span id="progressText">0 OF 3 ANSWERED</span>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <div class="game-questions">
+
+        <article class="game-question" data-question="1">
+          <div class="question-top">
+            <span>QUESTION 01</span>
+            <span>01 / 03</span>
+          </div>
+
+          <h3>What stresses you most about delivery?</h3>
+
+          <div class="answer-options">
+            <button class="answer-option" data-answer="Rider communication">
+              Rider communication
+            </button>
+            <button class="answer-option" data-answer="Location mismatch">
+              Location mismatch
+            </button>
+            <button class="answer-option" data-answer="Receiving the wrong items">
+              Receiving the wrong items
+            </button>
+          </div>
+        </article>
+
+
+        <article class="game-question" data-question="2">
+          <div class="question-top">
+            <span>QUESTION 02</span>
+            <span>02 / 03</span>
+          </div>
+
+          <h3>How do you prefer to receive your order?</h3>
+
+          <div class="answer-options">
+            <button class="answer-option" data-answer="Doorstep delivery">
+              At my doorstep
+            </button>
+            <button class="answer-option" data-answer="Meet the rider">
+              Meet the rider
+            </button>
+            <button class="answer-option" data-answer="Pickup">
+              I'll pick it up myself
+            </button>
+          </div>
+        </article>
+
+
+        <article class="game-question" data-question="3">
+          <div class="question-top">
+            <span>QUESTION 03</span>
+            <span>03 / 03</span>
+          </div>
+
+          <h3>What matters most when your order is on its way?</h3>
+
+          <div class="answer-options">
+            <button class="answer-option" data-answer="Fast delivery">
+              Fast delivery
+            </button>
+            <button class="answer-option" data-answer="Regular updates">
+              Regular updates
+            </button>
+            <button class="answer-option" data-answer="Careful handling">
+              Careful handling
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="game-complete" id="gameComplete" hidden>
+        <p class="complete-kicker">THAT'S EVERYTHING</p>
+        <h3>Thanks for sharing.</h3>
+        <p>Your answers help us understand what matters to you.</p>
+      </div>
+
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="delivery-faq">
+      <div class="section-label">05 / COMMON QUESTIONS</div>
+
+      <div class="faq-heading">
+        <h2>Good to know.</h2>
+      </div>
+
+      <div class="faq-list">
+
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How much is delivery?</span>
+            <span class="faq-symbol">+</span>
+          </button>
+          <div class="faq-answer" hidden>
+            Delivery fees can be confirmed based on your location. Please
+            contact us for the details.
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Do you deliver outside Accra?</span>
+            <span class="faq-symbol">+</span>
+          </button>
+          <div class="faq-answer" hidden>
+            Contact us with your location so we can confirm the available
+            delivery arrangements.
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How long does delivery take?</span>
+            <span class="faq-symbol">+</span>
+          </button>
+          <div class="faq-answer" hidden>
+            Delivery timing depends on your location. Please confirm the
+            expected timing when placing your order.
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can I pick up my order?</span>
+            <span class="faq-symbol">+</span>
+          </button>
+          <div class="faq-answer" hidden>
+            Please contact us to confirm whether collection is available.
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can someone receive my order for me?</span>
+            <span class="faq-symbol">+</span>
+          </button>
+          <div class="faq-answer" hidden>
+            Yes, you can arrange for someone to receive your order. Make sure
+            they have the necessary delivery details.
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="delivery-contact">
+      <p class="contact-kicker">NEED A LITTLE HELP?</p>
+
+      <h2>We're just<br>one message away.</h2>
+
+      <p>Have a question about your delivery? Get in touch with us.</p>
+
+      <a href="https://wa.me/233536115258"
+         target="_blank" rel="noopener noreferrer"
+         class="contact-button">
+        CONTACT US
+      </a>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <a href="index.html" class="footer-brand">ZEL'S HAIR COLLECTION</a>
+    <p>Hair, your way.</p>
+    <span>© <span id="currentYear"></span> Zel's Hair Collection</span>
+  </footer>
+
+
+  <script src="delivery.js"></script>
+
+</body>
+</html>
