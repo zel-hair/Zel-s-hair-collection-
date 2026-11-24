@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="A look at Zel's Hair Collection.">
+
+    <title>Gallery | Zel's Hair Collection</title>
+
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="site-header">
+
+        <a href="index.html" class="logo">
+            Zel's Hair Collection
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-nav" id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="gallery.html" class="active">Gallery</a>
+            <a href="contact-delivery.html">Delivery</a>
+            <a href="wholesale.html">Wholesale</a>
+            <a href="appointments.html">Appointments</a>
+        </nav>
+
+    </header>
+
+
+    <!-- GALLERY -->
+
+    <main class="gallery-page">
+
+        <section class="gallery-heading">
+            <h1>Gallery</h1>
+        </section>
+
+
+        <section class="gallery-grid">
+
+            <div class="gallery-video">
+                <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    controls
+                    preload="metadata"
+                >
+                    <source
+                        src="89947edc-99c5-4650-9aa6-1e24f6a832fc.mp4"
+                        type="video/mp4"
+                    >
+                    Your browser does not support this video.
+                </video>
+            </div>
+
+
+            <div class="gallery-video">
+                <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    controls
+                    preload="metadata"
+                >
+                    <source
+                        src="9b957cc9-a134-43f4-8f9c-b58f77b37d0b.mp4"
+                        type="video/mp4"
+                    >
+                    Your browser does not support this video.
+                </video>
+            </div>
+
+
+            <div class="gallery-video">
+                <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    controls
+                    preload="metadata"
+                >
+                    <source
+                        src="9fad27f1-c581-46f1-966a-876191d3897d.mp4"
+                        type="video/mp4"
+                    >
+                    Your browser does not support this video.
+                </video>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+        <p>© <span id="currentYear"></span> Zel's Hair Collection</p>
+    </footer>
+
+
+    <script src="gallery.js"></script>
+
+</body>
+</html>
