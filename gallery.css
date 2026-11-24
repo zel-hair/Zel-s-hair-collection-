@@ -1,0 +1,278 @@
+/* ================================
+   GALLERY PAGE
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', Arial, sans-serif;
+    background: #ffffff;
+    color: #171717;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.site-header {
+    width: 100%;
+    min-height: 82px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    position: relative;
+    z-index: 20;
+}
+
+.logo {
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.main-nav a {
+    font-size: 12px;
+    font-weight: 500;
+    color: #444444;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #000000;
+}
+
+.main-nav a.active {
+    border-bottom: 1px solid #171717;
+    padding-bottom: 5px;
+}
+
+
+/* ================================
+   MOBILE MENU BUTTON
+================================ */
+
+.menu-toggle {
+    display: none;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 23px;
+    height: 1px;
+    background: #171717;
+}
+
+
+/* ================================
+   GALLERY HEADING
+================================ */
+
+.gallery-page {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 55px 7% 100px;
+}
+
+.gallery-heading {
+    margin-bottom: 38px;
+}
+
+.gallery-heading h1 {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: -0.8px;
+    line-height: 1.2;
+}
+
+
+/* ================================
+   VIDEO GRID
+================================ */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-items: start;
+}
+
+.gallery-video {
+    width: 100%;
+    overflow: hidden;
+    background: #f7f7f7;
+    aspect-ratio: 4 / 5;
+}
+
+.gallery-video video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #f7f7f7;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.site-footer {
+    width: 100%;
+    padding: 25px 7%;
+    border-top: 1px solid #eeeeee;
+    text-align: center;
+}
+
+.site-footer p {
+    font-size: 11px;
+    color: #777777;
+    letter-spacing: 0.2px;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 950px) {
+
+    .site-header {
+        padding: 0 5%;
+    }
+
+    .main-nav {
+        gap: 18px;
+    }
+
+    .main-nav a {
+        font-size: 11px;
+    }
+
+    .gallery-page {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .gallery-grid {
+        gap: 15px;
+    }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+
+    .site-header {
+        min-height: 70px;
+        padding: 0 6%;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 22px 6% 28px;
+        background: #ffffff;
+        border-bottom: 1px solid #eeeeee;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 21px;
+    }
+
+    .main-nav.is-open {
+        display: flex;
+    }
+
+    .main-nav a {
+        font-size: 13px;
+    }
+
+    .gallery-page {
+        padding: 38px 6% 65px;
+    }
+
+    .gallery-heading {
+        margin-bottom: 25px;
+    }
+
+    .gallery-heading h1 {
+        font-size: 26px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .gallery-video {
+        aspect-ratio: 4 / 5;
+    }
+
+    .site-footer {
+        padding: 22px 6%;
+    }
+
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 380px) {
+
+    .gallery-page {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .gallery-grid {
+        gap: 15px;
+    }
+
+}
