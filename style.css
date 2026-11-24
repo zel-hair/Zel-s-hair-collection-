@@ -1730,4 +1730,33 @@ body { font-size: 16px; }
         bottom: 138px;
     }
 }
+/* DELIVERY PAGE LINK */
+
+.delivery-more {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px 55px;
+}
+
+.delivery-more-link {
+    display: inline-block;
+    color: #315c43;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-bottom: 1px solid #315c43;
+    padding-bottom: 6px;
+    transition: opacity 0.2s ease;
+}
+
+.delivery-more-link:hover {
+    opacity: 0.65;
+}
+
+@media (max-width: 650px) {
+    .delivery-more {
+        padding: 5px 20px 45px;
+    }
+}
 
