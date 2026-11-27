@@ -48,32 +48,40 @@
         <div class="header-actions">
 
             <!-- Search -->
-            <a class="header-icon search-button"
-               href="#shop"
-               aria-label="Browse hair collections">
+<button class="header-icon search-button" id="homeSearchToggle"
+        type="button" aria-label="Search products"
+        aria-expanded="false" aria-controls="homeSearchPanel">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="10.8" cy="10.8" r="7"></circle>
+        <path d="M16 16L21 21"></path>
+    </svg>
+</button>
 
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <circle cx="10.8" cy="10.8" r="7"></circle>
-                    <path d="M16 16L21 21"></path>
-                </svg>
-
-            </a>
-
-            <!-- Shopping Bag / Shop shortcut -->
-            <a class="header-icon cart-button"
-               href="shop.html"
-               aria-label="Shop hair">
-
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M5 8H19L20 21H4L5 8Z"></path>
-                    <path d="M9 9V6A3 3 0 0 1 15 6V9"></path>
-                </svg>
-
+<!-- Shopping Cart -->
+<button class="header-icon cart-button" type="button"
+        data-cart-open aria-label="Open shopping cart">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M5 8H19L20 21H4L5 8Z"></path>
+        <path d="M9 9V6A3 3 0 0 1 15 6V9"></path>
+    </svg>
+    <span class="shop-cart-count" data-cart-count>0</span>
+</button>
             </a>
 
         </div>
 
     </header>
+    <!-- HOMEPAGE PRODUCT SEARCH -->
+<section class="shop-search-panel home-search-panel"
+         id="homeSearchPanel" hidden>
+    <label for="homeSearchInput">Search the collection</label>
+    <div class="shop-search-field">
+        <input id="homeSearchInput" type="search"
+               placeholder="Try body wave, wigs, braiding hair..."
+               autocomplete="off">
+        <button id="homeSearchSubmit" type="button">SEARCH</button>
+    </div>
+</section>
 
 <!-- HERO SECTION -->
 
@@ -552,6 +560,35 @@
 
 </div>
 
+<!-- SHARED SHOPPING CART -->
+<div class="cart-backdrop" data-cart-close hidden></div>
 
+<aside class="cart-drawer" id="shoppingCart"
+       aria-label="Shopping cart" aria-hidden="true">
+
+    <div class="cart-drawer-header">
+        <div>
+            <span class="cart-eyebrow">YOUR SELECTION</span>
+            <h2>Your Cart <span data-cart-heading-count>(0)</span></h2>
+        </div>
+        <button type="button" class="cart-close"
+                data-cart-close aria-label="Close cart">×</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+        <p class="cart-empty">Your cart is currently empty.</p>
+    </div>
+
+    <div class="cart-drawer-footer">
+        <div class="cart-total-row">
+            <span>Subtotal</span>
+            <strong id="cartSubtotal">GHC 0.00</strong>
+        </div>
+        <p class="cart-note">Delivery charges can be confirmed when placing your order.</p>
+        <button type="button" class="cart-checkout" id="cartCheckout">
+            CONTINUE TO ORDER
+        </button>
+    </div>
+</aside>
 </body>
 </html>
