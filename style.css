@@ -1760,3 +1760,67 @@ body { font-size: 16px; }
     }
 }
 
+/* =====================================================
+   ZEL'S — DESKTOP IMAGE SIZE CORRECTION
+   Appointment and mobile layouts remain untouched
+   ===================================================== */
+
+@media (min-width: 761px) {
+
+  /* HERO IMAGE */
+  .hero {
+    width: min(100% - 80px, 1180px);
+    min-height: 490px;
+    margin: 35px auto 75px;
+  }
+
+  .hero-image {
+    min-height: 490px;
+    height: 490px;
+  }
+
+  .hero-content {
+    width: min(55%, 560px);
+    padding: 45px 55px;
+  }
+
+  /* CATEGORY IMAGES */
+  .category-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 55px;
+  }
+
+  .category-card-image {
+    width: min(100%, 560px);
+    aspect-ratio: 4 / 5;
+  }
+
+  .category-card-info {
+    width: min(100%, 540px);
+    padding-top: 18px;
+  }
+
+  /* WHOLESALE IMAGES */
+  .wholesale-track {
+    grid-auto-columns: 58%;
+    gap: 22px;
+  }
+
+  .wholesale-slide {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* GALLERY VIDEO */
+  .gallery-video {
+    width: min(100%, 850px);
+    max-height: 480px;
+    margin-inline: auto;
+  }
+
+  .gallery-video video {
+    max-height: 480px;
+  }
+
+}
+
+
