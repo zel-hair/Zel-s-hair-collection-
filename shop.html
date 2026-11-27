@@ -22,19 +22,21 @@
       <a href="index.html">Home</a>
       <a href="shop.html" aria-current="page">Shop hair</a>
       <a href="gallery.html">Gallery</a>
-      <a href="delivery.html">Delivery</a>
+      <a href="contact-delivery.html">Delivery</a>
       <a href="help.html">Help</a>
     </nav>
 
     <a href="index.html" class="brand-name">Zel's Hair Collection</a>
 
     <div class="header-actions">
-      <button class="header-icon search-button" id="shopSearchToggle" type="button"
-        aria-label="Open product search" aria-expanded="false">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="10.8" cy="10.8" r="7"></circle><path d="M16 16L21 21"></path>
-        </svg>
-      </button>
+      <button class="header-icon cart-button" type="button"
+        data-cart-open aria-label="Open shopping cart">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M5 8H19L20 21H4L5 8Z"></path>
+        <path d="M9 9V6A3 3 0 0 1 15 6V9"></path>
+    </svg>
+    <span class="shop-cart-count" data-cart-count>0</span>
+</button>
       <a class="header-icon cart-button" href="#shop-products" aria-label="Shopping cart">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M5 8H19L20 21H4L5 8Z"></path><path d="M9 9V6A3 3 0 0 1 15 6V9"></path>
@@ -188,6 +190,35 @@
     </main>
 
   <div class="shop-toast" id="shopToast" role="status" aria-live="polite"></div>
+<!-- SHARED SHOPPING CART -->
+<div class="cart-backdrop" data-cart-close hidden></div>
 
+<aside class="cart-drawer" id="shoppingCart"
+       aria-label="Shopping cart" aria-hidden="true">
+
+    <div class="cart-drawer-header">
+        <div>
+            <span class="cart-eyebrow">YOUR SELECTION</span>
+            <h2>Your Cart <span data-cart-heading-count>(0)</span></h2>
+        </div>
+        <button type="button" class="cart-close"
+                data-cart-close aria-label="Close cart">×</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+        <p class="cart-empty">Your cart is currently empty.</p>
+    </div>
+
+    <div class="cart-drawer-footer">
+        <div class="cart-total-row">
+            <span>Subtotal</span>
+            <strong id="cartSubtotal">GHC 0.00</strong>
+        </div>
+        <p class="cart-note">Delivery charges can be confirmed when placing your order.</p>
+        <button type="button" class="cart-checkout" id="cartCheckout">
+            CONTINUE TO ORDER
+        </button>
+    </div>
+</aside>
 </body>
 </html>
